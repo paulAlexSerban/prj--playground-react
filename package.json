@@ -12,6 +12,7 @@
         "prepare": "husky install",
         "formats:check": "yarn prettier --check .",
         "formats:write": "yarn prettier --write .",
+        "lint": "lerna run lint --stream",
         "build:dev": "lerna run build:dev --stream",
         "build:prod": "lerna run build:prod --stream"
     },
