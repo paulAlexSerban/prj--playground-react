@@ -14,3 +14,8 @@
 
 -   Node.js
 -   Yarn - `npm install -g yarn`
+
+## Future Improvements
+
+-   [ ] Refactor 'prj--fe-ci-build-system' to use monorepo structure as used in this project (prj--playground-react)
+-   [ ] Refactor packages/scss to 'prj--fe-ci-build-system'

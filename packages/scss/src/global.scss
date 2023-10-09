@@ -1,3 +1,4 @@
+@use 'foundation/all' as var;
 /*------------------------------------*\
     TABLE OF CONTENTS
 \*------------------------------------*/
@@ -22,7 +23,7 @@
 @use 'base/root';
 
 body {
-    font-family: $body-font-family;
-    font-size: $body-font-size;
-    font-weight: $body-font-weight;
+    font-family: var.$body-font-family;
+    font-size: var.$body-font-size;
+    font-weight: var.$body-font-weight;
 }

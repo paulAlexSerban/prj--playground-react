@@ -4,10 +4,12 @@
     "main": "index.js",
     "license": "MIT",
     "scripts": {
-        "lint": "stylelint ./**/*.scss --config stylelint.config.js"
+        "lint": "stylelint ./**/*.scss --config stylelint.config.js",
+        "build:dev": "export NODE_ENV=development && node build/scss.js",
+        "build:prod": "export NODE_ENV=production && node build/scss.js"
     },
     "dependencies": {
-        "normalize-scss": "^7.0.1"
+        "sass": "^1.69.0"
     },
     "devDependencies": {
         "stylelint": "^15.10.3",
