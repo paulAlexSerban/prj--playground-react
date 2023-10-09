@@ -11,10 +11,20 @@
     "normalize-scss": "^7.0.1"
   },
   "devDependencies": {
+    "husky": "^8.0.3",
+    "lint-staged": "^14.0.1",
     "prettier": "^3.0.3",
     "stylelint": "^15.10.3",
     "stylelint-config-prettier": "^9.0.5",
     "stylelint-config-sass-guidelines": "^10.0.0",
     "stylelint-prettier": "^4.0.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged":{
+    "src/**/*.scss": "yarn lint:fix"
   }
 }
