@@ -1,0 +1,33 @@
+{
+    "name": "@prj--playground-react/core",
+    "version": "0.0.0",
+    "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/paulAlexSerban/prj--playground-react.git"
+    },
+    "author": "paulAlexSerban <paul.alex.serban@gmail.com>",
+    "license": "MIT",
+    "scripts": {
+        "prepare": "husky install",
+        "formats:check": "npx prettier --check .",
+        "formats:write": "npx prettier --write ."
+    },
+    "devDependencies": {
+        "husky": "^8.0.3",
+        "lerna": "^7.3.0"
+    },
+    "description": "Coursework repository for the React course - Advanced React for Enterprise Applications: react for Senior Engineers",
+    "bugs": {
+        "url": "https://github.com/paulAlexSerban/prj--playground-react/issues"
+    },
+    "homepage": "https://github.com/paulAlexSerban/prj--playground-react#readme",
+    "keywords": [],
+    "private": true,
+    "workspaces": [
+        "packages/*"
+    ],
+    "dependencies": {
+        "prettier": "^3.0.3"
+    }
+}

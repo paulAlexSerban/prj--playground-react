@@ -1,0 +1,16 @@
+{
+    "name": "@prj--playground-react/scss",
+    "version": "0.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "scripts": {
+        "lint": "stylelint ./**/*.scss --config stylelint.config.js"
+    },
+    "dependencies": {
+        "normalize-scss": "^7.0.1"
+    },
+    "devDependencies": {
+        "stylelint": "^15.10.3",
+        "stylelint-config-sass-guidelines": "^10.0.0"
+    }
+}

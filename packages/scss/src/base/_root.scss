@@ -1,0 +1,34 @@
+:root {
+    --ppr-body-text-color: #{$dark};
+    --ppr-body-bg-color: #{$white};
+
+    --ppr-btn-primary-color: #{$white};
+    --ppr-btn-primary-bg: #{$green};
+    --ppr-btn-primary-bg-hover: #{$green-light};
+
+    --ppr-btn-secondary-color: #{$white};
+    --ppr-btn-secondary-bg: #{$dark};
+
+    --ppr-form-color: #{$dark};
+    --ppr-form-bg: #{$white};
+    --ppr-form-error-color: #{$red};
+    --ppr-form-error-border: #{$red};
+    --ppr-form-border-focus-color: #{$green};
+
+    --ppr-body-font-size: #{$fs-base};
+    --ppr-body-font-weight: #{$fw-normal};
+
+    --ppr-h1-font-size: #{$h-1};
+    --ppr-h2-font-size: #{$h-2};
+    --ppr-h3-font-size: #{$h-3};
+    --ppr-h4-font-size: #{$h-4};
+    --ppr-h5-font-size: #{$h-5};
+    --ppr-h6-font-size: #{$h-6};
+
+    --ppr-h1-font-weight: #{$fw-medium};
+    --ppr-h2-font-weight: #{$fw-medium};
+    --ppr-h3-font-weight: #{$fw-medium};
+    --ppr-h4-font-weight: #{$fw-normal};
+    --ppr-h5-font-weight: #{$fw-normal};
+    --ppr-h6-font-weight: #{$fw-light};
+}

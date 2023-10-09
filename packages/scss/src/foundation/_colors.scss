@@ -27,10 +27,7 @@ $btn-primary-bg-hover: var(--ppr-btn-primary-bg-hover, $green-light) !default;
 $form-border-color: var(--ppr-form-border-color, $white-dark) !default;
 $form-bg-color: var(--ppr-form-bg-color, $white) !default;
 $form-bg-option-selected: var(--ppr-form-bg-option-selected, $green) !default;
-$form-color-option-selected: var(
-  --ppr-form-color-option-selected,
-  $white
-) !default;
+$form-color-option-selected: var(--ppr-form-color-option-selected, $white) !default;
 $form-bg-color-hover: var(--ppr-form-bg-color-hover, $white-dark) !default;
 $form-color: var(--ppr-form-color, $dark) !default;
 $form-bg: var(--ppr-form-bg, $white) !default;
