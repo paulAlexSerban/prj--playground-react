@@ -1,0 +1,9 @@
+{
+  "name": "@prj--playground-react/scss",
+  "version": "0.1.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "normalize-scss": "^7.0.1"
+  }
+}

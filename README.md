@@ -1,4 +1,4 @@
-# Playground React
+# Playground React (Project Playground React - PPR)
 
 > Coursework repository for the React course - Advanced React for Enterprise Applications: react for Senior Engineers
 
@@ -9,3 +9,7 @@
 - Atomic Design principles applied
 - Easy to understand (comments, variables, etc)
 - Reusable across teams / projects
+
+## Prerequisites
+- Node.js
+- Yarn - `npm install -g yarn`
