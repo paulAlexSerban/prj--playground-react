@@ -1,0 +1,24 @@
+{
+    "name": "@prj--playground-react/react",
+    "version": "1.0.0",
+    "main": "lib/index.js",
+    "license": "MIT",
+    "files": [
+        "lib"
+    ],
+    "dependencies": {
+        "@rollup/plugin-typescript": "^11.1.5",
+        "@types/react": "^18.2.27",
+        "react": "^18.2.0",
+        "rollup": "^4.0.2",
+        "typescript": "^5.2.2"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "scripts": {
+        "build:dev": "rollup --config rollup.config.js",
+        "watch": "rollup -c -w"
+    },
+    "type": "module"
+}
