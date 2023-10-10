@@ -17,6 +17,9 @@
         "rollup": "^4.0.2",
         "typescript": "^5.2.2"
     },
+    "dependencies": {
+        "@prj--playground-react/foundation": "*"
+    },
     "publishConfig": {
         "access": "public"
     },
