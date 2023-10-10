@@ -3,4 +3,6 @@ import ReactDOM from 'react-dom';
 
 import { Color } from '@prj--playground-react/react';
 
-ReactDOM.render(<Color hexCode="#FF0000" width="1rem" height="1rem" />, document.getElementById('root'));
+import '@prj--playground-react/scss/lib/atoms/utilities.css';
+
+ReactDOM.render(<Color hexCode="#000" />, document.getElementById('root'));

@@ -102,10 +102,82 @@
  * styles for components.
  *
  */
-.button-container {
-  display: flex;
-  background-color: red;
-  color: var(--ppr-btn-primary-color, #fff);
-  border: none;
-  padding: 0.25rem;
+.width-none {
+  width: 0;
+}
+
+.height-none {
+  height: 0;
+}
+
+.width-xxxs {
+  width: 0.25rem;
+}
+
+.height-xxxs {
+  height: 0.25rem;
+}
+
+.width-xxs {
+  width: 0.5rem;
+}
+
+.height-xxs {
+  height: 0.5rem;
+}
+
+.width-xs {
+  width: 0.75rem;
+}
+
+.height-xs {
+  height: 0.75rem;
+}
+
+.width-sm {
+  width: 1rem;
+}
+
+.height-sm {
+  height: 1rem;
+}
+
+.width-md {
+  width: 1.5rem;
+}
+
+.height-md {
+  height: 1.5rem;
+}
+
+.width-lg {
+  width: 2rem;
+}
+
+.height-lg {
+  height: 2rem;
+}
+
+.width-xl {
+  width: 3rem;
+}
+
+.height-xl {
+  height: 3rem;
+}
+
+.width-xxl {
+  width: 4.5rem;
+}
+
+.height-xxl {
+  height: 4.5rem;
+}
+
+.width-xxxl {
+  width: 6rem;
+}
+
+.height-xxxl {
+  height: 6rem;
 }
