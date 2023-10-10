@@ -1,0 +1,17 @@
+{
+    "name": "@playground/react",
+    "version": "1.0.0",
+    "license": "MIT",
+    "dependencies": {
+        "@types/react": "^18.2.27",
+        "@types/react-dom": "^18.2.12",
+        "parcel": "^2.9.3",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "typescript": "^5.2.2"
+    },
+    "scripts": {
+        "start": "parcel src/index.html -p 3000 --https",
+        "build": "parcel build src/index.html"
+    }
+}

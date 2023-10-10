@@ -18,7 +18,8 @@
     },
     "devDependencies": {
         "husky": "^8.0.3",
-        "lerna": "^7.3.0"
+        "lerna": "^7.3.0",
+        "process": "^0.11.10"
     },
     "description": "Coursework repository for the React course - Advanced React for Enterprise Applications: react for Senior Engineers",
     "bugs": {
@@ -29,7 +30,8 @@
     "private": true,
     "workspaces": {
         "packages": [
-            "packages/*"
+            "packages/*",
+            "playground/*"
         ],
         "nohoist": [
             "**/normalize-scss"
