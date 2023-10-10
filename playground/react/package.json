@@ -12,6 +12,6 @@
     },
     "scripts": {
         "start": "parcel src/index.html -p 3000 --https",
-        "build": "parcel build src/index.html"
+        "build:dev": "parcel build src/index.html"
     }
 }

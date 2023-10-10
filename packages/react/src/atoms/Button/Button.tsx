@@ -1,10 +1,11 @@
 import React from 'react';
 
 interface ButtonProps {
-    children: React.ReactNode;
     label: string;
 }
 
-const Button = ({ label }: ButtonProps) => <button>{label}</button>;
+const Button = ({ label }: ButtonProps) => {
+    return <button className="button-container">{label}</button>;
+};
 
 export default Button;

@@ -1,3 +1,10 @@
-.button {
-    color: #ff0000;
+@use 'sass:map';
+@use '../foundation/all' as *;
+
+.button-container {
+    display: flex;
+    background-color: red;
+    color: $btn-primary-color;
+    border: none;
+    padding: map.get($spacing, 'xxxs');
 }

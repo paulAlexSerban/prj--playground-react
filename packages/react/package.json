@@ -17,8 +17,8 @@
         "access": "public"
     },
     "scripts": {
-        "build:dev": "rollup --config rollup.config.js",
-        "watch": "rollup -c -w"
+        "start": "export NODE_ENV=development && rollup -c -w",
+        "build:dev": "export NODE_ENV=development && rollup --config rollup.config.js"
     },
     "type": "module"
 }

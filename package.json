@@ -13,8 +13,9 @@
         "formats:check": "yarn prettier --check .",
         "formats:write": "yarn prettier --write .",
         "lint": "lerna run lint --stream",
-        "build:dev": "lerna run build:dev --stream",
-        "build:prod": "lerna run build:prod --stream"
+        "build:dev": "lerna run build:dev --concurrency=5",
+        "build:prod": "lerna run build:prod --concurrency=5",
+        "start": "yarn lerna run start"
     },
     "devDependencies": {
         "husky": "^8.0.3",
