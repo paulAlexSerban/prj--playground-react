@@ -1,7 +1,7 @@
 import typescript from '@rollup/plugin-typescript';
 
 export default {
-    input: ['./src/index.ts', './src/atoms/Color/index.ts', './src/foundation/Spacing.ts'],
+    input: ['./src/index.ts', './src/atoms/Color/index.ts', './src/atoms/Text/index.ts', './src/atoms/Margin/index.ts'],
     output: {
         dir: 'lib',
         format: 'esm',
@@ -9,5 +9,5 @@ export default {
         preserveModules: true,
     },
     plugins: [typescript()],
-    external: ['react'],
+    external: ['react', '@prj--playground-react/foundation'],
 };

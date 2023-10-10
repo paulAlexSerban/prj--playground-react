@@ -36,7 +36,7 @@ const compile = (inputFile, outputFile) => {
 
     fs.writeFileSync(outputFile, result.css);
 
-    console.log(`[ COMPILED ] ${outputFile} - ${(result.css.length / 1024).toFixed(2)} Kb`);
+    console.log(`[ scss ] ${outputFile} - ${(result.css.length / 1024).toFixed(2)} Kb`);
 };
 
 compile(`${SRC_DIR}/global.scss`, `${DIST_DIR}/global.css`);

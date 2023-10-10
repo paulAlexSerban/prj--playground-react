@@ -1,0 +1,19 @@
+{
+    "name": "@prj--playground-react/foundation",
+    "version": "0.1.0",
+    "main": "lib/index.js",
+    "license": "MIT",
+    "files": [
+        "lib"
+    ],
+    "devDependencies": {
+        "tsc": "^2.0.4",
+        "typescript": "^5.2.2"
+    },
+    "scripts": {
+        "build:dev": "yarn tsc --project tsconfig.json",
+        "build:prod": "yarn tsc --project tsconfig.json",
+        "start": "yarn tsc --project tsconfig.json --watch"
+    },
+    "type": "module"
+}
