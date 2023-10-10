@@ -12,14 +12,13 @@
         "prepare": "husky install",
         "formats:check": "yarn prettier --check .",
         "formats:write": "yarn prettier --write .",
-        "lint": "lerna run lint --stream",
+        "lint": "lerna run lint --concurrency=5",
         "build:dev": "lerna run build:dev --concurrency=5",
         "build:prod": "lerna run build:prod --concurrency=5",
         "start": "yarn lerna run start"
     },
     "devDependencies": {
         "husky": "^8.0.3",
-        "lerna": "^7.3.0",
         "process": "^0.11.10"
     },
     "description": "Coursework repository for the React course - Advanced React for Enterprise Applications: react for Senior Engineers",
@@ -39,6 +38,7 @@
         ]
     },
     "dependencies": {
+        "lerna": "^7.3.0",
         "prettier": "^3.0.3"
     }
 }

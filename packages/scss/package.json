@@ -9,11 +9,9 @@
         "build:dev": "export NODE_ENV=development && node build/scss.js",
         "build:prod": "export NODE_ENV=production && node build/scss.js"
     },
-    "dependencies": {
-        "sass": "^1.69.0"
-    },
     "devDependencies": {
         "nodemon": "^3.0.1",
+        "sass": "^1.69.0",
         "stylelint": "^15.10.3",
         "stylelint-config-sass-guidelines": "^10.0.0"
     }

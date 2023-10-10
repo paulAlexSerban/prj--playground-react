@@ -1,12 +1,16 @@
 {
     "name": "@prj--playground-react/react",
-    "version": "1.0.0",
+    "version": "0.0.0",
     "main": "lib/index.js",
     "license": "MIT",
     "files": [
         "lib"
     ],
-    "dependencies": {
+    "scripts": {
+        "start": "export NODE_ENV=development && rollup -c -w",
+        "build:dev": "export NODE_ENV=development && rollup --config rollup.config.js"
+    },
+    "devDependencies": {
         "@rollup/plugin-typescript": "^11.1.5",
         "@types/react": "^18.2.27",
         "react": "^18.2.0",
@@ -15,10 +19,6 @@
     },
     "publishConfig": {
         "access": "public"
-    },
-    "scripts": {
-        "start": "export NODE_ENV=development && rollup -c -w",
-        "build:dev": "export NODE_ENV=development && rollup --config rollup.config.js"
     },
     "type": "module"
 }
