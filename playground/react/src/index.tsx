@@ -1,8 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import { Button } from '@prj--playground-react/react';
+import { Color } from '@prj--playground-react/react';
 
-import '@prj--playground-react/scss/lib/atoms/button.css';
-
-ReactDOM.render(<Button label="Hello World" />, document.getElementById('root'));
+ReactDOM.render(<Color hexCode="#FF0000" width="1rem" height="1rem" />, document.getElementById('root'));
