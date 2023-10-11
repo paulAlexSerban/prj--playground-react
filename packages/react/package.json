@@ -7,7 +7,7 @@
         "lib"
     ],
     "scripts": {
-        "start": "export NODE_ENV=development && rollup -c -w",
+        "start": "export NODE_ENV=development && export NODE_ENV=development && rollup --config rollup.config.js && rollup --config -w",
         "lint": "echo \"No linting configured\"",
         "build:dev": "rm -rfv ./lib && export NODE_ENV=development && rollup --config rollup.config.js",
         "build:prod": "rm -rfv ./lib && export NODE_ENV=production && rollup --config rollup.config.js"
