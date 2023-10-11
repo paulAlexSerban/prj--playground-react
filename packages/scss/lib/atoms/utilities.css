@@ -1,1 +1,183 @@
-.width-none{width:0}.height-none{height:0}.width-xxxs{width:.25rem}.height-xxxs{height:.25rem}.width-xxs{width:.5rem}.height-xxs{height:.5rem}.width-xs{width:.75rem}.height-xs{height:.75rem}.width-sm{width:1rem}.height-sm{height:1rem}.width-md{width:1.5rem}.height-md{height:1.5rem}.width-lg{width:2rem}.height-lg{height:2rem}.width-xl{width:3rem}.height-xl{height:3rem}.width-xxl{width:4.5rem}.height-xxl{height:4.5rem}.width-xxxl{width:6rem}.height-xxxl{height:6rem}
+/*=============================================
+    #Variables
+
+    - keeps reusable variables to be used mong atoms, molecules and organisms
+    - this will also export the possibility to override variables in the future with scss variables   
+=============================================*/
+/**
+ * TABLE OF CONTENTS
+ * 
+ * COLORS
+ * Brand colors...................These are the main brand colors. They will be used the most
+ * Neutral colors.................White and black, gray scale, secondary colors.
+ * Utility colors.................Other colors to represent states: info, warning, success, etc.
+ * 
+ * TYPOGRAPHY
+ * Font families..................The fonts used in the design system.
+ * Font weights...................Font weights
+ * Sizes..........................Font sizing for body text, paragraphs, inputs
+ * Heading sizes..................Font sizing for page headings
+ *
+ * BREAKPOINTS
+ * Breakpoints....................Global responsive breakpoints definitions.
+ *
+ * SPACING
+ * Spacing........................Global fixed set of spacing variables
+ */
+/*=============================================
+=                  Colors                     =
+=============================================*/
+/* Brand Colors */
+/* Neutral Colors */
+/* Utility colors */
+/*=====  End of Colors  ======*/
+/*=============================================
+=                Typography                   =
+=============================================*/
+/**
+ *
+ * 1) The playfair font. We'll use this for headings mostly.
+ *     https://fonts.google.com/specimen/Playfair+Display
+ *
+ * 2) The raleway font. We'll use this for the body text.
+ *     https://fonts.google.com/specimen/Raleway
+ */
+/* Font families */
+/* 1 */
+/* 2 */
+/* Font sizes */
+/* Heading font sizes */
+/* Font weights */
+/*=====  End of Typography  ======*/
+/*=============================================
+=            Breakpoints                      =
+=============================================*/
+/*=====  End of Breakpoints  ======*/
+/*=============================================
+=            Spacing                          =
+=============================================*/
+/*=====  End of Spacing  ======*/
+/*=============================================
+=            Foundation - colors              =
+=============================================*/
+/**
+ * This file defines the actual colors that will be used for styling. They will default to the palette
+ * we defined in the _variable.scss file. This is our default palette, and devs can override this
+ * with their own variables.
+ */
+/*=============================================
+=            Global text colors               =
+=============================================*/
+/*=============================================
+=                 Buttons                     =
+=============================================*/
+/*=============================================
+=                 Forms                       =
+=============================================*/
+/*=============================================
+=        Foundation - Typography              =
+=============================================*/
+/**
+ * This file defines the default font sizes to be used on headings and texts. The defaults come
+ * from the palette defined in _variables.scss.
+ */
+/*=============================================
+=            Body font family                  =
+=============================================*/
+/*=============================================
+=            Body font sizes                  =
+=============================================*/
+/*=============================================
+=            Heading font sizes               =
+=============================================*/
+/*=============================================
+=            Head font weights                =
+=============================================*/
+/*=============================================
+=            Mixins                           =
+=============================================*/
+/**
+ *
+ * Helpful reusable function-like things that will be used to implement
+ * styles for components.
+ *
+ */
+.width-none {
+  width: 0;
+}
+
+.height-none {
+  height: 0;
+}
+
+.width-xxxs {
+  width: 0.25rem;
+}
+
+.height-xxxs {
+  height: 0.25rem;
+}
+
+.width-xxs {
+  width: 0.5rem;
+}
+
+.height-xxs {
+  height: 0.5rem;
+}
+
+.width-xs {
+  width: 0.75rem;
+}
+
+.height-xs {
+  height: 0.75rem;
+}
+
+.width-sm {
+  width: 1rem;
+}
+
+.height-sm {
+  height: 1rem;
+}
+
+.width-md {
+  width: 1.5rem;
+}
+
+.height-md {
+  height: 1.5rem;
+}
+
+.width-lg {
+  width: 2rem;
+}
+
+.height-lg {
+  height: 2rem;
+}
+
+.width-xl {
+  width: 3rem;
+}
+
+.height-xl {
+  height: 3rem;
+}
+
+.width-xxl {
+  width: 4.5rem;
+}
+
+.height-xxl {
+  height: 4.5rem;
+}
+
+.width-xxxl {
+  width: 6rem;
+}
+
+.height-xxxl {
+  height: 6rem;
+}

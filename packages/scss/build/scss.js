@@ -12,7 +12,7 @@ if (!fs.existsSync(DIST_DIR)) {
 
 const getComponents = () => {
     let components = [];
-    const types = ['atoms', 'molecules', 'organisms'];
+    const types = ['atoms', 'molecules', 'organisms', 'pages'];
 
     types.forEach((type) => {
         const allFiles = fs.readdirSync(path.resolve(SRC_DIR, `${type}`)).map((file) => ({
