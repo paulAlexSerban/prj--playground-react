@@ -8,5 +8,5 @@ export interface MarginProps {
     bottom?: boolean;
     children?: React.ReactNode;
 }
-declare const Margin: ({ space, children, left, right, top, bottom }: MarginProps) => React.JSX.Element;
+declare const Margin: React.FC<MarginProps>;
 export default Margin;

@@ -5,5 +5,5 @@ interface ColorProps {
     width?: keyof typeof Spacing;
     height?: keyof typeof Spacing;
 }
-declare const Color: ({ hexCode, width, height }: ColorProps) => React.JSX.Element;
+declare const Color: React.FC<ColorProps>;
 export default Color;

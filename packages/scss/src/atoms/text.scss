@@ -1,4 +1,4 @@
-@import '../foundation/all';
+@use '../foundation/all' as *;
 
 .text {
     margin: 0;

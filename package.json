@@ -13,9 +13,9 @@
         "formats:check": "yarn prettier --check .",
         "formats:write": "yarn prettier --write .",
         "lint": "lerna run lint --concurrency=5",
-        "build:dev": "rm -rfv .parcel-cache && lerna run build:dev --concurrency=5",
-        "build:prod": "rm -rfv .parcel-cache && lerna run build:prod --concurrency=5",
-        "start": "rm -rfv .parcel-cache && yarn lerna run start --concurrency=5"
+        "build:dev": "rm -rfv .parcel-cache && lerna run build:dev",
+        "build:prod": "rm -rfv .parcel-cache && lerna run build:prod",
+        "start": "rm -rfv .parcel-cache && yarn lerna run start"
     },
     "devDependencies": {
         "husky": "^8.0.3",

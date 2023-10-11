@@ -8,7 +8,9 @@
     ],
     "scripts": {
         "start": "export NODE_ENV=development && rollup -c -w",
-        "build:dev": "export NODE_ENV=development && rollup --config rollup.config.js"
+        "lint": "echo \"No linting configured\"",
+        "build:dev": "rm -rfv ./lib && export NODE_ENV=development && rollup --config rollup.config.js",
+        "build:prod": "rm -rfv ./lib && export NODE_ENV=production && rollup --config rollup.config.js"
     },
     "devDependencies": {
         "@rollup/plugin-typescript": "^11.1.5",

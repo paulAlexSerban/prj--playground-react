@@ -11,9 +11,10 @@
         "typescript": "^5.2.2"
     },
     "scripts": {
-        "build:dev": "yarn tsc --project tsconfig.json",
-        "build:prod": "yarn tsc --project tsconfig.json",
-        "start": "yarn tsc --project tsconfig.json --watch"
+        "start": "yarn tsc --project tsconfig.json --watch",
+        "lint": "echo \"No linting configured\"",
+        "build:dev": "rm -rfv ./lib && yarn tsc --project tsconfig.json",
+        "build:prod": "rm -rfv ./lib && yarn tsc --project tsconfig.json"
     },
     "type": "module"
 }

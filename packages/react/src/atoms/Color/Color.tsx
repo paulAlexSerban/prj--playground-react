@@ -7,7 +7,7 @@ interface ColorProps {
     height?: keyof typeof Spacing;
 }
 
-const Color = ({ hexCode, width = Spacing.sm, height = Spacing.sm }: ColorProps) => {
+const Color: React.FC<ColorProps> = ({ hexCode, width = Spacing.sm, height = Spacing.sm }) => {
     const className = `width-${width} height-${height}`;
 
     return (

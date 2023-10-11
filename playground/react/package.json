@@ -4,7 +4,9 @@
     "license": "MIT",
     "scripts": {
         "start": "parcel src/index.html -p 3000 --https",
-        "build:dev": "parcel build src/index.html"
+        "lint": "echo \"No linting configured\"",
+        "build:dev": "rm -rfv ./dist && export NODE_ENV=development && parcel build src/index.html",
+        "build:prod": "rm -rfv ./dist && export NODE_ENV=production && parcel build src/index.html --no-source-maps --no-cache --no-autoinstall"
     },
     "devDependencies": {
         "@types/react": "^18.2.27",
@@ -15,8 +17,8 @@
         "typescript": "^5.2.2"
     },
     "dependencies": {
-        "prj--playground-react/foundation": "*",
-        "prj--playground-react/react": "*",
-        "prj--playground-react/scss": "*"
+        "@prj--playground-react/foundation": "*",
+        "@prj--playground-react/react": "*",
+        "@prj--playground-react/scss": "*"
     }
 }
