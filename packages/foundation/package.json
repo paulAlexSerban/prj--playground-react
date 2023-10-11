@@ -7,14 +7,18 @@
         "lib"
     ],
     "devDependencies": {
+        "@babel/preset-env": "^7.22.20",
+        "@babel/preset-typescript": "^7.23.0",
+        "@types/jest": "^29.5.5",
+        "jest": "^29.7.0",
         "tsc": "^2.0.4",
         "typescript": "^5.2.2"
     },
     "scripts": {
+        "test": "jest --verbose --coverage",
         "start": "yarn tsc --project tsconfig.json --watch",
         "lint": "echo \"No linting configured\"",
         "build:dev": "rm -rfv ./lib && yarn tsc --project tsconfig.json",
         "build:prod": "rm -rfv ./lib && yarn tsc --project tsconfig.json"
-    },
-    "type": "module"
+    }
 }
