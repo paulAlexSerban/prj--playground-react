@@ -32,6 +32,10 @@
 -   [ ] Refactor 'prj--fe-ci-build-system' to use monorepo structure as used in this project (prj--playground-react)
 -   [ ] Refactor packages/scss to 'prj--fe-ci-build-system'
 -   [ ] Move Storybook as external library `packages/storybook` - NOT inside `packages/react`
+-   [ ] Rename `packages/scss` to `packages/living-style-guide`
+-   [ ] Rename `packages/react` to `packages/react-components-library`
+-   [ ] Rename `playground` to `frontend`
+-   [ ] Refactor `prj--react-component-library` to use monorepo structure as used in this project (prj--playground-react)
 
 ## Root Commands
 

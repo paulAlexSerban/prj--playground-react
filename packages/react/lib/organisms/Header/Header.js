@@ -2,7 +2,7 @@ import React from 'react';
 import Button from '../../atoms/Button/Button.js';
 
 const Header = ({ user, onLogin, onLogout, onCreateAccount }) => (React.createElement("header", null,
-    React.createElement("div", { className: "storybook-header" },
+    React.createElement("div", { className: "header" },
         React.createElement("div", null,
             React.createElement("svg", { width: "32", height: "32", viewBox: "0 0 32 32", xmlns: "http://www.w3.org/2000/svg" },
                 React.createElement("g", { fill: "none", fillRule: "evenodd" },

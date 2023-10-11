@@ -1,5 +1,7 @@
 /// <reference types="react" />
 import type { StoryObj } from '@storybook/react';
+import '@prj--playground-react/scss/lib/organisms/header.css';
+import '@prj--playground-react/scss/lib/pages/main.css';
 declare const meta: {
     title: string;
     component: import("react").FC<{}>;

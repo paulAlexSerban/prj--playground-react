@@ -1,6 +1,6 @@
 import React from 'react';
 import { Spacing } from '@prj--playground-react/foundation';
-interface ColorProps {
+export interface ColorProps {
     hexCode: string;
     width?: keyof typeof Spacing;
     height?: keyof typeof Spacing;

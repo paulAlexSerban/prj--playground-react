@@ -1,0 +1,10 @@
+import type { Meta, StoryObj } from '@storybook/react';
+import Select from './Select';
+import '@prj--playground-react/scss/lib/molecules/select.css';
+import '@prj--playground-react/scss/lib/global.css';
+declare const meta: Meta<typeof Select>;
+export default meta;
+type Story = StoryObj<typeof Select>;
+export declare const Default: Story;
+export declare const RenderOption: Story;
+export declare const CustomLabel: Story;
