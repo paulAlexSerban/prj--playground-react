@@ -17,7 +17,7 @@ const Margin = ({ space = 'xxxs', children, left, right, top, bottom }) => {
     if (bottom) {
         className = `${className} margin-bottom-${space}`;
     }
-    return React.createElement("div", { className: className }, children);
+    return React.createElement("div", { "data-testid": 'Margin', className: className }, children);
 };
 
 export { Margin as default };

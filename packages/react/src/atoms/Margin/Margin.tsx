@@ -33,7 +33,11 @@ const Margin: React.FC<MarginProps> = ({ space = 'xxxs', children, left, right, 
         className = `${className} margin-bottom-${space}`;
     }
 
-    return <div className={className}>{children}</div>;
+    return (
+        <div data-testid="Margin" className={className}>
+            {children}
+        </div>
+    );
 };
 
 export default Margin;

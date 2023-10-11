@@ -7,7 +7,11 @@ export interface TextProps {
 }
 const Text: React.FC<TextProps> = ({ size = FontSize.base, children }) => {
     const className = `text text-${size}`;
-    return <p className={className}>{children}</p>;
+    return (
+        <p data-testid="Text" className={className}>
+            {children}
+        </p>
+    );
 };
 
 export default Text;

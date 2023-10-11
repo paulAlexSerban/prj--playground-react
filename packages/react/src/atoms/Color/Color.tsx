@@ -12,6 +12,7 @@ const Color: React.FC<ColorProps> = ({ hexCode, width = Spacing.sm, height = Spa
 
     return (
         <div
+            data-testid="Color"
             className={className}
             style={{
                 backgroundColor: hexCode,
