@@ -20,5 +20,6 @@
         "@prj--playground-react/foundation": "*",
         "@prj--playground-react/react": "*",
         "@prj--playground-react/scss": "*"
-    }
+    },
+    "private": true
 }

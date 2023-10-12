@@ -20,5 +20,8 @@
         "lint": "echo \"No linting configured\"",
         "build:dev": "rm -rfv ./lib && yarn tsc --project tsconfig.json",
         "build:prod": "rm -rfv ./lib && yarn tsc --project tsconfig.json"
+    },
+    "publishConfig": {
+        "access": "public"
     }
 }

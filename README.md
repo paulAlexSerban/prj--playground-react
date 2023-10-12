@@ -34,7 +34,8 @@
 -   [ ] Move Storybook as external library `packages/storybook` - NOT inside `packages/react`
 -   [ ] Rename `packages/scss` to `packages/living-style-guide`
 -   [ ] Rename `packages/react` to `packages/react-components-library`
--   [ ] Rename `playground` to `frontend`
+-   [ ] Move `playground` to `frontend`
+    -   [ ] `playground` is private and it is used only for development and testing purposes
 -   [ ] Refactor `prj--react-component-library` to use monorepo structure as used in this project (prj--playground-react)
 
 ## Root Commands

@@ -14,5 +14,8 @@
         "sass": "^1.69.0",
         "stylelint": "^15.10.3",
         "stylelint-config-sass-guidelines": "^10.0.0"
+    },
+    "publishConfig": {
+        "access": "public"
     }
 }
