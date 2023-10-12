@@ -49,3 +49,25 @@
 -   `yarn formats:write` - fix all formats
 -   `yarn start` - start and watch all packages in development mode
 -   `yarn nx graph` - show dependency graph using NX
+
+## Issues to solve in the future
+
+### 1. Can't publish to npm registry
+
+> on: `yarn lerna publish`
+
+```bash
+lerna notice cli v7.3.0
+lerna info versioning independent
+lerna WARN Yarn's registry proxy is broken, replacing with public npm registry
+lerna WARN If you don't have an npm token, you should exit and run `npm login`
+lerna info Assuming all packages changed
+... some logs ...
+lerna WARN notice Package failed to publish: @prj--playground-react/foundation
+lerna ERR! E404 Not found
+lerna ERR! errno "undefined" is not a valid exit code - exiting with code 1
+lerna WARN notice Package failed to publish: @prj--playground-react/scss
+lerna ERR! E404 Not found
+lerna ERR! errno "undefined" is not a valid exit code - exiting with code 1
+error Command failed with exit code 1.
+```

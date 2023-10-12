@@ -16,7 +16,8 @@
         "build:dev": "rm -rfv .parcel-cache && lerna run build:dev",
         "build:prod": "rm -rfv .parcel-cache && lerna run build:prod",
         "start": "rm -rfv .parcel-cache && yarn lerna run start --stream --parallel",
-        "chromatic": "yarn lerna run chromatic:publish --scope=@prj--playground-react/react --stream"
+        "chromatic": "yarn lerna run chromatic:publish --scope=@prj--playground-react/react --stream",
+        "version": "yarn lerna version"
     },
     "devDependencies": {
         "husky": "^8.0.3",
