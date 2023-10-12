@@ -6,7 +6,7 @@
     "stream": true,
     "command": {
         "version": {
-            "message": "chore(release): publish %s [skip ci]"
+            "message": "chore(release): publish [skip ci]"
         }
     }
 }
