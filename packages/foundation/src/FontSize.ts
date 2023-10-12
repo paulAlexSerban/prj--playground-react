@@ -1,3 +1,6 @@
+/**
+ * Font size
+ */
 const fontSizes: {
     xs: 'xs';
     sm: 'sm';

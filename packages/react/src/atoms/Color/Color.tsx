@@ -7,6 +7,11 @@ export interface ColorProps {
     height?: keyof typeof Spacing;
 }
 
+/**
+ * Color
+ * @param param0 
+ * @returns 
+ */
 const Color: React.FC<ColorProps> = ({ hexCode, width = Spacing.sm, height = Spacing.sm }) => {
     const className = `width-${width} height-${height}`;
 
