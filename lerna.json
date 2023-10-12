@@ -1,14 +1,13 @@
 {
     "$schema": "node_modules/lerna/schemas/lerna-schema.json",
     "version": "independent",
+    "granularPathspec": false,
     "packages": ["packages/*", "playground/*"],
     "npmClient": "yarn",
     "stream": true,
     "command": {
         "version": {
-            "message": "chore(release): publish [skip ci]"
-        },
-        "publish": {
+            "message": "chore(release): publish [skip ci]",
             "conventionalCommits": true
         }
     }

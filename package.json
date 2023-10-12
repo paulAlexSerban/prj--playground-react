@@ -17,7 +17,7 @@
         "build:prod": "rm -rfv .parcel-cache && lerna run build:prod",
         "start": "rm -rfv .parcel-cache && yarn lerna run start --stream --parallel",
         "chromatic": "yarn lerna run chromatic:publish --scope=@prj--playground-react/react --stream",
-        "version": "yarn lerna version",
+        "version": "bash scripts/version.bash",
         "commit": "yarn git-cz"
     },
     "devDependencies": {
@@ -55,6 +55,7 @@
     },
     "husky": {
         "hooks": {
+            "prepare-commit-msg": "exec < /dev/tty && npx cz --hook || true",
             "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
         }
     }
