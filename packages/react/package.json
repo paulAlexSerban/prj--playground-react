@@ -55,5 +55,6 @@
         "access": "public"
     },
     "readme": "ERROR: No README data found!",
-    "_id": "@prj--playground-react/react@0.1.0"
+    "_id": "@prj--playground-react/react@0.1.0",
+    "gitHead": "61a2d86e9917e1c31664100e607aae6701cd3ca0"
 }
