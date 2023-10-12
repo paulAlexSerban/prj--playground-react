@@ -15,7 +15,8 @@
         "lint": "lerna run lint --concurrency=5",
         "build:dev": "rm -rfv .parcel-cache && lerna run build:dev",
         "build:prod": "rm -rfv .parcel-cache && lerna run build:prod",
-        "start": "rm -rfv .parcel-cache && yarn lerna run start --stream --parallel"
+        "start": "rm -rfv .parcel-cache && yarn lerna run start --stream --parallel",
+        "chromatic": "yarn lerna run chromatic:publish --scope=@prj--playground-react/react --stream"
     },
     "devDependencies": {
         "husky": "^8.0.3",

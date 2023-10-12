@@ -1,21 +1,32 @@
 const typescript = require('@rollup/plugin-typescript');
+const terser = require('@rollup/plugin-terser');
+
+const NODE_ENV = process.env.NODE_ENV || 'development';
+
+const input = [
+    './src/index.ts',
+    './src/atoms/Color/index.ts',
+    './src/atoms/Text/index.ts',
+    './src/atoms/Margin/index.ts',
+    './src/atoms/Button/index.ts',
+    './src/molecules/Select/index.ts',
+    './src/organisms/Header/index.ts',
+];
+
+const plugins = [typescript()];
+
+if (NODE_ENV === 'production') {
+    plugins.push(terser());
+}
 
 module.exports = {
-    input: [
-        './src/index.ts',
-        './src/atoms/Color/index.ts',
-        './src/atoms/Text/index.ts',
-        './src/atoms/Margin/index.ts',
-        './src/atoms/Button/index.ts',
-        './src/molecules/Select/index.ts',
-        './src/organisms/Header/index.ts',
-    ],
+    input,
     output: {
         dir: 'lib',
         format: 'esm',
         sourcemap: true,
         preserveModules: true,
     },
-    plugins: [typescript()],
+    plugins,
     external: ['react', '@prj--playground-react/foundation'],
 };
