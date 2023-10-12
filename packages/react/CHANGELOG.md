@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/paulAlexSerban/prj--playground-react/compare/@prj--playground-react/react@0.2.3...@prj--playground-react/react@0.3.0) (2023-10-12)
+
+### Features
+
+-   added chormatic tests ([fab13db](https://github.com/paulAlexSerban/prj--playground-react/commit/fab13db64d15606ec3e1bee1ac658c7b21827ee9))
+
 ## [0.2.3](https://github.com/paulAlexSerban/prj--playground-react/compare/@prj--playground-react/react@0.2.2...@prj--playground-react/react@0.2.3) (2023-10-12)
 
 ### Bug Fixes

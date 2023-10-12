@@ -1,6 +1,6 @@
 {
     "name": "@playground/react",
-    "version": "0.2.3",
+    "version": "0.2.4",
     "license": "MIT",
     "scripts": {
         "start": "export NODE_ENV=development && parcel build src/index.html && parcel src/index.html -p 3000 --https",
@@ -18,7 +18,7 @@
     },
     "dependencies": {
         "@prj--playground-react/foundation": "^0.2.3",
-        "@prj--playground-react/react": "^0.2.3",
+        "@prj--playground-react/react": "^0.3.0",
         "@prj--playground-react/scss": "^0.2.3"
     },
     "private": true
