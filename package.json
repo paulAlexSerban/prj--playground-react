@@ -17,9 +17,12 @@
         "build:prod": "rm -rfv .parcel-cache && lerna run build:prod",
         "start": "rm -rfv .parcel-cache && yarn lerna run start --stream --parallel",
         "chromatic": "yarn lerna run chromatic:publish --scope=@prj--playground-react/react --stream",
-        "version": "yarn lerna version"
+        "version": "yarn lerna version",
+        "commit": "yarn git-cz"
     },
     "devDependencies": {
+        "commitizen": "^4.3.0",
+        "cz-conventional-changelog": "^3.3.0",
         "husky": "^8.0.3",
         "process": "^0.11.10"
     },
@@ -42,5 +45,10 @@
     "dependencies": {
         "lerna": "^7.3.0",
         "prettier": "^3.0.3"
+    },
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+        }
     }
 }
