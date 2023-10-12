@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.1](https://github.com/paulAlexSerban/prj--playground-react/compare/@prj--playground-react/react@0.3.0...@prj--playground-react/react@0.3.1) (2023-10-12)
+
+**Note:** Version bump only for package @prj--playground-react/react
+
 # [0.3.0](https://github.com/paulAlexSerban/prj--playground-react/compare/@prj--playground-react/react@0.2.3...@prj--playground-react/react@0.3.0) (2023-10-12)
 
 ### Features
