@@ -71,3 +71,15 @@ lerna ERR! E404 Not found
 lerna ERR! errno "undefined" is not a valid exit code - exiting with code 1
 error Command failed with exit code 1.
 ```
+
+### Deploy Storybook to Chromatic
+
+-   there is an issue in GitHub Actions when trying to deploy Storybook to Chromatic
+
+### Deploy Storybook to Netlify
+
+-   follow course instructions to deploy Storybook to Netlify
+
+### Refactor CI Build System for better performance
+
+-   use CI from other projects
