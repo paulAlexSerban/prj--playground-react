@@ -3,6 +3,9 @@
 cd "$(dirname "$0")" || exit
 yarn --cwd .. lerna version --no-push --yes
 
+# format checngelogs
+yarn --cwd .. formats:write
+
 # Add changes to the staging area
 git add .
 
