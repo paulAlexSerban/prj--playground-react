@@ -50,6 +50,7 @@
 -   `yarn start` - start and watch all packages in development mode
 -   `yarn nx graph` - show dependency graph using NX
 -   `yarn commit` - commit changes using Commitizen
+-   `yarn lerna version` - bump version of all packages using Lerna
 
 ## Issues to solve in the future
 
