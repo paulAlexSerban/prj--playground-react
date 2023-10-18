@@ -31,7 +31,7 @@
 
 -   [ ] Refactor 'prj--fe-ci-build-system' to use monorepo structure as used in this project (prj--playground-react)
 -   [ ] Refactor packages/scss to 'prj--fe-ci-build-system'
--   [ ] Move Storybook as external library `packages/storybook` - NOT inside `packages/react`
+-   [x] Move Storybook as separate library `packages/storybook` - NOT inside `packages/react`
 -   [ ] Rename `packages/scss` to `packages/living-style-guide`
 -   [ ] Rename `packages/react` to `packages/react-components-library`
 -   [ ] Move `playground` to `frontend`
@@ -49,6 +49,7 @@
 -   `yarn formats:write` - fix all formats
 -   `yarn start` - start and watch all packages in development mode
 -   `yarn nx graph` - show dependency graph using NX
+-   `yarn commit` - commit changes using Commitizen
 
 ## Issues to solve in the future
 
