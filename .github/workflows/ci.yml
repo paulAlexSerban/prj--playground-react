@@ -1,0 +1,50 @@
+name: Build & Test CI
+
+on:
+    push:
+        branches: [develop]
+    pull_request:
+        branches: [main]
+
+# Sets the GITHUB_TOKEN permissions to allow deployment to GitHub Pages
+permissions:
+    contents: read
+    pages: write
+    id-token: write
+
+# Allow one concurrent deployment
+concurrency:
+    group: 'pages'
+    cancel-in-progress: true
+
+env:
+    NODE_VERSION: 18.17.1
+
+jobs:
+    builds:
+        runs-on: ubuntu-latest
+        steps:
+            - name: '📥 checkout repository'
+              uses: actions/checkout@v3
+              with:
+                  fetch-depth: 0
+
+            - name: '🔧  Setup NodeJS ${{ env.NODE_VERSION }}'
+              uses: actions/setup-node@v3
+              with:
+                  node-version: ${{ env.NODE_VERSION }}
+                  cache: 'yarn'
+
+            - name: Install dependencies
+              run: yarn install
+
+            - name: Build packages
+              run: yarn build:prod
+
+            - name: Automated tests
+              run: yarn run test
+
+            - name: Visual regression tests
+              env:
+                  CHROMATIC_PROJECT_TOKEN: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+              run: yarn test:chromatic

@@ -1,0 +1,63 @@
+{
+    "name": "@prj--playground-react/core",
+    "version": "0.0.0",
+    "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/paulAlexSerban/prj--playground-react.git"
+    },
+    "author": "paulAlexSerban <paul.alex.serban@gmail.com>",
+    "license": "MIT",
+    "scripts": {
+        "prepare": "husky install",
+        "formats:check": "yarn prettier --check .",
+        "formats:write": "yarn prettier --write .",
+        "lint": "lerna run lint --concurrency=5",
+        "build:dev": "rm -rfv .parcel-cache && lerna run build:dev",
+        "build:prod": "rm -rfv .parcel-cache && lerna run build:prod",
+        "start": "rm -rfv .parcel-cache && yarn lerna run start --stream --parallel",
+        "test": "yarn lerna run test --stream --parallel",
+        "test:chromatic": "yarn lerna run test:chromatic",
+        "version": "bash scripts/version.bash",
+        "commit": "yarn git-cz"
+    },
+    "devDependencies": {
+        "@commitlint/cli": "^17.7.2",
+        "@commitlint/config-conventional": "^17.7.0",
+        "commitizen": "^4.3.0",
+        "cz-conventional-changelog": "^3.3.0",
+        "husky": "^8.0.3",
+        "process": "^0.11.10"
+    },
+    "dependencies": {
+        "lerna": "^7.3.0",
+        "prettier": "^3.0.3"
+    },
+    "description": "Coursework repository for the React course - Advanced React for Enterprise Applications: react for Senior Engineers",
+    "bugs": {
+        "url": "https://github.com/paulAlexSerban/prj--playground-react/issues"
+    },
+    "homepage": "https://github.com/paulAlexSerban/prj--playground-react#readme",
+    "keywords": [],
+    "private": true,
+    "workspaces": {
+        "packages": [
+            "packages/*",
+            "playground/*"
+        ],
+        "nohoist": [
+            "**/normalize-scss"
+        ]
+    },
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+        }
+    },
+    "husky": {
+        "hooks": {
+            "prepare-commit-msg": "exec < /dev/tty && npx cz --hook || true",
+            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+        }
+    }
+}

@@ -1,0 +1,11 @@
+@use '../foundation/all' as *;
+
+.text {
+    margin: 0;
+}
+
+@each $size, $value in $fs {
+    .text-#{$size} {
+        font-size: $value;
+    }
+}

@@ -1,0 +1,15 @@
+@use '../foundation/all' as *;
+
+$sides: left, right, top, bottom;
+
+@each $space, $value in $spacing {
+    .margin-#{$space} {
+        margin: $value;
+    }
+
+    @each $side in $sides {
+        .margin-#{$side}-#{$space} {
+            margin-#{$side}: $value;
+        }
+    }
+}
