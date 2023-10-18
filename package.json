@@ -19,7 +19,8 @@
         "test": "yarn lerna run test --stream --parallel",
         "test:chromatic": "yarn lerna run test:chromatic",
         "version": "bash scripts/version.bash",
-        "commit": "yarn git-cz"
+        "commit": "yarn git-cz",
+        "storybook": "yarn lerna run storybook"
     },
     "devDependencies": {
         "@commitlint/cli": "^17.7.2",

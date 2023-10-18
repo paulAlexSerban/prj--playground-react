@@ -1,5 +1,5 @@
 {
-    "name": "@prj--playground-react/react",
+    "name": "@prj--playground-react/react-cmp-lib",
     "version": "0.4.0",
     "main": "lib/index.js",
     "license": "MIT",
@@ -36,6 +36,6 @@
         "access": "public"
     },
     "readme": "ERROR: No README data found!",
-    "_id": "@prj--playground-react/react@0.1.0",
+    "_id": "@prj--playground-react/react-cmp-lib@0.1.0",
     "gitHead": "1d60eb697e8de2f3d72ca816f3763ec42a52b1aa"
 }

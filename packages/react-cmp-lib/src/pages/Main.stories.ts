@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { within, userEvent } from '@storybook/testing-library';
 
-import '@prj--playground-react/scss/lib/organisms/header.css';
-import '@prj--playground-react/scss/lib/pages/main.css';
+import '@prj--playground-react/lsg/lib/organisms/header.css';
+import '@prj--playground-react/lsg/lib/pages/main.css';
 
 import { Page } from './Main';
 

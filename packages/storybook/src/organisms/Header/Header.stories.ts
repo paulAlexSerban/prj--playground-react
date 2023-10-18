@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import '@prj--playground-react/scss/lib/organisms/header.css';
-import { Header } from '@prj--playground-react/react';
+import '@prj--playground-react/lsg/lib/organisms/header.css';
+import { Header } from '@prj--playground-react/react-cmp-lib';
 
 const meta = {
     title: 'Organisms/Header',

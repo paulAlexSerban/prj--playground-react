@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import '@prj--playground-react/scss/lib/organisms/header.css';
+import '@prj--playground-react/lsg/lib/organisms/header.css';
 import Header from './Header';
 
 const meta = {

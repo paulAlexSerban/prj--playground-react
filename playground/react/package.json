@@ -18,8 +18,8 @@
     },
     "dependencies": {
         "@prj--playground-react/foundation": "^0.2.3",
-        "@prj--playground-react/react": "^0.4.0",
-        "@prj--playground-react/scss": "^0.2.3"
+        "@prj--playground-react/react-cmp-lib": "^0.4.0",
+        "@prj--playground-react/lsg": "^0.2.3"
     },
     "private": true
 }
