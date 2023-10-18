@@ -1,6 +1,6 @@
 {
     "name": "@playground/react",
-    "version": "0.2.6",
+    "version": "0.2.7",
     "license": "MIT",
     "scripts": {
         "start": "export NODE_ENV=development && parcel build src/index.html && parcel src/index.html -p 3000 --https",
@@ -18,8 +18,8 @@
     },
     "dependencies": {
         "@prj--playground-react/foundation": "^0.2.3",
-        "@prj--playground-react/react-cmp-lib": "^0.4.0",
-        "@prj--playground-react/lsg": "^0.2.3"
+        "@prj--playground-react/lsg": "^0.2.4",
+        "@prj--playground-react/react-cmp-lib": "^0.4.1"
     },
     "private": true
 }

@@ -1,6 +1,6 @@
 {
     "name": "storybook",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "main": "index.js",
     "license": "MIT",
     "scripts": {
@@ -31,7 +31,7 @@
     },
     "dependencies": {
         "@prj--playground-react/foundation": "*",
-        "@prj--playground-react/react-cmp-lib": "^0.4.0"
+        "@prj--playground-react/react-cmp-lib": "^0.4.1"
     },
     "publishConfig": {
         "access": "public"

@@ -1,6 +1,6 @@
 {
     "name": "@prj--playground-react/lsg",
-    "version": "0.2.3",
+    "version": "0.2.4",
     "main": "index.js",
     "license": "MIT",
     "scripts": {

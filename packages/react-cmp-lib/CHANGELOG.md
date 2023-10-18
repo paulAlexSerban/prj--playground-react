@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.4.1 (2023-10-18)
+
+**Note:** Version bump only for package @prj--playground-react/react-cmp-lib
+
 # [0.4.0](https://github.com/paulAlexSerban/prj--playground-react/compare/@prj--playground-react/react-cmp-lib@0.3.1...@prj--playground-react/react-cmp-lib@0.4.0) (2023-10-18)
 
 ### Features
