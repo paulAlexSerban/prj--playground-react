@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import Color from './Color';
+import { Color } from '@prj--playground-react/react';
 import '@prj--playground-react/scss/lib/atoms/utilities.css';
 import { text, select } from '@storybook/addon-knobs';
 
