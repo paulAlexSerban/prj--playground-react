@@ -93,9 +93,9 @@ The project comprises multiple packages as sub-projects, with dependencies betwe
 -   [x] Refactor `prj--react-component-library` to use monorepo structure as used in this project (prj--playground-react)
 -   [ ] follow course instructions to deploy Storybook to Netlify
 -   [ ] refactor CI build for better performance (use CI for better performance)
-    -   [ ] lint, formats and test 
-        -   [ ] - run locally on committing for development branches
-        -   [ ] - run in CI for master branch and on pull requests to release branches
+    -   [ ] lint, formats and test
+        -   [ ] -   run locally on committing for development branches
+        -   [ ] -   run in CI for master branch and on pull requests to release branches
 
 ### Issues
 
