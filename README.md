@@ -6,7 +6,6 @@
 >
 > -   Monorepo's - A Beginner's Guide (udemy)
 > -   The Complete Github Actions & Workflows Guide (udemy)
-> -
 > -   Master the Core Concepts of React and Storybook (udemy)
 
 ## 1. Introduction
@@ -91,9 +90,12 @@ The project comprises multiple packages as sub-projects, with dependencies betwe
 -   [x] Rename `packages/react` to `packages/react-components-library`
 -   [ ] Move `playground` to `frontend`
     -   [ ] `playground` is private and it is used only for development and testing purposes
--   [ ] Refactor `prj--react-component-library` to use monorepo structure as used in this project (prj--playground-react)
+-   [x] Refactor `prj--react-component-library` to use monorepo structure as used in this project (prj--playground-react)
 -   [ ] follow course instructions to deploy Storybook to Netlify
--   [ ] Refactor CI Build System for better performance (use CI from other projects)
+-   [ ] refactor CI build for better performance (use CI for better performance)
+    -   [ ] lint, formats and test 
+        -   [ ] - run locally on committing for development branches
+        -   [ ] - run in CI for master branch and on pull requests to release branches
 
 ### Issues
 
