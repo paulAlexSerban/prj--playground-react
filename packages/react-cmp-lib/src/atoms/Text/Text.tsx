@@ -1,5 +1,5 @@
 import React from 'react';
-import { FontSize } from '@prj--playground-react/foundation';
+import { FontSize } from '@prj--react-playground-typescript/foundation';
 
 export interface TextProps {
     size?: keyof typeof FontSize;

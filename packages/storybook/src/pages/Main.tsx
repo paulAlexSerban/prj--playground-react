@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Header } from '@prj--playground-react/react-cmp-lib';
+import { Header } from '@prj--react-playground-typescript/react-cmp-lib';
 
 type User = {
     name: string;

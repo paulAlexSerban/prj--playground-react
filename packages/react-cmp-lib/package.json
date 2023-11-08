@@ -1,5 +1,5 @@
 {
-    "name": "@prj--playground-react/react-cmp-lib",
+    "name": "@prj--react-playground-typescript/react-cmp-lib",
     "version": "0.4.1",
     "main": "lib/index.js",
     "license": "MIT",
@@ -28,7 +28,7 @@
         "typescript": "^5.2.2"
     },
     "dependencies": {
-        "@prj--playground-react/foundation": "^0.2.3",
+        "@prj--react-playground-typescript/foundation": "^0.2.3",
         "babel-jest": "^29.7.0",
         "jest-environment-jsdom": "^29.7.0"
     },
@@ -36,6 +36,6 @@
         "access": "public"
     },
     "readme": "ERROR: No README data found!",
-    "_id": "@prj--playground-react/react-cmp-lib@0.1.0",
+    "_id": "@prj--react-playground-typescript/react-cmp-lib@0.1.0",
     "gitHead": "1d60eb697e8de2f3d72ca816f3763ec42a52b1aa"
 }

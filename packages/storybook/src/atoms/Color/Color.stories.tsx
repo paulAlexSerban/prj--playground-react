@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Color } from '@prj--playground-react/react-cmp-lib';
-import '@prj--playground-react/lsg/lib/atoms/utilities.css';
+import { Color } from '@prj--react-playground-typescript/react-cmp-lib';
+import '@prj--react-playground-typescript/lsg/lib/atoms/utilities.css';
 import { text, select } from '@storybook/addon-knobs';
 
 const meta = {

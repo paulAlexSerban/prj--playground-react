@@ -17,9 +17,9 @@
         "typescript": "^5.2.2"
     },
     "dependencies": {
-        "@prj--playground-react/foundation": "^0.2.3",
-        "@prj--playground-react/lsg": "^0.2.4",
-        "@prj--playground-react/react-cmp-lib": "^0.4.1"
+        "@prj--react-playground-typescript/foundation": "^0.2.3",
+        "@prj--react-playground-typescript/lsg": "^0.2.4",
+        "@prj--react-playground-typescript/react-cmp-lib": "^0.4.1"
     },
     "private": true
 }

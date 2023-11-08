@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import '@prj--playground-react/lsg/lib/atoms/button.css';
-import { Button } from '@prj--playground-react/react-cmp-lib';
+import '@prj--react-playground-typescript/lsg/lib/atoms/button.css';
+import { Button } from '@prj--react-playground-typescript/react-cmp-lib';
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {

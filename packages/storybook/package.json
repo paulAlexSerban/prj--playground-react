@@ -30,8 +30,8 @@
         "typescript": "^5.2.2"
     },
     "dependencies": {
-        "@prj--playground-react/foundation": "*",
-        "@prj--playground-react/react-cmp-lib": "^0.4.1"
+        "@prj--react-playground-typescript/foundation": "*",
+        "@prj--react-playground-typescript/react-cmp-lib": "^0.4.1"
     },
     "publishConfig": {
         "access": "public"

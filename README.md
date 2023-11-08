@@ -83,14 +83,14 @@ The project comprises multiple packages as sub-projects, with dependencies betwe
 
 ### Future Improvements or Ideas
 
--   [ ] Refactor 'prj--fe-ci-build-system' to use monorepo structure as used in this project (prj--playground-react)
+-   [ ] Refactor 'prj--fe-ci-build-system' to use monorepo structure as used in this project (prj--react-playground-typescript)
 -   [ ] Refactor packages/scss to 'prj--fe-ci-build-system'
 -   [x] Move Storybook as separate library `packages/storybook` - NOT inside `packages/react`
 -   [x] Rename `packages/scss` to `packages/living-style-guide`
 -   [x] Rename `packages/react` to `packages/react-components-library`
 -   [ ] Move `playground` to `frontend`
     -   [ ] `playground` is private and it is used only for development and testing purposes
--   [x] Refactor `prj--react-component-library` to use monorepo structure as used in this project (prj--playground-react)
+-   [x] Refactor `prj--react-component-library` to use monorepo structure as used in this project (prj--react-playground-typescript)
 -   [ ] follow course instructions to deploy Storybook to Netlify
 -   [ ] refactor CI build for better performance (use CI for better performance)
     -   [ ] lint, formats and test
@@ -112,10 +112,10 @@ lerna WARN Yarn's registry proxy is broken, replacing with public npm registry
 lerna WARN If you don't have an npm token, you should exit and run `npm login`
 lerna info Assuming all packages changed
 ... some logs ...
-lerna WARN notice Package failed to publish: @prj--playground-react/foundation
+lerna WARN notice Package failed to publish: @prj--react-playground-typescript/foundation
 lerna ERR! E404 Not found
 lerna ERR! errno "undefined" is not a valid exit code - exiting with code 1
-lerna WARN notice Package failed to publish: @prj--playground-react/lsg
+lerna WARN notice Package failed to publish: @prj--react-playground-typescript/lsg
 lerna ERR! E404 Not found
 lerna ERR! errno "undefined" is not a valid exit code - exiting with code 1
 error Command failed with exit code 1.

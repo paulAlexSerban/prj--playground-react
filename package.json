@@ -1,10 +1,10 @@
 {
-    "name": "@prj--playground-react/core",
+    "name": "@prj--react-playground-typescript/core",
     "version": "0.0.0",
     "main": "index.js",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/paulAlexSerban/prj--playground-react.git"
+        "url": "git+https://github.com/paulAlexSerban/prj--react-playground-typescript.git"
     },
     "author": "paulAlexSerban <paul.alex.serban@gmail.com>",
     "license": "MIT",
@@ -36,9 +36,9 @@
     },
     "description": "Coursework repository for the React course - Advanced React for Enterprise Applications: react for Senior Engineers",
     "bugs": {
-        "url": "https://github.com/paulAlexSerban/prj--playground-react/issues"
+        "url": "https://github.com/paulAlexSerban/prj--react-playground-typescript/issues"
     },
-    "homepage": "https://github.com/paulAlexSerban/prj--playground-react#readme",
+    "homepage": "https://github.com/paulAlexSerban/prj--react-playground-typescript#readme",
     "keywords": [],
     "private": true,
     "workspaces": {

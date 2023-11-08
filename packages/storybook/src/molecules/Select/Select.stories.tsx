@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Select } from '@prj--playground-react/react-cmp-lib';
+import { Select } from '@prj--react-playground-typescript/react-cmp-lib';
 import React from 'react';
 
-import '@prj--playground-react/lsg/lib/molecules/select.css';
-import '@prj--playground-react/lsg/lib/global.css';
+import '@prj--react-playground-typescript/lsg/lib/molecules/select.css';
+import '@prj--react-playground-typescript/lsg/lib/global.css';
 
 const meta: Meta<typeof Select> = {
     title: 'Molecules/Select',
