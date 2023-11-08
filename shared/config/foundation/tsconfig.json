@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "outDir": "../../foundation/lib",
+        "module": "esnext",
+        "target": "esnext",
+        "declaration": true,
+        "moduleResolution": "node",
+        "preserveWatchOutput": true
+    },
+    "include": ["../../foundation/src/**/*"],
+    "exclude": ["../../foundation/node_modules", "../../foundation/lib", "../../foundation/src/tests"]
+}

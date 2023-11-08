@@ -2,10 +2,6 @@
     "name": "@prj--react-playground-typescript/core",
     "version": "0.0.0",
     "main": "index.js",
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/paulAlexSerban/prj--react-playground-typescript.git"
-    },
     "author": "paulAlexSerban <paul.alex.serban@gmail.com>",
     "license": "MIT",
     "scripts": {
@@ -43,8 +39,15 @@
     "private": true,
     "workspaces": {
         "packages": [
-            "packages/*",
-            "playground/*"
+            "assets/*",
+            "assets/",
+            "backend/*",
+            "database/*",
+            "frontend/*",
+            "frontend/**/*",
+            "shared/*",
+            "shared/**/*",
+            "tools/*"
         ],
         "nohoist": [
             "**/normalize-scss"
