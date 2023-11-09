@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "outDir": "../select-dropdown-app/lib",
+        "module": "esnext",
+        "lib": ["DOM", "ESNext"],
+        "jsx": "react",
+        "allowSyntheticDefaultImports": true,
+        "target": "esnext",
+        "noImplicitAny": true,
+        "strictNullChecks": true,
+        "noImplicitReturns": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "declaration": true,
+        "moduleResolution": "node"
+    },
+    "include": ["../select-dropdown-app/src"],
+    "exclude": ["../select-dropdown-app/node_modules", "../select-dropdown-app/lib"]
+}
