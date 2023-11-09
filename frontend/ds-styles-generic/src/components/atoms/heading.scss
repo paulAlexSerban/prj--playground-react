@@ -30,6 +30,12 @@
         line-height: 1.2;
     }
 
+    &--6 {
+        font-size: 0.8rem;
+        font-weight: 700;
+        line-height: 1.2;
+    }
+
     &--align-left {
         text-align: left;
     }
@@ -40,5 +46,10 @@
 
     &--align-right {
         text-align: right;
+    }
+
+    span {
+        display: block;
+        font-size: 1.2rem;
     }
 }
