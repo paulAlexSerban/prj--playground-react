@@ -14,7 +14,7 @@
         "start": "rm -rfv .parcel-cache && yarn lerna run start --stream --parallel",
         "test": "yarn lerna run test --stream --parallel",
         "test:chromatic": "yarn lerna run test:chromatic",
-        "version": "bash scripts/version.bash",
+        "version": "bash tools/build-scripts/version.bash",
         "commit": "yarn git-cz",
         "storybook": "yarn lerna run storybook"
     },

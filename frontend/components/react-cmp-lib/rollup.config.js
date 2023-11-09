@@ -28,5 +28,5 @@ module.exports = {
         preserveModules: true,
     },
     plugins,
-    external: ['react', '@prj--react-playground-typescript/foundation'],
+    external: ['react', '@prj--react-playground-typescript/foundation-ts'],
 };
