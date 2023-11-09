@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { within, userEvent } from '@storybook/testing-library';
 
+import '@prj--react-playground-typescript/styles-generic/lib/components/atoms/button.css';
 import '@prj--react-playground-typescript/styles-generic/lib/components/organisms/header.css';
 import '@prj--react-playground-typescript/styles-generic/lib/system/pages/main.css';
 
