@@ -1,10 +1,10 @@
 import React from 'react';
-import { Spacing } from '@prj--react-playground-typescript/foundation-ts';
+import { spacing } from '@prj--react-playground-typescript/foundation-ts';
 
 export interface ColorProps {
     hexCode: string;
-    width?: keyof typeof Spacing;
-    height?: keyof typeof Spacing;
+    width?: keyof typeof spacing;
+    height?: keyof typeof spacing;
 }
 
 /**
@@ -12,7 +12,7 @@ export interface ColorProps {
  * @param param0
  * @returns
  */
-const Color: React.FC<ColorProps> = ({ hexCode, width = Spacing.sm, height = Spacing.sm }) => {
+const Color: React.FC<ColorProps> = ({ hexCode, width = spacing.sm, height = spacing.sm }) => {
     const className = `width-${width} height-${height}`;
 
     return (

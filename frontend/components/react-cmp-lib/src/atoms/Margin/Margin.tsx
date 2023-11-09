@@ -1,8 +1,8 @@
 import React from 'react';
-import { Spacing } from '@prj--react-playground-typescript/foundation-ts';
+import { spacing } from '@prj--react-playground-typescript/foundation-ts';
 
 export interface MarginProps {
-    space?: keyof typeof Spacing;
+    space?: keyof typeof spacing;
     left?: boolean;
     right?: boolean;
     top?: boolean;

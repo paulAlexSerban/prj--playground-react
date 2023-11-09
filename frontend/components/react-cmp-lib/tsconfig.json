@@ -1,5 +1,6 @@
 {
     "compilerOptions": {
+        "baseUrl": ".",
         "outDir": "lib",
         "module": "esnext",
         "lib": ["DOM", "ESNext"],
@@ -14,6 +15,11 @@
         "declaration": true,
         "moduleResolution": "node"
     },
-    "include": ["src"],
+    "include": [
+        "src",
+        "../../../../prj--reactjs-application-library/frontend/components/generic-lib/src/atoms/Heading",
+        "../../../../prj--reactjs-application-library/frontend/components/generic-lib/src/atoms/Icon",
+        "../../../../prj--reactjs-application-library/frontend/components/generic-lib/src/atoms/Paragraph"
+    ],
     "exclude": ["node_modules", "lib"]
 }

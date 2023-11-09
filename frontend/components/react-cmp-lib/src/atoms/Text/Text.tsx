@@ -1,11 +1,11 @@
 import React from 'react';
-import { FontSize } from '@prj--react-playground-typescript/foundation-ts';
+import { fontSize } from '@prj--react-playground-typescript/foundation-ts';
 
 export interface TextProps {
-    size?: keyof typeof FontSize;
+    size?: keyof typeof fontSize;
     children: React.ReactNode;
 }
-const Text: React.FC<TextProps> = ({ size = FontSize.base, children }) => {
+const Text: React.FC<TextProps> = ({ size = fontSize.base, children }) => {
     const className = `text text-${size}`;
     return (
         <p data-testid="Text" className={className}>
