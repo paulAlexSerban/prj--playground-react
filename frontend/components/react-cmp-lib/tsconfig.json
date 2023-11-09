@@ -15,11 +15,6 @@
         "declaration": true,
         "moduleResolution": "node"
     },
-    "include": [
-        "src",
-        "../../../../prj--reactjs-application-library/frontend/components/generic-lib/src/atoms/Heading",
-        "../../../../prj--reactjs-application-library/frontend/components/generic-lib/src/atoms/Icon",
-        "../../../../prj--reactjs-application-library/frontend/components/generic-lib/src/atoms/Paragraph"
-    ],
+    "include": ["src"],
     "exclude": ["node_modules", "lib"]
 }

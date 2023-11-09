@@ -6,7 +6,7 @@ const NODE_ENV = process.env.NODE_ENV || 'development';
 const input = [
     './src/index.ts',
     './src/atoms/Color/index.ts',
-    './src/atoms/Text/index.ts',
+    './src/atoms/Paragraph/index.ts',
     './src/atoms/Margin/index.ts',
     './src/atoms/Button/index.ts',
     './src/molecules/Select/index.ts',

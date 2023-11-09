@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect, KeyboardEventHandler, createRef } from 'react';
 
-import Text from '../../atoms/Text';
+import Text from '../../atoms/Paragraph';
 
 export const KEY_CODES = {
     ENTER: 13,

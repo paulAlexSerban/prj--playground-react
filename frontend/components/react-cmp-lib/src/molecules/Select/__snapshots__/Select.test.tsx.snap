@@ -12,8 +12,8 @@ exports[`snapshot of the base state 1`] = `
       data-testid="SelectButton"
     >
       <p
-        class="text text-base"
-        data-testid="Text"
+        class="paragraph paragraph--base"
+        data-testid="Paragraph"
       >
         Please select an option ...
       </p>
@@ -50,8 +50,8 @@ exports[`snapshot of the base state 1`] = `
         tabindex="0"
       >
         <p
-          class="text text-base"
-          data-testid="Text"
+          class="paragraph paragraph--base"
+          data-testid="Paragraph"
         >
           Strict Black
         </p>
@@ -66,8 +66,8 @@ exports[`snapshot of the base state 1`] = `
         tabindex="0"
       >
         <p
-          class="text text-base"
-          data-testid="Text"
+          class="paragraph paragraph--base"
+          data-testid="Paragraph"
         >
           Heavenly Green
         </p>
@@ -82,8 +82,8 @@ exports[`snapshot of the base state 1`] = `
         tabindex="0"
       >
         <p
-          class="text text-base"
-          data-testid="Text"
+          class="paragraph paragraph--base"
+          data-testid="Paragraph"
         >
           Sweet Pink
         </p>
@@ -106,8 +106,8 @@ exports[`snapshot of the options menu open state 1`] = `
       data-testid="SelectButton"
     >
       <p
-        class="text text-base"
-        data-testid="Text"
+        class="paragraph paragraph--base"
+        data-testid="Paragraph"
       >
         Please select an option ...
       </p>
@@ -143,8 +143,8 @@ exports[`snapshot of the options menu open state 1`] = `
         tabindex="0"
       >
         <p
-          class="text text-base"
-          data-testid="Text"
+          class="paragraph paragraph--base"
+          data-testid="Paragraph"
         >
           Strict Black
         </p>
@@ -159,8 +159,8 @@ exports[`snapshot of the options menu open state 1`] = `
         tabindex="0"
       >
         <p
-          class="text text-base"
-          data-testid="Text"
+          class="paragraph paragraph--base"
+          data-testid="Paragraph"
         >
           Heavenly Green
         </p>
@@ -175,8 +175,8 @@ exports[`snapshot of the options menu open state 1`] = `
         tabindex="0"
       >
         <p
-          class="text text-base"
-          data-testid="Text"
+          class="paragraph paragraph--base"
+          data-testid="Paragraph"
         >
           Sweet Pink
         </p>
@@ -198,8 +198,8 @@ exports[`snapshot of the selected option state 1`] = `
       data-testid="SelectButton"
     >
       <p
-        class="text text-base"
-        data-testid="Text"
+        class="paragraph paragraph--base"
+        data-testid="Paragraph"
       >
         Strict Black
       </p>
@@ -237,8 +237,8 @@ exports[`snapshot of the selected option state 1`] = `
         tabindex="0"
       >
         <p
-          class="text text-base"
-          data-testid="Text"
+          class="paragraph paragraph--base"
+          data-testid="Paragraph"
         >
           Strict Black
         </p>
@@ -267,8 +267,8 @@ exports[`snapshot of the selected option state 1`] = `
         tabindex="0"
       >
         <p
-          class="text text-base"
-          data-testid="Text"
+          class="paragraph paragraph--base"
+          data-testid="Paragraph"
         >
           Heavenly Green
         </p>
@@ -283,8 +283,8 @@ exports[`snapshot of the selected option state 1`] = `
         tabindex="0"
       >
         <p
-          class="text text-base"
-          data-testid="Text"
+          class="paragraph paragraph--base"
+          data-testid="Paragraph"
         >
           Sweet Pink
         </p>
