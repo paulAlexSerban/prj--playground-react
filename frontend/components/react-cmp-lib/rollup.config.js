@@ -8,6 +8,7 @@ const input = [
     './src/atoms/Color/index.ts',
     './src/atoms/Paragraph/index.ts',
     './src/atoms/Margin/index.ts',
+    './src/atoms/Heading/index.ts',
     './src/atoms/Button/index.ts',
     './src/molecules/Select/index.ts',
     './src/organisms/Header/index.ts',
