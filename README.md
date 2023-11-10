@@ -7,6 +7,7 @@
 > -   Monorepo's - A Beginner's Guide (udemy)
 > -   The Complete Github Actions & Workflows Guide (udemy)
 > -   Master the Core Concepts of React and Storybook (udemy)
+> -   React & TypeScript - The Practical Guide
 
 ## 1. Introduction
 
@@ -19,18 +20,22 @@ The project comprises multiple packages as sub-projects, with dependencies betwe
 -   **Monorepo Management**: Yarn and Lerna are used to manage the monorepo, ensuring consistent dependency versions and streamlined project scripts across packages.
 -   **Atomic Design**: Used to organize components into atoms, molecules, organisms, templates, and pages.
 -   **Node.js**: 18.17.1
+-   **Yarn**: 1.22.10
+-   **Lerna**: 7.3.0
 
 ### 2.2 Packages
 
--   **React Component Library**: A library of reusable React components with a custom build system using Rollup.
--   **Playground**: A playground for testing components, with a custom build using Parcel.
--   **Foundation**: A collection of utilities written in TypeScript, packaged separately.
--   **Storybook**: A separate package for documenting and visually testing components in isolation.
--   **Living Style Guide**: A collections of SCSS variables, mixins, and functions, and component styles packaged separately.
+-   **React Components Library (frontend/components/react-cmp-lib)**: A library of reusable React components with a custom build system using Rollup.
+-   **Design System Playground (frontend/ds-playgrounds/\*)**: A playground for testing components, with a custom build using Parcel.
+-   **Foundation (shared/foundation)**: A collection of utilities written in TypeScript, packaged separately.
+-   **Storybook (frontend/ds-storybook)**: A separate package for documenting and visually testing components in isolation.
+-   **Living Style Guide - Generic Styles (frontend/lsg-design-system)**: A collections of SCSS variables, mixins, and functions, and component styles packaged separately.
 
 ## 3. Technology Stack
 
 -   **Front-end**: React.js, TypeScript, SCSS
+    -   React.js - for building user interfaces and component-based architecture.
+    -   TypeScript - for extended JavaScript functionality, string type checking, and code consistency - catch and fix type related error before runtime - sometimes that comes with the expense of having to define complex types.
 -   **Testing**: Jest for unit testing, Storybook and Chromatic for visual testing.
 -   **Linting and Formatting**: Prettier, ESLint, and Stylelint.
 -   **Version Control**: Git, with Husky for git hooks, Commit Lint, and Commitzen for structured commit messages.
