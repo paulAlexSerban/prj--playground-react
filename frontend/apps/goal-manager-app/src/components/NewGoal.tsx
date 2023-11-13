@@ -1,4 +1,4 @@
-import { type FormEvent, useRef } from 'react';
+import { type FC, type FormEvent, useRef } from 'react';
 
 type Goal = {
     id: number;
@@ -10,7 +10,7 @@ type NewGoalProps = {
     onAddGoal: (goal: Goal) => void;
 };
 
-const NewGoal: React.FC<NewGoalProps> = ({ onAddGoal }) => {
+const NewGoal: FC<NewGoalProps> = ({ onAddGoal }) => {
     const goalInputRef = useRef<HTMLInputElement>(null);
     const summaryInputRef = useRef<HTMLInputElement>(null);
 

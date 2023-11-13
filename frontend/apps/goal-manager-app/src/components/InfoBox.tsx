@@ -11,7 +11,7 @@ type WarningBoxProps = PropsWithChildren<{
 
 type InfoBoxProps = HintBoxProps | WarningBoxProps;
 
-const InfoBox = (props: InfoBoxProps) => {
+const InfoBox: FC<InfoBoxProps> = (props) => {
     const classes = ['infoBox'];
 
     if (props.mode === 'hint') {
