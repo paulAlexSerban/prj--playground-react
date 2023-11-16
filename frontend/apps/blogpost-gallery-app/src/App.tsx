@@ -3,7 +3,6 @@ import { get } from './util/http';
 import BlogPosts, { type BlogPost } from './components/BlogPosts';
 import ErrorMessage from './components/ErrorMessage';
 import fetchingImg from './assets/data-fetching.png';
-import './index.css';
 type RawDataBlogPost = {
     id: number;
     userId: number;
