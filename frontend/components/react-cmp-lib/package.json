@@ -31,7 +31,7 @@
         "typescript": "^5.2.2"
     },
     "dependencies": {
-        "@prj--react-playground-typescript/foundation-ts": "^0.2.3",
+        "@prj--react-playground-typescript/foundation": "^0.2.3",
         "babel-jest": "^29.7.0",
         "jest-environment-jsdom": "^29.7.0"
     },

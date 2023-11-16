@@ -17,7 +17,7 @@
         "typescript": "^5.2.2"
     },
     "dependencies": {
-        "@prj--react-playground-typescript/foundation-ts": "*",
+        "@prj--react-playground-typescript/foundation": "*",
         "@prj--react-playground-typescript/lsg-styles-generic": "*",
         "@prj--react-playground-typescript/react-cmp-lib": "*"
     },

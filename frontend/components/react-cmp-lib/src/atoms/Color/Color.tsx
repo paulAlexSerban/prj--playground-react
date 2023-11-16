@@ -1,5 +1,5 @@
 import React from 'react';
-import { spacing } from '@prj--react-playground-typescript/foundation-ts';
+import { spacing } from '@prj--react-playground-typescript/foundation';
 
 export interface ColorProps {
     hexCode: string;

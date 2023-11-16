@@ -1,5 +1,5 @@
 {
-    "name": "@prj--react-playground-typescript/foundation-ts",
+    "name": "@prj--react-playground-typescript/foundation",
     "version": "0.2.3",
     "main": "./lib/index.js",
     "types": "./lib/index.d.ts",
