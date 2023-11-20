@@ -11,11 +11,12 @@
         "lint": "lerna run lint --concurrency=5",
         "build:dev": "rm -rfv .parcel-cache && lerna run build:dev",
         "build:prod": "rm -rfv .parcel-cache && lerna run build:prod",
+        "package": "rm -rfv ./package/* && lerna run package --stream --parallel && node tools/build-scripts/DashboardGenerator.js",
         "start": "rm -rfv .parcel-cache && yarn lerna run start --stream --parallel",
         "start:playgrounds": "rm -rfv .parcel-cache && yarn lerna run start --stream --parallel",
         "test": "yarn lerna run test --stream --parallel",
         "test:chromatic": "yarn lerna run test:chromatic",
-        "version": "bash tools/build-scripts/version.bash",
+        "version:modules": "bash tools/build-scripts/version.bash",
         "commit": "yarn git-cz",
         "storybook": "yarn lerna run storybook"
     },
