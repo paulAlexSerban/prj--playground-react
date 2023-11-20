@@ -18,7 +18,8 @@
         "test:chromatic": "yarn lerna run test:chromatic --stream --parallel",
         "version:modules": "bash tools/build-scripts/version.bash",
         "commit": "yarn git-cz",
-        "storybook": "yarn lerna run storybook"
+        "storybook": "yarn lerna run storybook",
+        "build:styles": "lerna run build:prod --scope=@prj--react-playground-typescript/lsg-* --stream"
     },
     "devDependencies": {
         "@commitlint/cli": "^17.7.2",

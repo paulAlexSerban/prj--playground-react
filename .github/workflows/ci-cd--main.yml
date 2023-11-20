@@ -36,6 +36,10 @@ jobs:
             - name: '🔧 Install dependencies'
               run: yarn install
 
+            - name: 'Compile Styles'
+              if: steps.changed-test-files.outputs.any_changed == 'true'
+              run: yarn run build:styles
+
             - name: '🌈 Run VRT w. Chromatic'
               env:
                   CHROMATIC_PROJECT_TOKEN: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
