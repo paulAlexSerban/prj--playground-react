@@ -117,7 +117,7 @@ lerna WARN Yarn's registry proxy is broken, replacing with public npm registry
 lerna WARN If you don't have an npm token, you should exit and run `npm login`
 lerna info Assuming all packages changed
 ... some logs ...
-lerna WARN notice Package failed to publish: @prj--react-playground-typescript/foundation
+lerna WARN notice Package failed to publish: @prj--react-playground-typescript/shared-foundation
 lerna ERR! E404 Not found
 lerna ERR! errno "undefined" is not a valid exit code - exiting with code 1
 lerna WARN notice Package failed to publish: @prj--react-playground-typescript/lsg

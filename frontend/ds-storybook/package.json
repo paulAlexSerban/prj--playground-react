@@ -30,7 +30,7 @@
         "typescript": "^5.2.2"
     },
     "dependencies": {
-        "@prj--react-playground-typescript/foundation": "*",
+        "@prj--react-playground-typescript/shared-foundation": "*",
         "@prj--react-playground-typescript/react-cmp-lib": "*",
         "@prj--react-playground-typescript/lsg-styles-generic": "*"
     },

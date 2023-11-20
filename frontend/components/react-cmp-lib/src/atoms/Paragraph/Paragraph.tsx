@@ -1,5 +1,5 @@
 import React from 'react';
-import { fontSize } from '@prj--react-playground-typescript/foundation';
+import { fontSize } from '@prj--react-playground-typescript/shared-foundation';
 
 export interface ParagraphProps {
     size?: keyof typeof fontSize;
