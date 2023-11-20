@@ -16,7 +16,7 @@
         "typescript": "^5.2.2"
     },
     "scripts": {
-        "test": "echo \"Error: no test specified\"",
+        "test": "jest --verbose --coverage",
         "test:watch": "jest --verbose --watch",
         "start": "yarn tsc --project tsconfig.json --watch",
         "lint": "echo \"No linting configured\"",
