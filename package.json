@@ -1,11 +1,7 @@
 {
-    "name": "@prj--playground-react/core",
+    "name": "@prj--react-playground-typescript/core",
     "version": "0.0.0",
     "main": "index.js",
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/paulAlexSerban/prj--playground-react.git"
-    },
     "author": "paulAlexSerban <paul.alex.serban@gmail.com>",
     "license": "MIT",
     "scripts": {
@@ -15,11 +11,15 @@
         "lint": "lerna run lint --concurrency=5",
         "build:dev": "rm -rfv .parcel-cache && lerna run build:dev",
         "build:prod": "rm -rfv .parcel-cache && lerna run build:prod",
+        "package": "rm -rfv ./package/* && lerna run package --stream --parallel && node tools/build-scripts/DashboardGenerator.js",
         "start": "rm -rfv .parcel-cache && yarn lerna run start --stream --parallel",
+        "start:playgrounds": "rm -rfv .parcel-cache && yarn lerna run start --stream --parallel",
         "test": "yarn lerna run test --stream --parallel",
-        "test:chromatic": "yarn lerna run test:chromatic",
-        "version": "bash scripts/version.bash",
-        "commit": "yarn git-cz"
+        "test:chromatic": "yarn lerna run test:chromatic --stream --parallel",
+        "version:modules": "bash tools/build-scripts/version.bash",
+        "commit": "yarn git-cz",
+        "storybook": "yarn lerna run storybook",
+        "build:styles": "lerna run build:prod --scope=@prj--react-playground-typescript/lsg-* --stream"
     },
     "devDependencies": {
         "@commitlint/cli": "^17.7.2",
@@ -35,15 +35,22 @@
     },
     "description": "Coursework repository for the React course - Advanced React for Enterprise Applications: react for Senior Engineers",
     "bugs": {
-        "url": "https://github.com/paulAlexSerban/prj--playground-react/issues"
+        "url": "https://github.com/paulAlexSerban/prj--react-playground-typescript/issues"
     },
-    "homepage": "https://github.com/paulAlexSerban/prj--playground-react#readme",
+    "homepage": "https://github.com/paulAlexSerban/prj--react-playground-typescript#readme",
     "keywords": [],
     "private": true,
     "workspaces": {
         "packages": [
-            "packages/*",
-            "playground/*"
+            "assets/*",
+            "assets/",
+            "backend/*",
+            "database/*",
+            "frontend/*",
+            "frontend/**/*",
+            "shared/*",
+            "shared/**/*",
+            "tools/*"
         ],
         "nohoist": [
             "**/normalize-scss"

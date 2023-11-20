@@ -1,45 +1,69 @@
-# Playground React (Project Playground React - PPR)
+# Playground React (Template)
 
-> Coursework repository for the React course - Advanced React for Enterprise Applications: react for Senior Engineers
+> Template repository for React Monorepo projects
+> Initially built by following: Advanced React for Enterprise Applications: react for Senior Engineers (udemy)
+> Improved by following:
+>
+> -   Monorepo's - A Beginner's Guide (udemy)
+> -   The Complete Github Actions & Workflows Guide (udemy)
+> -   Master the Core Concepts of React and Storybook (udemy)
+> -   React & TypeScript - The Practical Guide
 
-## Concepts
+## 1. Introduction
 
--   Monorepo project structure with multiple packages as sub-projects and dependencies between them
--   Rollup, Parcel and TSC as build tools
--   Storybook for component development and documentation
--   Jest for unit testing
--   TypeScript as main programming language
--   Scss for CSS styling
--   Atomic Design for component architecture
--   Husky for git hooks
--   Linting and formatting with ESLint, StyleLint and Prettier
+The project comprises multiple packages as sub-projects, with dependencies between them. The monorepo structure is managed using Yarn and Lerna. The following sections provide a detailed breakdown of the project structure, technologies used, and the configuration of various tools and libraries to ensure consistency, quality, and automated workflows across the project.
 
-## CSS Architecture Checklist
+## 2. Project Structure
 
--   Organized - fixed code structure
--   No specificity issues
--   Atomic Design principles applied
--   Easy to understand (comments, variables, etc)
--   Reusable across teams / projects
+### 2.1 Monorepo Setup
 
-## Prerequisites
+-   **Monorepo Management**: Yarn and Lerna are used to manage the monorepo, ensuring consistent dependency versions and streamlined project scripts across packages.
+-   **Atomic Design**: Used to organize components into atoms, molecules, organisms, templates, and pages.
+-   **Node.js**: 18.17.1
+-   **Yarn**: 1.22.10
+-   **Lerna**: 7.3.0
 
--   Node.js
--   Yarn - `npm install -g yarn`
+### 2.2 Packages
 
-## Future Improvements or Ideas
+-   **React Components Library (frontend/components/react-cmp-lib)**: A library of reusable React components with a custom build system using Rollup.
+-   **Design System Playground (frontend/ds-playgrounds/\*)**: A playground for testing components, with a custom build using Parcel.
+-   **Foundation (shared/foundation)**: A collection of utilities written in TypeScript, packaged separately.
+-   **Storybook (frontend/ds-storybook)**: A separate package for documenting and visually testing components in isolation.
+-   **Living Style Guide - Generic Styles (frontend/lsg-design-system)**: A collections of SCSS variables, mixins, and functions, and component styles packaged separately.
 
--   [ ] Refactor 'prj--fe-ci-build-system' to use monorepo structure as used in this project (prj--playground-react)
--   [ ] Refactor packages/scss to 'prj--fe-ci-build-system'
--   [x] Move Storybook as separate library `packages/storybook` - NOT inside `packages/react`
--   [ ] Rename `packages/scss` to `packages/living-style-guide`
--   [ ] Rename `packages/react` to `packages/react-components-library`
--   [ ] Move `playground` to `frontend`
-    -   [ ] `playground` is private and it is used only for development and testing purposes
--   [ ] Refactor `prj--react-component-library` to use monorepo structure as used in this project (prj--playground-react)
+## 3. Technology Stack
 
-## Root Commands
+-   **Front-end**: React.js, TypeScript, SCSS
+    -   React.js - for building user interfaces and component-based architecture.
+    -   TypeScript - for extended JavaScript functionality, string type checking, and code consistency - catch and fix type related error before runtime - sometimes that comes with the expense of having to define complex types.
+-   **Testing**: Jest for unit testing, Storybook and Chromatic for visual testing.
+-   **Linting and Formatting**: Prettier, ESLint, and Stylelint.
+-   **Version Control**: Git, with Husky for git hooks, Commit Lint, and Commitzen for structured commit messages.
 
+## 4. Development and Build Tools
+
+-   **Component Development**: Storybook for developing and documenting components in an isolated environment.
+-   **Build Systems**: Custom build setups using Rollup for the component library and Parcel for the playground.
+
+## 5. Continuous Integration and Deployment
+
+-   **GitHub Actions**: Set up to automate testing, building, and deployment workflows.
+-   **Chromatic Deployment**: Automatic deployment to Chromatic for visual regression testing and Storybook hosting.
+
+## 6. Testing and Quality Assurance
+
+-   **Unit Testing**: Jest is used for unit testing components and utility functions.
+-   **Visual Testing**: Storybook and Chromatic are used for visual testing of components.
+-   **Linting and Formatting**: Prettier, ESLint, and Stylelint are configured to ensure code consistency and quality.
+
+## 7. Version Control and Commit Conventions
+
+-   **Git Hooks**: Husky is configured to enforce linting and testing before commits and pushes.
+-   **Commit Conventions**: Commit Lint and Commitzen are used to ensure structured and meaningful commit messages.
+
+## 8. Root Commands / Scripts
+
+-   `npm install -g yarn` - install yarn globally
 -   `yarn install` - install dependencies
 -   `yarn build:dev` - build all packages for development
 -   `yarn build:prod` - build all packages for production
@@ -52,11 +76,39 @@
 -   `yarn commit` - commit changes using Commitizen
 -   `yarn lerna version` - bump version of all packages using Lerna
 
-## Issues to solve in the future
+## 9. CSS Architecture Checklist
 
-### 1. Can't publish to npm registry
+-   Organized - fixed code structure
+-   No specificity issues
+-   Atomic Design principles applied
+-   Easy to understand (comments, variables, etc)
+-   Reusable across teams / projects
+
+## 10. Backlog
+
+### Future Improvements or Ideas
+
+-   [ ] Refactor 'prj--fe-ci-build-system' to use monorepo structure as used in this project (prj--react-playground-typescript)
+-   [ ] Refactor packages/scss to 'prj--fe-ci-build-system'
+-   [x] Move Storybook as separate library `packages/storybook` - NOT inside `packages/react`
+-   [x] Rename `packages/scss` to `packages/living-style-guide`
+-   [x] Rename `packages/react` to `packages/react-components-library`
+-   [ ] Move `playground` to `frontend`
+    -   [ ] `playground` is private and it is used only for development and testing purposes
+-   [x] Refactor `prj--react-component-library` to use monorepo structure as used in this project (prj--react-playground-typescript)
+-   [ ] follow course instructions to deploy Storybook to AWS
+-   [ ] refactor CI build for better performance (use CI for better performance)
+    -   [ ] lint, formats and test
+        -   [ ] -   run locally on committing for development branches
+        -   [ ] -   run in CI for master branch and on pull requests to release branches
+
+### Issues
+
+#### 1. Can't publish to npm registry
 
 > on: `yarn lerna publish`
+
+Logs:
 
 ```bash
 lerna notice cli v7.3.0
@@ -65,23 +117,11 @@ lerna WARN Yarn's registry proxy is broken, replacing with public npm registry
 lerna WARN If you don't have an npm token, you should exit and run `npm login`
 lerna info Assuming all packages changed
 ... some logs ...
-lerna WARN notice Package failed to publish: @prj--playground-react/foundation
+lerna WARN notice Package failed to publish: @prj--react-playground-typescript/shared-foundation
 lerna ERR! E404 Not found
 lerna ERR! errno "undefined" is not a valid exit code - exiting with code 1
-lerna WARN notice Package failed to publish: @prj--playground-react/scss
+lerna WARN notice Package failed to publish: @prj--react-playground-typescript/lsg
 lerna ERR! E404 Not found
 lerna ERR! errno "undefined" is not a valid exit code - exiting with code 1
 error Command failed with exit code 1.
 ```
-
-### Deploy Storybook to Chromatic
-
--   there is an issue in GitHub Actions when trying to deploy Storybook to Chromatic
-
-### Deploy Storybook to Netlify
-
--   follow course instructions to deploy Storybook to Netlify
-
-### Refactor CI Build System for better performance
-
--   use CI from other projects
