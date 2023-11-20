@@ -19,7 +19,8 @@
         "version:modules": "bash tools/build-scripts/version.bash",
         "commit": "yarn git-cz",
         "storybook": "yarn lerna run storybook",
-        "build:styles": "lerna run build:prod --scope=@prj--react-playground-typescript/lsg-* --stream"
+        "build:styles": "lerna run build:prod --scope=@prj--react-playground-typescript/lsg-* --stream",
+        "build:cmp": "lerna run build:prod --scope=@prj--react-playground-typescript/react-cmp-lib --stream"
     },
     "devDependencies": {
         "@commitlint/cli": "^17.7.2",
