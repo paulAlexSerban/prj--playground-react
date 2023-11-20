@@ -12,7 +12,11 @@ const init = () => {
     // Read the contents of the directory
     fs.readdir(source, (err, files) => {
         if (err) {
-            return console.error('Error reading the directory:', err);
+            if (err.code === 'ENOENT') {
+                console.error('Directory does not exist.');
+                return;
+            }
+            return console.log('Error reading the directory:', err);
         }
 
         // Filter out only directories
