@@ -48,7 +48,9 @@ jobs:
 
             - name: 'Compile Styles'
               if: steps.changed-test-files.outputs.any_changed == 'true'
-              run: yarn run build:styles
+              run: |
+                  yarn run build:cmp
+                  yarn run build:styles
 
             - name: '🌈 Run VRT w. Chromatic'
               if: steps.changed-test-files.outputs.any_changed == 'true'
