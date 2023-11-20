@@ -96,7 +96,7 @@ The project comprises multiple packages as sub-projects, with dependencies betwe
 -   [ ] Move `playground` to `frontend`
     -   [ ] `playground` is private and it is used only for development and testing purposes
 -   [x] Refactor `prj--react-component-library` to use monorepo structure as used in this project (prj--react-playground-typescript)
--   [ ] follow course instructions to deploy Storybook to Netlify
+-   [ ] follow course instructions to deploy Storybook to AWS
 -   [ ] refactor CI build for better performance (use CI for better performance)
     -   [ ] lint, formats and test
         -   [ ] -   run locally on committing for development branches
