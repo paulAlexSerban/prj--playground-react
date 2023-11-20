@@ -7,6 +7,6 @@ if [[ -d '../dist' ]]; then
   PROJECT_NAME=$(node -p "require('../package.json').name.split('/').pop()")
   echo "📦  Package $PROJECT_NAME"
 
-  mkdir -p ../../../../package/$PROJECT_NAME
-  cp -rfv ../dist/* ../../../../package/$PROJECT_NAME
+  mkdir -p ../../../package/$PROJECT_NAME
+  cp -rfv ../dist/* ../../../package/$PROJECT_NAME
 fi

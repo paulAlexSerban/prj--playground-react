@@ -19,6 +19,7 @@
         "version:modules": "bash tools/build-scripts/version.bash",
         "commit": "yarn git-cz",
         "storybook": "yarn lerna run storybook",
+        "build:storybook": "yarn lerna run build:storybook",
         "build:styles": "lerna run build:prod --scope=@prj--react-playground-typescript/lsg-* --stream",
         "build:cmp": "lerna run build:prod --scope=@prj--react-playground-typescript/react-cmp-lib --scope=@prj--react-playground-typescript/shared-foundation --stream"
     },
