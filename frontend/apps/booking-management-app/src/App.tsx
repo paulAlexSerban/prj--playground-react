@@ -18,7 +18,10 @@ const Router = createBrowserRouter([
             { path: 'sessions/:id', element: <SessionPage /> },
         ],
     },
-]);
+], {
+    basename: import.meta.env.DEV ? '/' : `/prj--react-playground-typescript/apps/booking-management-app/`,
+}
+    );
 
 function App() {
     return <RouterProvider router={Router} />;

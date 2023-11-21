@@ -20,7 +20,8 @@ permissions:
 
 env:
     NODE_VERSION: 18.17.1
-    BASE_URL: ${{ secrets.DEV_BASE_URL }}
+    BASE_URL: ${{ secrets.BASE_URL }}
+    PROJECT_NAME: '/prj--react-playground-typescript'
 
 jobs:
     formats-check:
@@ -225,15 +226,15 @@ jobs:
                   name: apps-${{ github.run_number }}-${{ github.run_id }}
                   path: package/apps
 
-            # - name: 'Configure AWS Credentials'
-            #   uses: aws-actions/configure-aws-credentials@v1
-            #   with:
-            #       aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-            #       aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-            #       aws-region: ${{ secrets.S3_BUCKET_REGION }}
+            - name: 'Configure AWS Credentials'
+              uses: aws-actions/configure-aws-credentials@v1
+              with:
+                  aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+                  aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+                  aws-region: ${{ secrets.S3_BUCKET_REGION }}
 
-            # - name: 'Deploy  to bucket'
-            #   run: aws s3 sync ./package/apps/ s3://${{ secrets.S3_DEVELOP_BUCKET }} --delete
+            - name: 'Deploy to bucket'
+              run: aws s3 sync ./package/apps/ s3://${{ secrets.S3_DEVELOP_BUCKET }}/${{ env.PROJECT_NAME }}/apps --delete
 
     deploy-storybook-dev:
         name: 'Deploy Storybook to AWS DEV env.'
@@ -265,15 +266,15 @@ jobs:
                   name: storybook-${{ github.run_number }}-${{ github.run_id }}
                   path: package/storybook
 
-            # - name: 'Configure AWS Credentials'
-            #   uses: aws-actions/configure-aws-credentials@v1
-            #   with:
-            #       aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-            #       aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-            #       aws-region: ${{ secrets.S3_BUCKET_REGION }}
+            - name: 'Configure AWS Credentials'
+              uses: aws-actions/configure-aws-credentials@v1
+              with:
+                  aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+                  aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+                  aws-region: ${{ secrets.S3_BUCKET_REGION }}
 
-            # - name: 'Deploy  to bucket'
-            #   run: aws s3 sync ./package/apps/ s3://${{ secrets.S3_STORYBOOK_DEVELOP_BUCKET }} --delete
+            - name: 'Deploy  to bucket'
+              run: aws s3 sync ./package/storybook/ s3://${{ secrets.S3_DEVELOP_BUCKET }}/${{ env.PROJECT_NAME }}/storybook --delete
 
     flush-cdn-cache:
         name: 'Flush CDN Cache'
@@ -281,4 +282,4 @@ jobs:
         needs: [deploy-stage, deploy-storybook-stage]
         steps:
             - name: 'Invalidate  cloudfront'
-              run: aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_DEVELOP_DISTRIBUTION_ID }} --paths "/"
+              run: aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_DEVELOP_DISTRIBUTION_ID }} --paths "/${{ env.PROJECT_NAME }}/*"
