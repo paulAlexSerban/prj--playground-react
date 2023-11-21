@@ -9,11 +9,27 @@
 > -   Master the Core Concepts of React and Storybook (udemy)
 > -   React & TypeScript - The Practical Guide
 
+## Env. URL's
+
+-   [PROD Apps Lib](https://www.paulserban.eu/prj--react-playground-typescript/apps/)
+-   [Visual Regression Testing w. Chromatic & Storybook](https://www.chromatic.com/builds?appId=65278ceafda5062d74eb64f6)
+
+-   [STAGE - Apps Lib](https://stage.paulserban.eu/prj--react-playground-typescript/apps/)
+-   [STAGE - Component Lib w. Storybook](https://stage.paulserban.eu/prj--react-playground-typescript/storybook)
+
+-   [TEST - Apps Lib](https://test.paulserban.eu/prj--react-playground-typescript/apps/)
+-   [TEST - Component Lib w. Storybook](https://test.paulserban.eu/prj--react-playground-typescript/storybook)
+
+-   [DEV - Apps Lib](https://develop.paulserban.eu/prj--react-playground-typescript/apps/)
+-   [DEV - Component Lib w. Storybook](https://develop.paulserban.eu/prj--react-playground-typescript/storybook)
+
 ## 1. Introduction
 
 The project comprises multiple packages as sub-projects, with dependencies between them. The monorepo structure is managed using Yarn and Lerna. The following sections provide a detailed breakdown of the project structure, technologies used, and the configuration of various tools and libraries to ensure consistency, quality, and automated workflows across the project.
 
 ## 2. Project Structure
+
+![ci-cd](/wiki/ci-cd.png)
 
 ### 2.1 Monorepo Setup
 
@@ -88,19 +104,11 @@ The project comprises multiple packages as sub-projects, with dependencies betwe
 
 ### Future Improvements or Ideas
 
--   [ ] Refactor 'prj--fe-ci-build-system' to use monorepo structure as used in this project (prj--react-playground-typescript)
--   [ ] Refactor packages/scss to 'prj--fe-ci-build-system'
--   [x] Move Storybook as separate library `packages/storybook` - NOT inside `packages/react`
--   [x] Rename `packages/scss` to `packages/living-style-guide`
--   [x] Rename `packages/react` to `packages/react-components-library`
--   [ ] Move `playground` to `frontend`
-    -   [ ] `playground` is private and it is used only for development and testing purposes
--   [x] Refactor `prj--react-component-library` to use monorepo structure as used in this project (prj--react-playground-typescript)
--   [ ] follow course instructions to deploy Storybook to AWS
 -   [ ] refactor CI build for better performance (use CI for better performance)
     -   [ ] lint, formats and test
         -   [ ] -   run locally on committing for development branches
         -   [ ] -   run in CI for master branch and on pull requests to release branches
+    -   [ ] visual regression testing run locally on feature and bug branches and remote on develop branch
 
 ### Issues
 
