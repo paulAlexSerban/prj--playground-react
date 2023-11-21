@@ -5,20 +5,25 @@ import SessionsPage from './pages/Sessions.tsx';
 import SessionPage from './pages/Session.tsx';
 import Root from './pages/Root.tsx';
 
-const Router = createBrowserRouter([
+const Router = createBrowserRouter(
+    [
+        {
+            path: '/',
+            element: <Root />,
+            children: [
+                {
+                    index: true,
+                    element: <HomePage />,
+                },
+                { path: 'sessions', element: <SessionsPage /> },
+                { path: 'sessions/:id', element: <SessionPage /> },
+            ],
+        },
+    ],
     {
-        path: '/',
-        element: <Root />,
-        children: [
-            {
-                index: true,
-                element: <HomePage />,
-            },
-            { path: 'sessions', element: <SessionsPage /> },
-            { path: 'sessions/:id', element: <SessionPage /> },
-        ],
-    },
-]);
+        basename: import.meta.env.DEV ? '/' : `/prj--react-playground-typescript/apps/booking-management-app/`,
+    }
+);
 
 function App() {
     return <RouterProvider router={Router} />;

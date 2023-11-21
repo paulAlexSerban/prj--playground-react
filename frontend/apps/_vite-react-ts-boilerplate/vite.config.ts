@@ -12,7 +12,7 @@ export default defineConfig(({ command }) => {
     };
 
     if (command !== 'serve') {
-        config.base = `${BASE_URL}${PROJECT_NAME}`;
+        config.base = `${BASE_URL}apps/${PROJECT_NAME}`;
     }
 
     return config;

@@ -42,7 +42,7 @@ const init = () => {
               </head>
             <body class="container">
               <header class="row">
-                <h1 class="col display-1">React App Library</h1>
+                <h1 class="col display-1">React Playground w. TypeScript</h1>
               </header>
 
               <main>
@@ -53,7 +53,7 @@ const init = () => {
         directories.forEach((dir) => {
             htmlContent += `
               <li class="nav-item mb-2">
-                <a class="nav-link p-0 text-body-primary" href="${BASE_URL}${dir}/">${dir}</a>
+                <a class="nav-link p-0 text-body-primary" href="${BASE_URL}apps/${dir}/">${dir}</a>
               </li>`;
         });
 
