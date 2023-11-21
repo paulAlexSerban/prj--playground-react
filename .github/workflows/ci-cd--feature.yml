@@ -244,7 +244,7 @@ jobs:
 
             - name: 'Deploy to bucket'
               if: steps.changed-test-files.outputs.any_changed == 'true' && ${{ steps.random-color-generator.outputs.BUILD }} == 'true'
-              run: aws s3 sync ./package/apps/ s3://${{ secrets.S3_DEVELOP_BUCKET }}/${{ env.PROJECT_NAME }}/apps --delete
+              run: aws s3 sync ./package/apps/ s3://${{ secrets.S3_DEVELOP_BUCKET }}${{ env.PROJECT_NAME }}/apps --delete
 
             - name: 'Set Flush CDN Cache flag'
               if: steps.changed-test-files.outputs.any_changed == 'true' && ${{ steps.random-color-generator.outputs.BUILD }} == 'true'
@@ -290,7 +290,7 @@ jobs:
 
             - name: 'Deploy  to bucket'
               if: steps.changed-test-files.outputs.any_changed == 'true' && ${{ steps.random-color-generator.outputs.VRT }} == 'true'
-              run: aws s3 sync ./package/storybook/ s3://${{ secrets.S3_DEVELOP_BUCKET }}/${{ env.PROJECT_NAME }}/storybook --delete
+              run: aws s3 sync ./package/storybook/ s3://${{ secrets.S3_DEVELOP_BUCKET }}${{ env.PROJECT_NAME }}/storybook --delete
 
             - name: 'Set Flush CDN Cache flag'
               if: steps.changed-test-files.outputs.any_changed == 'true' && ${{ steps.random-color-generator.outputs.VRT }} == 'true'
