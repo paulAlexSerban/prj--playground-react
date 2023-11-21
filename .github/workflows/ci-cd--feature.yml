@@ -279,7 +279,7 @@ jobs:
     flush-cdn-cache:
         name: 'Flush CDN Cache'
         runs-on: ubuntu-latest
-        needs: [deploy-stage, deploy-storybook-stage]
+        needs: [deploy-dev, deploy-storybook-dev]
         steps:
             - name: 'Invalidate  cloudfront'
               run: aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_DEVELOP_DISTRIBUTION_ID }} --paths "/${{ env.PROJECT_NAME }}/*"
