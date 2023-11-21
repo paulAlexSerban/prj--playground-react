@@ -150,6 +150,10 @@ jobs:
                   name: storybook-${{ github.run_number }}-${{ github.run_id }}
                   path: './package/storybook/'
 
+            - name: 'Set VRT flag'
+              if: steps.changed-test-files.outputs.any_changed == 'true'
+              run: echo "VRT=true" >> $GITHUB_OUTPUT
+
     build-n-package:
         name: 'Build & Package'
         runs-on: ubuntu-latest
@@ -196,6 +200,10 @@ jobs:
                   name: apps-${{ github.run_number }}-${{ github.run_id }}
                   path: './package/apps/'
 
+            - name: 'Set Build flag'
+              if: steps.changed-test-files.outputs.any_changed == 'true'
+              run: echo "BUILD=true" >> $GITHUB_OUTPUT
+
     deploy-dev:
         name: 'Deploy to AWS DEV env.'
         runs-on: ubuntu-latest
@@ -217,16 +225,17 @@ jobs:
                       database/**/*
 
             - name: 'Create package/dist'
-              if: steps.changed-test-files.outputs.any_changed == 'true'
+              if: steps.changed-test-files.outputs.any_changed == 'true' && ${{ steps.random-color-generator.outputs.BUILD }} == 'true'
               run: mkdir -p package/apps
 
             - uses: actions/download-artifact@v3
-              if: steps.changed-test-files.outputs.any_changed == 'true'
+              if: steps.changed-test-files.outputs.any_changed == 'true' && ${{ steps.random-color-generator.outputs.BUILD }} == 'true'
               with:
                   name: apps-${{ github.run_number }}-${{ github.run_id }}
                   path: package/apps
 
             - name: 'Configure AWS Credentials'
+              if: steps.changed-test-files.outputs.any_changed == 'true' && ${{ steps.random-color-generator.outputs.BUILD }} == 'true'
               uses: aws-actions/configure-aws-credentials@v1
               with:
                   aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
@@ -234,7 +243,12 @@ jobs:
                   aws-region: ${{ secrets.S3_BUCKET_REGION }}
 
             - name: 'Deploy to bucket'
+              if: steps.changed-test-files.outputs.any_changed == 'true' && ${{ steps.random-color-generator.outputs.BUILD }} == 'true'
               run: aws s3 sync ./package/apps/ s3://${{ secrets.S3_DEVELOP_BUCKET }}/${{ env.PROJECT_NAME }}/apps --delete
+
+            - name: 'Set Flush CDN Cache flag'
+              if: steps.changed-test-files.outputs.any_changed == 'true' && ${{ steps.random-color-generator.outputs.BUILD }} == 'true'
+              run: echo "FLUSH_CDN_CACHE=true" >> $GITHUB_OUTPUT
 
     deploy-storybook-dev:
         name: 'Deploy Storybook to AWS DEV env.'
@@ -257,16 +271,17 @@ jobs:
                       database/**/*
 
             - name: 'Create package/storybook'
-              if: steps.changed-test-files.outputs.any_changed == 'true'
+              if: steps.changed-test-files.outputs.any_changed == 'true' && ${{ steps.random-color-generator.outputs.VRT }} == 'true'
               run: mkdir -p package/storybook
 
             - uses: actions/download-artifact@v3
-              if: steps.changed-test-files.outputs.any_changed == 'true'
+              if: steps.changed-test-files.outputs.any_changed == 'true' && ${{ steps.random-color-generator.outputs.VRT }} == 'true'
               with:
                   name: storybook-${{ github.run_number }}-${{ github.run_id }}
                   path: package/storybook
 
             - name: 'Configure AWS Credentials'
+              if: steps.changed-test-files.outputs.any_changed == 'true' && ${{ steps.random-color-generator.outputs.VRT }} == 'true'
               uses: aws-actions/configure-aws-credentials@v1
               with:
                   aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
@@ -274,7 +289,12 @@ jobs:
                   aws-region: ${{ secrets.S3_BUCKET_REGION }}
 
             - name: 'Deploy  to bucket'
+              if: steps.changed-test-files.outputs.any_changed == 'true' && ${{ steps.random-color-generator.outputs.VRT }} == 'true'
               run: aws s3 sync ./package/storybook/ s3://${{ secrets.S3_DEVELOP_BUCKET }}/${{ env.PROJECT_NAME }}/storybook --delete
+
+            - name: 'Set Flush CDN Cache flag'
+              if: steps.changed-test-files.outputs.any_changed == 'true' && ${{ steps.random-color-generator.outputs.VRT }} == 'true'
+              run: echo "FLUSH_CDN_CACHE=true" >> $GITHUB_OUTPUT
 
     flush-cdn-cache:
         name: 'Flush CDN Cache'
@@ -282,6 +302,7 @@ jobs:
         needs: [deploy-dev, deploy-storybook-dev]
         steps:
             - name: 'Configure AWS Credentials'
+              if: ${{ steps.random-color-generator.outputs.FLUSH_CDN_CACHE }} == 'true'
               uses: aws-actions/configure-aws-credentials@v1
               with:
                   aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
@@ -289,4 +310,5 @@ jobs:
                   aws-region: ${{ secrets.S3_BUCKET_REGION }}
 
             - name: 'Invalidate  cloudfront'
+              if: ${{ steps.random-color-generator.outputs.FLUSH_CDN_CACHE }} == 'true'
               run: aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_DEVELOP_DISTRIBUTION_ID }} --paths "/${{ env.PROJECT_NAME }}/*"
