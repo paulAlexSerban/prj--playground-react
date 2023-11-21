@@ -311,4 +311,4 @@ jobs:
 
             - name: 'Invalidate  cloudfront'
               if: ${{ steps.random-color-generator.outputs.FLUSH_CDN_CACHE }} == 'true'
-              run: aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_DEVELOP_DISTRIBUTION_ID }} --paths "/${{ env.PROJECT_NAME }}/*"
+              run: aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_DEVELOP_DISTRIBUTION_ID }} --paths "${{ env.PROJECT_NAME }}/*"
