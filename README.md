@@ -104,6 +104,7 @@ The project comprises multiple packages as sub-projects, with dependencies betwe
 
 ### Future Improvements or Ideas
 
+-   [ ] implement semantic release
 -   [ ] refactor CI build for better performance (use CI for better performance)
     -   [ ] lint, formats and test
         -   [ ] -   run locally on committing for development branches
