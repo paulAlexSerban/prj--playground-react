@@ -11,6 +11,7 @@ permissions:
 env:
     NODE_VERSION: 18.17.1
     BASE_URL: ${{ secrets.PROD_BASE_URL }}
+    PROJECT_NAME: '/prj--react-playground-typescript'
 
 jobs:
     build-n-package:
