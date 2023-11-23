@@ -6,8 +6,8 @@
         "dist"
     ],
     "scripts": {
-        "process": "gulp process --require @babel/register --gulpfile build",
-        "publish": "bash scripts/publish.bash"
+        "process:assets": "gulp process --require @babel/register --gulpfile build",
+        "publish:assets": "bash scripts/publish.bash"
     },
     "dependencies": {
         "@babel/core": "^7.23.2",
