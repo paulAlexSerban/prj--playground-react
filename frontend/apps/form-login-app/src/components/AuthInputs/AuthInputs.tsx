@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import classes from './authInputs.module.scss';
 
 type AuthInputsProps = {
     email: string;
@@ -26,13 +27,13 @@ export default function AuthInputs() {
     const passwordNotValid = submitted && enteredPassword.trim().length < 6;
 
     return (
-        <div id="auth-inputs">
-            <div className="controls">
+        <div id="auth-inputs" className={classes['auth-inputs']}>
+            <div className={classes.controls}>
                 <p>
                     <label>Email</label>
                     <input
                         type="email"
-                        className={emailNotValid ? 'invalid' : undefined}
+                        className={emailNotValid ? classes.invalid : undefined}
                         onChange={(event) => handleInputChange('email', event.target.value)}
                     />
                 </p>
@@ -40,16 +41,16 @@ export default function AuthInputs() {
                     <label>Password</label>
                     <input
                         type="password"
-                        className={passwordNotValid ? 'invalid' : undefined}
+                        className={passwordNotValid ? classes.invalid : undefined}
                         onChange={(event) => handleInputChange('password', event.target.value)}
                     />
                 </p>
             </div>
-            <div className="actions">
-                <button type="button" className="text-button">
+            <div className={classes.actions}>
+                <button type="button" className={classes['text-button']}>
                     Create a new account
                 </button>
-                <button className="button" onClick={handleLogin}>
+                <button className={classes.button} onClick={handleLogin}>
                     Sign In
                 </button>
             </div>
