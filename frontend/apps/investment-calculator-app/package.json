@@ -12,6 +12,9 @@
         "package": "bash scripts/package.bash"
     },
     "dependencies": {
+        "@prj--react-playground-typescript/shared-foundation": "*",
+        "@prj--react-playground-typescript/lsg-styles-generic": "*",
+        "@prj--react-playground-typescript/react-cmp-lib": "*",
         "react": "^18.2.0",
         "react-dom": "^18.2.0"
     },
