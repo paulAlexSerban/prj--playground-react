@@ -1,29 +1,20 @@
-import styled from 'styled-components';
-import { FC } from 'react';
-const StyledButton = styled.button`
-    padding: 1rem 2rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    border-radius: 0.25rem;
-    color: #1f2937;
-    background-color: #f0b322;
-    border-radius: 6px;
-    border: none;
-
-    &:hover {
-        background-color: #f0920e;
-    }
-`;
+import { type FC, type ReactNode } from 'react';
 
 type ButtonProps = {
-    onClick: () => void;
+    type: 'button' | 'submit' | 'reset';
+    disabled?: boolean;
+    onClick?: () => void;
+    children: ReactNode;
 };
 
-const Button: FC<ButtonProps> = ({ onClick }) => {
+const Button: FC<ButtonProps> = ({ children, ...props }) => {
     return (
-        <StyledButton type="button" onClick={onClick}>
-            Sign In
-        </StyledButton>
+        <button
+            className="px-4 py-2 font-semibold uppercase rounded text-stone-900 bg-amber-400 hover:bg-amber-500"
+            {...props}
+        >
+            {children}
+        </button>
     );
 };
 
