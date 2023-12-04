@@ -1,5 +1,15 @@
 import { useState } from 'react';
 import classes from './authInputs.module.scss';
+import styled from 'styled-components';
+import Button from './Button';
+import CustomInput from './Input';
+
+const ControlContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+`;
 
 type AuthInputsProps = {
     email: string;
@@ -28,31 +38,25 @@ export default function AuthInputs() {
 
     return (
         <div id="auth-inputs" className={classes['auth-inputs']}>
-            <div className={classes.controls}>
-                <p>
-                    <label>Email</label>
-                    <input
-                        type="email"
-                        className={emailNotValid ? classes.invalid : undefined}
-                        onChange={(event) => handleInputChange('email', event.target.value)}
-                    />
-                </p>
-                <p>
-                    <label>Password</label>
-                    <input
-                        type="password"
-                        className={passwordNotValid ? classes.invalid : undefined}
-                        onChange={(event) => handleInputChange('password', event.target.value)}
-                    />
-                </p>
-            </div>
+            <ControlContainer>
+                <CustomInput
+                    label="Email"
+                    type="email"
+                    invalid={emailNotValid}
+                    onChange={(e) => handleInputChange('email', e.target.value)}
+                />
+                <CustomInput
+                    label="Password"
+                    type="password"
+                    invalid={passwordNotValid}
+                    onChange={(e) => handleInputChange('password', e.target.value)}
+                />
+            </ControlContainer>
             <div className={classes.actions}>
                 <button type="button" className={classes['text-button']}>
                     Create a new account
                 </button>
-                <button className={classes.button} onClick={handleLogin}>
-                    Sign In
-                </button>
+                <Button onClick={handleLogin} />
             </div>
         </div>
     );
