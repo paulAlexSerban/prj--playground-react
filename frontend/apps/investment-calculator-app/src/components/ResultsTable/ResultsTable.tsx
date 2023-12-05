@@ -11,7 +11,8 @@ type ResultsTypes = {
 
 export default function Results({ input }: ResultsTypes) {
     const resultsData = calculateInvestmentResults(input);
-    const initialInvestment = resultsData[0].valueEndOfYear - resultsData[0].interest - resultsData[0].annualInvestment;
+    const { valueEndOfYear, interest, annualInvestment } = resultsData[0];
+    const initialInvestment = valueEndOfYear - interest - annualInvestment;
 
     return (
         <table id="result">
