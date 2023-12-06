@@ -1,60 +1,64 @@
-import { type FC, useRef, useState } from 'react';
-import ResultModal, { ResultModalHandle } from './ResultModal';
+import { useState, useRef } from 'react';
+
+import ResultModal, { type ResultModalHandle } from './ResultModal.jsx';
 
 type TimerChallengeProps = {
     title: string;
     targetTime: number;
 };
 
-const TimerChallenge: FC<TimerChallengeProps> = ({ title, targetTime }) => {
-    const [timerExpired, setTimerExpired] = useState<boolean>(false);
-    const [timerStarted, setTimerStarted] = useState<boolean>(false);
-    const dialogRef = useRef<ResultModalHandle>(null);
-    // timerRef is component instance specific
+export default function TimerChallenge({ title, targetTime }: TimerChallengeProps) {
     const timerRef = useRef<NodeJS.Timeout>();
-    const handleStart = () => {
-        console.log('Timer started!');
-        if (timerRef.current) {
-            clearTimeout(timerRef.current);
-        }
-        timerRef.current = setTimeout(() => {
-            console.log('Timer is done!');
-            setTimerExpired(true);
-            if (dialogRef.current) {
-                dialogRef.current.open();
-            }
-        }, targetTime * 1000);
+    const dialogRef = useRef<ResultModalHandle>(null);
 
-        setTimerStarted(true);
-    };
+    const [timeRemaining, setTimeRemaining] = useState(targetTime * 1000);
 
-    const handleStop = () => {
-        if (timerRef.current) {
-            clearTimeout(timerRef.current);
+    const timerIsActive = timeRemaining > 0 && timeRemaining < targetTime * 1000;
+
+    if (timeRemaining <= 0) {
+        clearInterval(timerRef.current);
+        if (dialogRef.current) {
+            dialogRef.current.open();
         }
-        setTimerStarted(false);
-    };
+    }
+
+    function handleReset() {
+        setTimeRemaining(targetTime * 1000);
+    }
+
+    function handleStart() {
+        timerRef.current = setInterval(() => {
+            setTimeRemaining((prevTimeRemaining) => prevTimeRemaining - 10);
+        }, 10);
+    }
+
+    function handleStop() {
+        if (!timerRef.current) {
+            return;
+        }
+        if (dialogRef.current) {
+            dialogRef.current.open();
+        }
+        clearInterval(timerRef.current);
+    }
 
     return (
         <>
-            <ResultModal ref={dialogRef} result="lost" targetTime={targetTime} />
+            <ResultModal ref={dialogRef} targetTime={targetTime} remainingTime={timeRemaining} onReset={handleReset} />
             <section className="challenge">
                 <h2>{title}</h2>
-                {timerExpired && <p>You Lost!</p>}
                 <p className="challenge-time">
                     {targetTime} second{targetTime > 1 ? 's' : ''}
                 </p>
-                <div>
-                    <button onClick={timerStarted ? handleStop : handleStart}>
-                        {timerStarted ? 'Timer started' : 'Start Timer'}
+                <p>
+                    <button onClick={timerIsActive ? handleStop : handleStart}>
+                        {timerIsActive ? 'Stop' : 'Start'} Challenge
                     </button>
-                </div>
-                <p className={timerStarted ? 'active' : undefined}>
-                    {timerStarted ? 'Timer is active' : 'Timer is not active'}
+                </p>
+                <p className={timerIsActive ? 'active' : undefined}>
+                    {timerIsActive ? 'Time is running...' : 'Timer inactive'}
                 </p>
             </section>
         </>
     );
-};
-
-export default TimerChallenge;
+}
