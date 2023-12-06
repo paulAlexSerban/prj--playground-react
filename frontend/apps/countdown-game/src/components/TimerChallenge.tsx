@@ -1,5 +1,5 @@
 import { type FC, useRef, useState } from 'react';
-import ResultModal from './ResultModal';
+import ResultModal, { ResultModalHandle } from './ResultModal';
 
 type TimerChallengeProps = {
     title: string;
@@ -9,7 +9,7 @@ type TimerChallengeProps = {
 const TimerChallenge: FC<TimerChallengeProps> = ({ title, targetTime }) => {
     const [timerExpired, setTimerExpired] = useState<boolean>(false);
     const [timerStarted, setTimerStarted] = useState<boolean>(false);
-    const dialogRef = useRef<HTMLDialogElement>(null);
+    const dialogRef = useRef<ResultModalHandle>(null);
     // timerRef is component instance specific
     const timerRef = useRef<NodeJS.Timeout>();
     const handleStart = () => {
@@ -21,7 +21,7 @@ const TimerChallenge: FC<TimerChallengeProps> = ({ title, targetTime }) => {
             console.log('Timer is done!');
             setTimerExpired(true);
             if (dialogRef.current) {
-                dialogRef.current.showModal();
+                dialogRef.current.open();
             }
         }, targetTime * 1000);
 
