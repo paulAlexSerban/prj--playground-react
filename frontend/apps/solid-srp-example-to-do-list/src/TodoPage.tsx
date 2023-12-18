@@ -1,4 +1,3 @@
-import React from 'react';
 import { useTodos } from './hooks/useTodos';
 import Todoitem from './components/TodoItem';
 
