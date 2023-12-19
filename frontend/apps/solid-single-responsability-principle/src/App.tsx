@@ -1,5 +1,5 @@
 import './App.css';
-import ToDoPage from './TodoPage.tsx';
+import ToDoPage from './components/TodoPage.tsx';
 function App() {
     return (
         <>

@@ -1,12 +1,12 @@
-import { useTodos } from './hooks/useTodos';
-import Todoitem from './components/TodoItem';
+import { useTodos } from '../hooks/useTodos';
+import Todoitem from './TodoItem';
 
 const TodosPage = () => {
     const todos = useTodos();
 
     const renderTodos = () => {
-        return todos.map((todo) => {
-            return <Todoitem id={todo.id} title={todo.title} />;
+        return todos.map((todo, index) => {
+            return <Todoitem key={index} id={todo.id} title={todo.title} />;
         });
     };
 
