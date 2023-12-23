@@ -7,7 +7,7 @@ function App() {
             <div>
                 <h2>login Form</h2>
                 <ConnectedLoginForm />
-            </div>  
+            </div>
             <div>
                 <h2>ToDo Page</h2>
                 <TodosPage />

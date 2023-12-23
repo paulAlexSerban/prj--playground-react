@@ -19,7 +19,6 @@ function useTodos() {
 
 export { useTodos };
 
-
 // another implementation detail change
 // import localTodos from "./todos.json";
 // function useTodos(){
