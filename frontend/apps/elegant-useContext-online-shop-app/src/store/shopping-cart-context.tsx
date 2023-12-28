@@ -1,28 +1,34 @@
-import { useState } from 'react';
+import { useState, createContext, type ReactNode } from 'react';
+import { type CartItem } from '../components/Cart.tsx';
+import { DUMMY_PRODUCTS } from '../dummy-products.ts';
 
-import Header from './components/Header.tsx';
-import Shop from './components/Shop.tsx';
-import { DUMMY_PRODUCTS } from './dummy-products.ts';
-
-type CartItem = {
-    id: string;
-    name: string;
-    price: number;
-    quantity: number;
-};
-
-type ShoppingCart = {
+type CartState = {
     items: CartItem[];
 };
 
-const App = () => {
-    const [shoppingCart, setShoppingCart] = useState<ShoppingCart>({
+type CartContextType = CartState & {
+    addItem: (id: string) => void;
+    updateItemQuantity: (id: string, amount: number) => void;
+};
+
+type CartContextProviderProps = {
+    children: ReactNode;
+};
+
+export const CartContext = createContext<CartContextType>({
+    items: [],
+    addItem: () => {},
+    updateItemQuantity: () => {},
+});
+
+export default function CartContextProvider({ children }: CartContextProviderProps) {
+    const [cartState, setCartState] = useState<CartState>({
         items: [],
     });
 
     function handleAddItemToCart(id: string) {
-        setShoppingCart((prevShoppingCart) => {
-            const updatedItems = [...prevShoppingCart.items];
+        setCartState((prevCartState) => {
+            const updatedItems = [...prevCartState.items];
 
             const existingCartItemIndex = updatedItems.findIndex((cartItem) => cartItem.id === id);
             const existingCartItem = updatedItems[existingCartItemIndex];
@@ -36,7 +42,7 @@ const App = () => {
             } else {
                 const product = DUMMY_PRODUCTS.find((product) => product.id === id);
                 if (!product) {
-                    return prevShoppingCart;
+                    return prevCartState;
                 }
                 updatedItems.push({
                     id: id,
@@ -53,8 +59,8 @@ const App = () => {
     }
 
     function handleUpdateCartItemQuantity(productId: string, amount: number) {
-        setShoppingCart((prevShoppingCart) => {
-            const updatedItems = [...prevShoppingCart.items];
+        setCartState((prevCartState) => {
+            const updatedItems = [...prevCartState.items];
             const updatedItemIndex = updatedItems.findIndex((item) => item.id === productId);
 
             const updatedItem = {
@@ -75,12 +81,16 @@ const App = () => {
         });
     }
 
-    return (
-        <>
-            <Header cart={shoppingCart} onUpdateCartItemQuantity={handleUpdateCartItemQuantity} />
-            <Shop onAddItemToCart={handleAddItemToCart} />
-        </>
-    );
-};
+    const cartContext: CartContextType = {
+        items: cartState.items,
+        addItem: handleAddItemToCart,
+        updateItemQuantity: handleUpdateCartItemQuantity,
+    };
 
-export default App;
+    /**
+     * WARNING:
+     * If Error: Cannot find context 'CartContext' in 'CartContextProvider'
+     * make sure the file extension is .tsx, NOT .ts
+     */
+    return <CartContext.Provider value={cartContext}>{children}</CartContext.Provider>;
+}
