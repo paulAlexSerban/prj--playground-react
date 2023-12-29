@@ -1,13 +1,13 @@
-import { useRef, type FC, useContext } from 'react';
+import { useRef, type FC } from 'react';
 
 import CartModal, { CartModalRef } from './CartModal.tsx';
-import { CartContext } from '../store/shopping-cart-context.tsx';
+import { useCartContext } from '../store/shopping-cart-context.tsx';
 
 type HeaderProps = {};
 
 const Header: FC<HeaderProps> = () => {
     const modal = useRef<CartModalRef>(null);
-    const cartContext = useContext(CartContext);
+    const cartContext = useCartContext();
     const { items } = cartContext;
     const cartQuantity = items.length;
 

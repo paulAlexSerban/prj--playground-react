@@ -1,4 +1,4 @@
-import { useState, createContext, type ReactNode } from 'react';
+import { useState, useContext, createContext, type ReactNode } from 'react';
 import { type CartItem } from '../components/Cart.tsx';
 import { DUMMY_PRODUCTS } from '../dummy-products.ts';
 
@@ -20,6 +20,19 @@ export const CartContext = createContext<CartContextType>({
     addItem: () => {},
     updateItemQuantity: () => {},
 });
+
+/**
+ * useCartContext is a custom hook that can be used to access the CartContext
+ * from any component that is a child of the CartContextProvider
+ * This way, we don't have to use useContext(CartContext) in every component that needs access to the CartContext
+ */
+export function useCartContext() {
+    const context = useContext(CartContext);
+    if (!context) {
+        throw new Error('useCartContext must be used within a CartContextProvider');
+    }
+    return context;
+}
 
 export default function CartContextProvider({ children }: CartContextProviderProps) {
     const [cartState, setCartState] = useState<CartState>({

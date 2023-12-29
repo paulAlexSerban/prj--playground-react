@@ -1,5 +1,5 @@
 import { type FC, useContext } from 'react';
-import { CartContext } from '../store/shopping-cart-context';
+import { useCartContext } from '../store/shopping-cart-context';
 
 type ProductProps = {
     id: string;
@@ -10,7 +10,7 @@ type ProductProps = {
 };
 
 const Product: FC<ProductProps> = ({ id, image, title, price, description }: ProductProps) => {
-    const { addItem } = useContext(CartContext);
+    const { addItem } = useCartContext();
     return (
         <article className="product">
             <img src={image} alt={title} />
