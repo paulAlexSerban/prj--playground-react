@@ -21,7 +21,10 @@ const Modal: FC<ModalProps> = ({ open, children, onClose }) => {
 
     return createPortal(
         <dialog className="modal" ref={dialog} onClose={onClose}>
-            {children}
+            {/* 
+                conditional rendering of the children prop so children functions are not called when the modal is closed
+            */}
+            {open ? children : null}
         </dialog>,
         document.getElementById('modal')!
     );

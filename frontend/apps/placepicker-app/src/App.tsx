@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useRef, useState, useCallback } from 'react';
 
 import Places, { Place } from './components/Places.tsx';
 import { AVAILABLE_PLACES } from './data.ts';
@@ -77,7 +77,14 @@ function App() {
         }
     };
 
-    const handleRemovePlace = () => {
+    /**
+     * useCallback makes sure that the function is not recreated on every render cycle
+     * This is important because the function is passed as a prop to a child component
+     * and we don't want the child component to re-render unnecessarily
+     * this way, we can use the function as a dependency in the useEffect hook in the child component such as in DeleteConfirmation.tsx
+     */
+
+    const handleRemovePlace = useCallback(() => {
         setPickedPlaces((prevPickedPlaces) => prevPickedPlaces.filter((place) => place.id !== selectedPlace.current));
         setModalIsOpen(false);
 
@@ -88,7 +95,7 @@ function App() {
             'selectedPlaces',
             JSON.stringify(storedIds.filter((id: string) => id !== selectedPlace.current))
         );
-    };
+    }, []);
 
     return (
         <>

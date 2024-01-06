@@ -1,11 +1,28 @@
-import { type FC } from 'react';
+import { type FC, useEffect } from 'react';
+import ProgressBar from './ProgressBar';
 
 type DeleteConfirmationProps = {
     onConfirm: () => void;
     onCancel: () => void;
 };
 
+const TIMER = 3000;
+
 const DeleteConfirmation: FC<DeleteConfirmationProps> = ({ onConfirm, onCancel }) => {
+    /**
+     * ProgressBar as a child component improves performance because it does not
+     * cause the parent component to re-render every time the progress bar is
+     * updated (every 10ms)
+     */
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            onConfirm();
+        }, TIMER);
+        return () => {
+            clearTimeout(timer);
+        };
+    }, [onConfirm]);
+
     return (
         <div id="delete-confirmation">
             <h2>Are you sure?</h2>
@@ -18,6 +35,7 @@ const DeleteConfirmation: FC<DeleteConfirmationProps> = ({ onConfirm, onCancel }
                     Yes
                 </button>
             </div>
+            <ProgressBar timer={TIMER} />
         </div>
     );
 };
