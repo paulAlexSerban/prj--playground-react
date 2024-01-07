@@ -1,4 +1,4 @@
-import { type FC, useState } from 'react';
+import { type FC, useState, type ChangeEvent, useEffect } from 'react';
 
 import Card from '../UI/Card/Card';
 import classes from './Login.module.scss';
@@ -15,16 +15,27 @@ const Login: FC<LoginProps> = (props) => {
     const [passwordIsValid, setPasswordIsValid] = useState<boolean>();
     const [formIsValid, setFormIsValid] = useState<boolean>(false);
 
-    const emailChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setEnteredEmail(event.target.value);
+    useEffect(() => {
+        // debounce pattern to avoid checking form validity on every keystroke
+        const timer = setTimeout(() => {
+            console.log('checking form validity');
+            setFormIsValid(enteredEmail.includes('@') && enteredPassword.trim().length > 6);
+        }, 500);
 
-        setFormIsValid(event.target.value.includes('@') && enteredPassword.trim().length > 6);
+        return () => {
+            console.log('CLEANUP');
+            clearTimeout(timer);
+        };
+    }, [enteredEmail, enteredPassword]);
+
+    const emailChangeHandler = (event: ChangeEvent<HTMLInputElement>) => {
+        const { value } = event.target;
+        setEnteredEmail(value);
     };
 
-    const passwordChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setEnteredPassword(event.target.value);
-
-        setFormIsValid(event.target.value.trim().length > 6 && enteredEmail.includes('@'));
+    const passwordChangeHandler = (event: ChangeEvent<HTMLInputElement>) => {
+        const { value } = event.target;
+        setEnteredPassword(value);
     };
 
     const validateEmailHandler = () => {
