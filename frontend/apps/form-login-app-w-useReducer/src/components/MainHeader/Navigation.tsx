@@ -1,29 +1,32 @@
 import { type FC } from 'react';
 
 import classes from './Navigation.module.scss';
+import { useAuthContext } from '../../store/auth-context';
 
-type NavigationProps = {
-    isLoggedIn: boolean;
-    onLogout: () => void;
-};
+// type NavigationProps = {
+//     isLoggedIn: boolean;
+//     onLogout: () => void;
+// };
 
-const Navigation: FC<NavigationProps> = (props) => {
+const Navigation: FC = () => {
+    const { isLoggedIn, onLogout } = useAuthContext();
+
     return (
         <nav className={classes.nav}>
             <ul>
-                {props.isLoggedIn && (
+                {isLoggedIn && (
                     <li>
                         <a href="/">Users</a>
                     </li>
                 )}
-                {props.isLoggedIn && (
+                {isLoggedIn && (
                     <li>
                         <a href="/">Admin</a>
                     </li>
                 )}
-                {props.isLoggedIn && (
+                {isLoggedIn && (
                     <li>
-                        <button onClick={props.onLogout}>Logout</button>
+                        <button onClick={onLogout}>Logout</button>
                     </li>
                 )}
             </ul>

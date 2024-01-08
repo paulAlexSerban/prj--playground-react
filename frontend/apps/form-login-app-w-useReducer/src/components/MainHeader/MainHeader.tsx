@@ -3,16 +3,16 @@ import { type FC } from 'react';
 import Navigation from './Navigation';
 import classes from './MainHeader.module.scss';
 
-type MainHeaderProps = {
-    isAuthenticated: boolean;
-    onLogout: () => void;
-};
+// type MainHeaderProps = {
+//     isAuthenticated: boolean;
+//     onLogout: () => void;
+// };
 
-const MainHeader: FC<MainHeaderProps> = (props) => {
+const MainHeader: FC = () => {
     return (
         <header className={classes['main-header']}>
             <h1>A Typical Page</h1>
-            <Navigation isLoggedIn={props.isAuthenticated} onLogout={props.onLogout} />
+            <Navigation />
         </header>
     );
 };
