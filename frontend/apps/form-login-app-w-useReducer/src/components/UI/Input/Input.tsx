@@ -1,5 +1,5 @@
 import classes from './Input.module.scss';
-import { type FC, type ComponentPropsWithoutRef, useRef, forwardRef, useImperativeHandle } from 'react';
+import { type ComponentPropsWithoutRef, useRef, forwardRef, useImperativeHandle } from 'react';
 
 export type InputProps = {
     label: string;
