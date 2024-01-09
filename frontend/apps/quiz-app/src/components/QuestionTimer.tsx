@@ -1,4 +1,3 @@
-import { on } from 'process';
 import { type FC, useState, useEffect } from 'react';
 
 type QuestionTimerProps = {

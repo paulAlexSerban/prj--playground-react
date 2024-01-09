@@ -1,7 +1,6 @@
 import { type FC } from 'react';
 import quizCompleteImage from '../assets/quiz-complete.png';
 import QUESTIONS from '../questions';
-import Answers from './Answers';
 
 type SummaryProps = {
     userAnswers: (string | null)[];
