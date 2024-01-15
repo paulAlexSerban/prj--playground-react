@@ -1,4 +1,4 @@
-import { useState, FC } from 'react';
+import { useState, FC, memo } from 'react';
 
 import IconButton from '../UI/IconButton.tsx';
 import MinusIcon from '../UI/Icons/MinusIcon.tsx';
@@ -26,8 +26,7 @@ function isPrime(number: number) {
 type CounterProps = {
     initialCount: number;
 };
-
-const Counter: FC<CounterProps> = ({ initialCount }) => {
+const Counter: FC<CounterProps> = memo(({ initialCount }) => {
     log('<Counter /> rendered', 1);
     const initialCountIsPrime = isPrime(initialCount);
 
@@ -58,6 +57,6 @@ const Counter: FC<CounterProps> = ({ initialCount }) => {
             </p>
         </section>
     );
-};
+});
 
 export default Counter;
