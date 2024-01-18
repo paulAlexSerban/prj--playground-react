@@ -1,4 +1,4 @@
-import { useState, FC, memo } from 'react';
+import { useState, FC, memo, useCallback, useMemo } from 'react';
 
 import IconButton from '../UI/IconButton.tsx';
 import MinusIcon from '../UI/Icons/MinusIcon.tsx';
@@ -26,19 +26,36 @@ function isPrime(number: number) {
 type CounterProps = {
     initialCount: number;
 };
+
+/**
+ * using memo here is useless because of the restructuring and implementing
+ * ConfigureCounter.tsx
+ *
+ * left here for example purposes, it should be remove in real life scenario
+ */
 const Counter: FC<CounterProps> = memo(({ initialCount }) => {
     log('<Counter /> rendered', 1);
-    const initialCountIsPrime = isPrime(initialCount);
+    /**
+     * using useMemo here to memoize the result and avoid re-rendering of the
+     * Counter component
+     *
+     * useMemo should only be used for complex calculations and expensive operations
+     */
+    const initialCountIsPrime = useMemo(() => isPrime(initialCount), [initialCount]);
 
     const [counter, setCounter] = useState<number>(initialCount);
 
-    function handleDecrement() {
+    /**
+     * using useCallback here to memoize the function and avoid re-rendering of the
+     * IconButton component
+     */
+    const handleDecrement = useCallback(() => {
         setCounter((prevCounter) => prevCounter - 1);
-    }
+    }, []);
 
-    function handleIncrement() {
+    const handleIncrement = useCallback(() => {
         setCounter((prevCounter) => prevCounter + 1);
-    }
+    }, []);
 
     return (
         <section className="counter">
