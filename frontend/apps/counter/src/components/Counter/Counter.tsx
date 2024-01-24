@@ -64,6 +64,7 @@ const Counter: FC<CounterProps> = memo(({ initialCount }) => {
                 <strong>is {initialCountIsPrime ? 'a' : 'not a'}</strong> prime number.
             </p>
             <p>
+                {/* as we pass handleDecrement here as prop we have to make sure we always pass the same instance of the handler function */}
                 <IconButton icon={MinusIcon} onClick={handleDecrement}>
                     Decrement
                 </IconButton>
