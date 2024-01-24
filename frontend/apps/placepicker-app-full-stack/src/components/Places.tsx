@@ -13,7 +13,7 @@ export type PlacesProps = {
     title: string;
     places: Place[];
     fallbackText?: string;
-    onSelectPlace: (place: Place) => void;
+    onSelectPlace?: (place: Place) => void;
     loadingText?: string;
     isLoading?: boolean;
 };
@@ -28,10 +28,12 @@ const Places: FC<PlacesProps> = ({ title, places, fallbackText, onSelectPlace, i
                 <ul className="places">
                     {places.map((place) => (
                         <li key={place.id} className="place-item">
-                            <button onClick={() => onSelectPlace(place)}>
-                                <img src={`http://localhost:4001/${place.image.src}`} alt={place.image.alt} />
-                                <h3>{place.title}</h3>
-                            </button>
+                            {onSelectPlace && (
+                                <button onClick={() => onSelectPlace(place)}>
+                                    <img src={`http://localhost:4001/${place.image.src}`} alt={place.image.alt} />
+                                    <h3>{place.title}</h3>
+                                </button>
+                            )}
                         </li>
                     ))}
                 </ul>
