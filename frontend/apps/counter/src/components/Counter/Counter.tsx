@@ -50,6 +50,7 @@ const Counter: FC<CounterProps> = memo(({ initialCount }) => {
      * IconButton component
      */
     const handleDecrement = useCallback(() => {
+        // using the arrow function form of the state updating function, React guarantees that the state update will be scheduled correctly
         setCounter((prevCounter) => prevCounter - 1);
     }, []);
 
