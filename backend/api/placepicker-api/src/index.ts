@@ -52,5 +52,5 @@ app.use((req, res, next) => {
 });
 
 app.listen(port, () => {
-    console.log(`⚡️ [server]: Comments service is running at port: ${port}`);
+    console.log(`⚡️ [server]: Placepicker service is running at port: ${port}`);
 });

@@ -5,6 +5,7 @@
     "type": "module",
     "scripts": {
         "develop": "vite",
+        "develop:signup-form-full": "vite",
         "build:dev": "export NODE_ENV=development && tsc && vite build",
         "build:prod": "export NODE_ENV=production && tsc && vite build",
         "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",

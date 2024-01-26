@@ -13,6 +13,7 @@
         "build:prod": "rm -rfv .parcel-cache && lerna run build:prod",
         "package": "rm -rfv ./package/* && lerna run package --stream --parallel && node tools/build-scripts/DashboardGenerator.js",
         "develop": "rm -rfv .parcel-cache && yarn lerna run develop --stream --parallel",
+        "develop:signup-form-full": "rm -rfv .parcel-cache && yarn lerna run develop:signup-form-full",
         "develop:placepicker-full": "rm -rfv .parcel-cache && yarn lerna run develop:placepicker-full",
         "develop:playgrounds": "rm -rfv .parcel-cache && yarn lerna run develop:playgrounds --stream --parallel",
         "test": "yarn lerna run test --stream --parallel",

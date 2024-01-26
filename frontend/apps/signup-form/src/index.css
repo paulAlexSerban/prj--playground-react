@@ -143,6 +143,12 @@ fieldset {
     cursor: pointer;
 }
 
+.button:disabled {
+    background-color: #869999;
+    color: #142020;
+    cursor: not-allowed;
+}
+
 .button:hover,
 .button:focus {
     background-color: #319890;
