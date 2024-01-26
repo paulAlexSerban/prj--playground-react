@@ -1,6 +1,7 @@
 import { FC, useState } from 'react';
 import { isEqualsToOtherValue } from '../util/validation';
 import Input from './Input';
+import { sendFormData } from '../http';
 interface FormDataObject {
     [key: string]: FormDataEntryValue | FormDataEntryValue[];
 }
@@ -23,32 +24,7 @@ const SignUp: FC = () => {
             return;
         }
 
-        fetch('http://localhost:4001/signup', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(data),
-        })
-            .then((response) => {
-                if (response.ok) {
-                    response
-                        .json()
-                        .then((body) => {
-                            console.log('Signup successful');
-                            console.log('Response Body:', body);
-                        })
-                        .catch((error) => {
-                            console.error('Error parsing JSON:', error);
-                        });
-                } else {
-                    console.log('Signup failed');
-                }
-            })
-            .catch((error) => {
-                console.error('Network error:', error);
-            });
-        // Reset the form with a native DOM method
+        sendFormData('http://localhost:4001/signup', data);
         event.currentTarget.reset();
     };
 

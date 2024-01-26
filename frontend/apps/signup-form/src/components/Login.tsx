@@ -2,6 +2,8 @@ import { FC, useState, useEffect, ChangeEvent } from 'react';
 import Input from './Input';
 import { isEmail, isNotEmpty, hasMinLength } from '../util/validation';
 import { useInput } from '../hooks/useInput';
+import { sendFormData } from '../http';
+import { send } from 'process';
 const Login: FC = () => {
     const [formIsValid, setFormIsValid] = useState(false);
     const {
@@ -35,32 +37,7 @@ const Login: FC = () => {
             password: passwordValue,
         };
 
-        fetch('http://localhost:4001/login', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(enteredValues),
-        })
-            .then((response) => {
-                if (response.ok) {
-                    response
-                        .json()
-                        .then((body) => {
-                            console.log('Login successful');
-                            console.log('Response Body:', body);
-                            handleReset();
-                        })
-                        .catch((error) => {
-                            console.error('Error parsing JSON:', error);
-                        });
-                } else {
-                    console.log('Login failed');
-                }
-            })
-            .catch((error) => {
-                console.error('Network error:', error);
-            });
+        sendFormData('http://localhost:4001/login', enteredValues, handleReset);
     };
 
     useEffect(() => {
