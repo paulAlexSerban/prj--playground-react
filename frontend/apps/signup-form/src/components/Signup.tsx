@@ -1,7 +1,7 @@
 import { FC, useState } from 'react';
 import { isEqualsToOtherValue } from '../util/validation';
 import Input from './Input';
-import { sendFormData } from '../http';
+import { postData } from '../http';
 interface FormDataObject {
     [key: string]: FormDataEntryValue | FormDataEntryValue[];
 }
@@ -24,7 +24,7 @@ const SignUp: FC = () => {
             return;
         }
 
-        sendFormData('http://localhost:4001/signup', data);
+        postData('http://localhost:4001/signup', data);
         event.currentTarget.reset();
     };
 

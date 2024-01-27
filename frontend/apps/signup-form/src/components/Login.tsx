@@ -2,8 +2,8 @@ import { FC, useState, useEffect, ChangeEvent } from 'react';
 import Input from './Input';
 import { isEmail, isNotEmpty, hasMinLength } from '../util/validation';
 import { useInput } from '../hooks/useInput';
-import { sendFormData } from '../http';
-import { send } from 'process';
+import { postData } from '../http';
+
 const Login: FC = () => {
     const [formIsValid, setFormIsValid] = useState(false);
     const {
@@ -37,7 +37,7 @@ const Login: FC = () => {
             password: passwordValue,
         };
 
-        sendFormData('http://localhost:4001/login', enteredValues, handleReset);
+        postData('http://localhost:4001/login', enteredValues, handleReset);
     };
 
     useEffect(() => {

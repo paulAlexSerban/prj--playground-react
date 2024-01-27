@@ -1,8 +1,9 @@
 import { useEffect, useState, type ReactNode } from 'react';
-import { get } from './util/http';
+import { getData } from './util/http';
 import BlogPosts, { type BlogPost } from './components/BlogPosts';
 import ErrorMessage from './components/ErrorMessage';
 import fetchingImg from './assets/data-fetching.png';
+
 type RawDataBlogPost = {
     id: number;
     userId: number;
@@ -10,6 +11,7 @@ type RawDataBlogPost = {
     body: string;
 };
 
+const POST_LIST_URL = 'https://jsonplaceholder.typicode.com/posts';
 function App() {
     const [fetchedPosts, setFetchedPosts] = useState<BlogPost[]>([]);
     const [error, setError] = useState<string>();
@@ -19,9 +21,13 @@ function App() {
         const fetchPosts = async () => {
             setIsFetching(true);
             try {
-                const data = await get<RawDataBlogPost[]>('https://jsonplaceholder.typicode.com/posts');
+                const data = await getData<RawDataBlogPost[]>(POST_LIST_URL);
                 if (data instanceof Error) {
                     setError(data.message);
+                    return;
+                }
+                if (!Array.isArray(data)) {
+                    setError('Data is not an array');
                     return;
                 }
                 const blogPosts: BlogPost[] = data.map((post) => ({

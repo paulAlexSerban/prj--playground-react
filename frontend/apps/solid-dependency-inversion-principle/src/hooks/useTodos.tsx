@@ -1,23 +1,22 @@
 import { useState, useEffect } from 'react';
 import { TodoItemProps } from '../components/TodoItem';
+import { getData } from '../util/http';
 
-function useTodos() {
+export const useTodos = () => {
     const [todos, setTodos] = useState<TodoItemProps[]>([]);
 
     useEffect(() => {
-        // Refactored to use fetch() instead of axios.get() to call an API
-        async function getTodosWithFetch() {
-            const response = await fetch('https://jsonplaceholder.typicode.com/todos');
-            const data = await response.json();
-            setTodos(data);
-        }
-        getTodosWithFetch();
+        const fetchTodos = async () => {
+            const data = await getData<TodoItemProps[]>('https://jsonplaceholder.typicode.com/todos');
+            if (data) {
+                setTodos(data);
+            }
+        };
+        fetchTodos();
     }, []);
 
     return todos;
-}
-
-export { useTodos };
+};
 
 // another implementation detail change
 // import localTodos from "./todos.json";

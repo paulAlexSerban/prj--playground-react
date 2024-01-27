@@ -1,6 +1,6 @@
 import { Place } from './components/Places';
 
-export const fetchAvailablePlaces = async (query: string) => {
+export const getData = async (query: string) => {
     const response = await fetch(query);
     const responseData = await response.json();
 
@@ -11,7 +11,7 @@ export const fetchAvailablePlaces = async (query: string) => {
     return responseData.places;
 };
 
-export const updateUserPlaces = async (places: Place[]) => {
+export const putData = async (places: Place[]) => {
     const response = await fetch('http://localhost:4001/user-places', {
         method: 'PUT',
         headers: {

@@ -5,7 +5,7 @@ import Modal from './components/Modal.tsx';
 import DeleteConfirmation from './components/DeleteConfirmation.tsx';
 import logoImg from './assets/logo.png';
 import AvailablePlaces from './components/AvailablePlaces.tsx';
-import { updateUserPlaces, fetchAvailablePlaces } from './http.ts';
+import { putData, getData } from './http.ts';
 import ErrorCmp from './components/Error.tsx';
 import useFetch from './hooks/useFetch.ts';
 
@@ -17,7 +17,7 @@ function App() {
         error: fetchError,
         setFetchedData: setUserPlaces,
         setError: setErrorUpdatingPlaces,
-    } = useFetch<Place[]>(fetchAvailablePlaces, 'http://localhost:4001/user-places', []);
+    } = useFetch<Place[]>(getData, 'http://localhost:4001/user-places', []);
     const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
 
     function handleStartRemovePlace(place: Place) {
@@ -45,7 +45,7 @@ function App() {
         });
 
         // this won't work because the state update is scheduled and not executed immediately
-        // updateUserPlaces(userPlaces);
+        // putData(userPlaces);
         try {
             if (!userPlaces) {
                 return;
@@ -54,13 +54,13 @@ function App() {
                 return;
             }
             // this will work because we use the updater function form of setState
-            await updateUserPlaces([selectedPlace, ...userPlaces]);
+            await putData([selectedPlace, ...userPlaces]);
         } catch {
             setErrorUpdatingPlaces({
                 message: 'Failed to update your places. Please try again later.',
             });
             setUserPlaces(userPlaces);
-            // we don't need to do anything here because the error is already handled in the updateUserPlaces() function
+            // we don't need to do anything here because the error is already handled in the putData() function
         }
     };
 
@@ -87,13 +87,13 @@ function App() {
                           }
                       })
                     : [];
-                await updateUserPlaces(filteredPlaces);
+                await putData(filteredPlaces);
             } catch {
                 setUserPlaces(userPlaces);
                 setErrorUpdatingPlaces({
                     message: 'Failed to update your places. Please try again later.',
                 });
-                // we don't need to do anything here because the error is already handled in the updateUserPlaces() function
+                // we don't need to do anything here because the error is already handled in the putData() function
             }
 
             setModalIsOpen(false);

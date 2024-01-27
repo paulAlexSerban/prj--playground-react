@@ -2,7 +2,7 @@ import { FC } from 'react';
 import Places, { Place } from './Places.tsx';
 import ErrorCmp from './Error.tsx';
 import { sortPlacesByDistance } from '../loc.ts';
-import { fetchAvailablePlaces } from '../http.ts';
+import { getData } from '../http.ts';
 import useFetch from '../hooks/useFetch.ts';
 
 type AvailablePlacesProps = {
@@ -10,7 +10,7 @@ type AvailablePlacesProps = {
 };
 
 const fetchSortedPlaces = async (url: string) => {
-    const places = await fetchAvailablePlaces(url);
+    const places = await getData(url);
     return new Promise<Place[]>((resolve, reject) => {
         navigator.geolocation.getCurrentPosition(
             (position) => {
