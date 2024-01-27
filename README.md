@@ -11,17 +11,17 @@
 
 ## Env. URL's
 
--   [PROD Apps Lib](https://www.paulserban.eu/prj--react-playground-typescript/apps/)
+-   [PROD Apps Lib](https://www.paulserban.eu/wbk--reactjs-playground--typescript/apps/)
 -   [Visual Regression Testing w. Chromatic & Storybook](https://www.chromatic.com/builds?appId=65278ceafda5062d74eb64f6)
 
--   [STAGE - Apps Lib](https://stage.paulserban.eu/prj--react-playground-typescript/apps/)
--   [STAGE - Component Lib w. Storybook](https://stage.paulserban.eu/prj--react-playground-typescript/storybook)
+-   [STAGE - Apps Lib](https://stage.paulserban.eu/wbk--reactjs-playground--typescript/apps/)
+-   [STAGE - Component Lib w. Storybook](https://stage.paulserban.eu/wbk--reactjs-playground--typescript/storybook)
 
--   [TEST - Apps Lib](https://test.paulserban.eu/prj--react-playground-typescript/apps/)
--   [TEST - Component Lib w. Storybook](https://test.paulserban.eu/prj--react-playground-typescript/storybook)
+-   [TEST - Apps Lib](https://test.paulserban.eu/wbk--reactjs-playground--typescript/apps/)
+-   [TEST - Component Lib w. Storybook](https://test.paulserban.eu/wbk--reactjs-playground--typescript/storybook)
 
--   [DEV - Apps Lib](https://develop.paulserban.eu/prj--react-playground-typescript/apps/)
--   [DEV - Component Lib w. Storybook](https://develop.paulserban.eu/prj--react-playground-typescript/storybook)
+-   [DEV - Apps Lib](https://develop.paulserban.eu/wbk--reactjs-playground--typescript/apps/)
+-   [DEV - Component Lib w. Storybook](https://develop.paulserban.eu/wbk--reactjs-playground--typescript/storybook)
 
 ## 1. Introduction
 
@@ -126,10 +126,10 @@ lerna WARN Yarn's registry proxy is broken, replacing with public npm registry
 lerna WARN If you don't have an npm token, you should exit and run `npm login`
 lerna info Assuming all packages changed
 ... some logs ...
-lerna WARN notice Package failed to publish: @prj--react-playground-typescript/shared-foundation
+lerna WARN notice Package failed to publish: @wbk--reactjs-playground--typescript/shared-foundation
 lerna ERR! E404 Not found
 lerna ERR! errno "undefined" is not a valid exit code - exiting with code 1
-lerna WARN notice Package failed to publish: @prj--react-playground-typescript/lsg
+lerna WARN notice Package failed to publish: @wbk--reactjs-playground--typescript/lsg
 lerna ERR! E404 Not found
 lerna ERR! errno "undefined" is not a valid exit code - exiting with code 1
 error Command failed with exit code 1.

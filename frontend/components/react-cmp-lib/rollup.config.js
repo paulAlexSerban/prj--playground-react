@@ -29,5 +29,5 @@ module.exports = {
         preserveModules: true,
     },
     plugins,
-    external: ['react', '@prj--react-playground-typescript/shared-foundation'],
+    external: ['react', '@wbk--reactjs-playground--typescript/shared-foundation'],
 };

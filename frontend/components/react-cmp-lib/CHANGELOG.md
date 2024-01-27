@@ -5,33 +5,33 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.4.1 (2023-10-18)
 
-**Note:** Version bump only for package @prj--react-playground-typescript/react-cmp-lib
+**Note:** Version bump only for package @wbk--reactjs-playground--typescript/react-cmp-lib
 
-# [0.4.0](https://github.com/paulAlexSerban/prj--react-playground-typescript/compare/@prj--react-playground-typescript/react-cmp-lib@0.3.1...@prj--react-playground-typescript/react-cmp-lib@0.4.0) (2023-10-18)
-
-### Features
-
--   **structure:** moved storybook out of the react library package ([8e557cd](https://github.com/paulAlexSerban/prj--react-playground-typescript/commit/8e557cdce96bd430df38d3da4460df4774b79b3d))
-
-## [0.3.1](https://github.com/paulAlexSerban/prj--react-playground-typescript/compare/@prj--react-playground-typescript/react-cmp-lib@0.3.0...@prj--react-playground-typescript/react-cmp-lib@0.3.1) (2023-10-12)
-
-**Note:** Version bump only for package @prj--react-playground-typescript/react-cmp-lib
-
-# [0.3.0](https://github.com/paulAlexSerban/prj--react-playground-typescript/compare/@prj--react-playground-typescript/react-cmp-lib@0.2.3...@prj--react-playground-typescript/react-cmp-lib@0.3.0) (2023-10-12)
+# [0.4.0](https://github.com/paulAlexSerban/wbk--reactjs-playground--typescript/compare/@wbk--reactjs-playground--typescript/react-cmp-lib@0.3.1...@wbk--reactjs-playground--typescript/react-cmp-lib@0.4.0) (2023-10-18)
 
 ### Features
 
--   added chormatic tests ([fab13db](https://github.com/paulAlexSerban/prj--react-playground-typescript/commit/fab13db64d15606ec3e1bee1ac658c7b21827ee9))
+-   **structure:** moved storybook out of the react library package ([8e557cd](https://github.com/paulAlexSerban/wbk--reactjs-playground--typescript/commit/8e557cdce96bd430df38d3da4460df4774b79b3d))
 
-## [0.2.3](https://github.com/paulAlexSerban/prj--react-playground-typescript/compare/@prj--react-playground-typescript/react-cmp-lib@0.2.2...@prj--react-playground-typescript/react-cmp-lib@0.2.3) (2023-10-12)
+## [0.3.1](https://github.com/paulAlexSerban/wbk--reactjs-playground--typescript/compare/@wbk--reactjs-playground--typescript/react-cmp-lib@0.3.0...@wbk--reactjs-playground--typescript/react-cmp-lib@0.3.1) (2023-10-12)
+
+**Note:** Version bump only for package @wbk--reactjs-playground--typescript/react-cmp-lib
+
+# [0.3.0](https://github.com/paulAlexSerban/wbk--reactjs-playground--typescript/compare/@wbk--reactjs-playground--typescript/react-cmp-lib@0.2.3...@wbk--reactjs-playground--typescript/react-cmp-lib@0.3.0) (2023-10-12)
+
+### Features
+
+-   added chormatic tests ([fab13db](https://github.com/paulAlexSerban/wbk--reactjs-playground--typescript/commit/fab13db64d15606ec3e1bee1ac658c7b21827ee9))
+
+## [0.2.3](https://github.com/paulAlexSerban/wbk--reactjs-playground--typescript/compare/@wbk--reactjs-playground--typescript/react-cmp-lib@0.2.2...@wbk--reactjs-playground--typescript/react-cmp-lib@0.2.3) (2023-10-12)
 
 ### Bug Fixes
 
--   cleanup ([7359581](https://github.com/paulAlexSerban/prj--react-playground-typescript/commit/735958170f11f71fccdae07f851dce5aa62f477a))
+-   cleanup ([7359581](https://github.com/paulAlexSerban/wbk--reactjs-playground--typescript/commit/735958170f11f71fccdae07f851dce5aa62f477a))
 
-## [0.2.2](https://github.com/paulAlexSerban/prj--react-playground-typescript/compare/@prj--react-playground-typescript/react-cmp-lib@0.2.1...@prj--react-playground-typescript/react-cmp-lib@0.2.2) (2023-10-12)
+## [0.2.2](https://github.com/paulAlexSerban/wbk--reactjs-playground--typescript/compare/@wbk--reactjs-playground--typescript/react-cmp-lib@0.2.1...@wbk--reactjs-playground--typescript/react-cmp-lib@0.2.2) (2023-10-12)
 
 ### Bug Fixes
 
--   formats ([3f60696](https://github.com/paulAlexSerban/prj--react-playground-typescript/commit/3f6069645d1ccb4d85fedfffabfbcd396a619bde))
--   updated comments ([ea70f6d](https://github.com/paulAlexSerban/prj--react-playground-typescript/commit/ea70f6d7acd23748d9dac8b44fe7d12f492febd8))
+-   formats ([3f60696](https://github.com/paulAlexSerban/wbk--reactjs-playground--typescript/commit/3f6069645d1ccb4d85fedfffabfbcd396a619bde))
+-   updated comments ([ea70f6d](https://github.com/paulAlexSerban/wbk--reactjs-playground--typescript/commit/ea70f6d7acd23748d9dac8b44fe7d12f492febd8))

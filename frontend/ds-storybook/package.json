@@ -31,9 +31,9 @@
         "typescript": "^5.2.2"
     },
     "dependencies": {
-        "@prj--react-playground-typescript/shared-foundation": "*",
-        "@prj--react-playground-typescript/react-cmp-lib": "*",
-        "@prj--react-playground-typescript/lsg-styles-generic": "*"
+        "@wbk--reactjs-playground--typescript/shared-foundation": "*",
+        "@wbk--reactjs-playground--typescript/react-cmp-lib": "*",
+        "@wbk--reactjs-playground--typescript/lsg-styles-generic": "*"
     },
     "publishConfig": {
         "access": "public"
