@@ -1,4 +1,4 @@
-import { Place } from './components/Places';
+import { Place } from '../components/Places';
 
 export const getData = async (query: string) => {
     const response = await fetch(query);

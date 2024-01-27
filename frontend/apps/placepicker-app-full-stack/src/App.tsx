@@ -5,7 +5,7 @@ import Modal from './components/Modal.tsx';
 import DeleteConfirmation from './components/DeleteConfirmation.tsx';
 import logoImg from './assets/logo.png';
 import AvailablePlaces from './components/AvailablePlaces.tsx';
-import { putData, getData } from './http.ts';
+import { putData, getData } from './util/http.ts';
 import ErrorCmp from './components/Error.tsx';
 import useFetch from './hooks/useFetch.ts';
 

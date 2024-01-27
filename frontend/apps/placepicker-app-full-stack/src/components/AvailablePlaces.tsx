@@ -1,8 +1,8 @@
 import { FC } from 'react';
 import Places, { Place } from './Places.tsx';
 import ErrorCmp from './Error.tsx';
-import { sortPlacesByDistance } from '../loc.ts';
-import { getData } from '../http.ts';
+import { sortPlacesByDistance } from '../util/loc.ts';
+import { getData } from '../util/http.ts';
 import useFetch from '../hooks/useFetch.ts';
 
 type AvailablePlacesProps = {
