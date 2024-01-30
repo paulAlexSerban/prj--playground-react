@@ -1,6 +1,7 @@
 import { type FC } from 'react';
 import { currencyFormatter } from '../util/formatting';
 import Button from './UI/Button';
+import { useCartContext } from '../store/CartContext';
 type MealItemProps = {
     name: string;
     description: string;
@@ -10,6 +11,15 @@ type MealItemProps = {
 
 const MealItem: FC<MealItemProps> = ({ image, name, price, description }) => {
     const formattedPrice = currencyFormatter.format(Number(price));
+    const { addItem } = useCartContext();
+    const handleAddMealToCart = () => {
+        addItem({
+            id: name,
+            name,
+            price: Number(price),
+            quantity: 1,
+        });
+    };
     return (
         <li className="meal-item">
             <article>
@@ -20,7 +30,7 @@ const MealItem: FC<MealItemProps> = ({ image, name, price, description }) => {
                     <p className="meal-item-description">{description}</p>
                 </div>
                 <div className="meal-item-actions">
-                    <Button>Add to cart</Button>
+                    <Button onClick={handleAddMealToCart}>Add to cart</Button>
                 </div>
             </article>
         </li>

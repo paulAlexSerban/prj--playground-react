@@ -1,8 +1,7 @@
-import { type FC, useEffect, useState } from 'react';
-import HttpRequestFacade from '../util/HttpRequestFacade';
+import { FC } from 'react';
+import useHttp from '../hooks/useHttp';
 import MealItem from './MealItem';
-const api = new HttpRequestFacade();
-
+import Error from './Error';
 type RawMealData = {
     id: string;
     name: string;
@@ -11,32 +10,34 @@ type RawMealData = {
     image: string;
 };
 
+// declaring the request config outside of the component so that it doesn't get re-created on every component re-render
+// it is passed as a dependency to the useHttp hook, so that the hook knows when to re-send the request
+const requestConfig = {
+    method: 'GET',
+};
+
 const Meals: FC = () => {
-    const [fetchedData, setFetchedData] = useState<RawMealData[]>([]);
-    const [error, setError] = useState<string | null>(null);
-    const [isFetching, setIsFetching] = useState<boolean>(true);
+    const {
+        data: loadedMeals,
+        isLoading,
+        error,
+    } = useHttp<RawMealData[]>('http://localhost:4001/meals', requestConfig, []);
 
-    useEffect(() => {
-        const fetchMeals = async () => {
-            setIsFetching(true);
-            try {
-                const rawData: RawMealData[] = await api.get('http://localhost:4001/meals');
-                const meals: RawMealData[] = rawData;
-                setFetchedData(meals);
-            } catch (err) {
-                setError(err instanceof Error ? err.message : String(err));
-            } finally {
-                setIsFetching(false);
-            }
-        };
-
-        fetchMeals();
-    }, []);
+    console.log({ loadedMeals });
+    if (isLoading) {
+        return <p className="center">Loading meals...</p>;
+    }
+    if (error) {
+        return <Error title="Failed to fetch meals" message={error} />;
+    }
+    if (loadedMeals?.length === 0 || !loadedMeals) {
+        return <p>No mealsfound.</p>;
+    }
 
     return (
         <ul id="meals">
-            {!isFetching &&
-                fetchedData.map((meal) => (
+            {!isLoading &&
+                loadedMeals?.map((meal) => (
                     <MealItem
                         key={meal.id}
                         name={meal.name}
@@ -45,8 +46,6 @@ const Meals: FC = () => {
                         image={meal.image}
                     />
                 ))}
-            {isFetching && <p>Loading meals...</p>}
-            {error && <p>{error}</p>}
         </ul>
     );
 };
