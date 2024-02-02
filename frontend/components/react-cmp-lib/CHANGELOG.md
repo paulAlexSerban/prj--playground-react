@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.5.0 (2024-02-02)
+
+### Features
+
+-   **cleanup:** remove duloingo app ([3ea8f7d](https://github.com/paulAlexSerban/wbk--reactjs-playground--typescript/commit/3ea8f7d47da9759c9ea8f62599a8aa4250b38c3c))
+-   **cleanup:** small ([ef5035d](https://github.com/paulAlexSerban/wbk--reactjs-playground--typescript/commit/ef5035dd88231efce920b3a5ed7e94acaaa02811))
+-   heading ([a9f7300](https://github.com/paulAlexSerban/wbk--reactjs-playground--typescript/commit/a9f7300df1e69167ada74ff161798555b3727750))
+-   **paragraph:** small ([facfe7a](https://github.com/paulAlexSerban/wbk--reactjs-playground--typescript/commit/facfe7ab7847f8af286e46fee916ac950d709ff5))
+-   refactor ([3819cb7](https://github.com/paulAlexSerban/wbk--reactjs-playground--typescript/commit/3819cb7dabfd32836e6acd0d5a8089b467ea5985))
+-   **refactoring:** init ([739b907](https://github.com/paulAlexSerban/wbk--reactjs-playground--typescript/commit/739b9078aa89501f101b009f87f09b49054815c0))
+-   **refactor:** small ([36ca9b7](https://github.com/paulAlexSerban/wbk--reactjs-playground--typescript/commit/36ca9b7dfff9673b918f52a9f80790f6d27cf44d))
+-   **rename:** done ([15a0f92](https://github.com/paulAlexSerban/wbk--reactjs-playground--typescript/commit/15a0f92f47690da6021269d43d7489cb72cdc514))
+-   restructure ([e7da142](https://github.com/paulAlexSerban/wbk--reactjs-playground--typescript/commit/e7da1422fa1001435ee4f7e086684e2ce2a65276))
+-   **storybook:** cleanup ([968a9c7](https://github.com/paulAlexSerban/wbk--reactjs-playground--typescript/commit/968a9c70db907e0e757ec6b2e2f9a1c032354bf2))
+
 ## 0.4.1 (2023-10-18)
 
 **Note:** Version bump only for package @wbk--reactjs-playground--typescript/react-cmp-lib
