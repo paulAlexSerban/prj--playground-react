@@ -1,5 +1,5 @@
 import React from 'react';
-import { spacing } from '@prj--react-playground-typescript/shared-foundation';
+import { spacing } from '@wbk--reactjs-playground--typescript/shared-foundation';
 
 export interface MarginProps {
     space?: keyof typeof spacing;

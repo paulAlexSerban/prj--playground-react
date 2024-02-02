@@ -1,8 +1,10 @@
 import { useEffect, useState, type ReactNode } from 'react';
-import { get } from './util/http';
 import BlogPosts, { type BlogPost } from './components/BlogPosts';
 import ErrorMessage from './components/ErrorMessage';
+import Spinner from './components/Spinner';
 import fetchingImg from './assets/data-fetching.png';
+import HttpRequestFacade from './util/HttpRequestFacade'; // Import HttpRequestFacade
+
 type RawDataBlogPost = {
     id: number;
     userId: number;
@@ -10,52 +12,48 @@ type RawDataBlogPost = {
     body: string;
 };
 
+const POST_LIST_URL = 'https://jsonplaceholder.typicode.com/posts';
+const api = new HttpRequestFacade(); // Create an instance of HttpRequestFacade
+
 function App() {
     const [fetchedPosts, setFetchedPosts] = useState<BlogPost[]>([]);
-    const [error, setError] = useState<string>();
-    const [isFetching, setIsFetching] = useState<boolean>(false);
+    const [error, setError] = useState<string | null>(null);
+    const [isFetching, setIsFetching] = useState<boolean>(true);
 
     useEffect(() => {
         const fetchPosts = async () => {
             setIsFetching(true);
             try {
-                const data = await get<RawDataBlogPost[]>('https://jsonplaceholder.typicode.com/posts');
-                if (data instanceof Error) {
-                    setError(data.message);
-                    return;
-                }
-                const blogPosts: BlogPost[] = data.map((post) => ({
+                const rawData: RawDataBlogPost[] = await api.get(POST_LIST_URL); // Use the facade's get method
+                const blogPosts: BlogPost[] = rawData.map((post) => ({
                     id: post.id,
                     title: post.title,
                     text: post.body,
                 }));
                 setFetchedPosts(blogPosts);
-            } catch (error) {
-                if (error instanceof Error) {
-                    setError(error.message);
-                }
-                return;
+            } catch (err) {
+                setError(err instanceof Error ? err.message : String(err));
+            } finally {
+                setIsFetching(false);
             }
-
-            setIsFetching(false);
         };
 
         fetchPosts();
     }, []);
 
     let content: ReactNode;
-
     if (error) {
         content = <ErrorMessage text={error} />;
-    }
-    if (isFetching) {
-        content = <p id="loading-fallback">Loading posts...</p>;
-    }
-    if (fetchedPosts) {
+    } else if (isFetching) {
+        content = <Spinner />;
+    } else if (fetchedPosts.length > 0) {
         content = <BlogPosts posts={fetchedPosts} />;
+    } else {
+        content = <p>No blog posts found.</p>;
     }
+
     return (
-        <main>
+        <main aria-busy={isFetching}>
             <img src={fetchingImg} alt="Fetching data" />
             {content}
         </main>

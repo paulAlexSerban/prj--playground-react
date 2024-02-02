@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import { Select } from '@prj--react-playground-typescript/react-cmp-lib';
+import { Select } from '@wbk--reactjs-playground--typescript/react-cmp-lib';
 
-import '@prj--react-playground-typescript/lsg-styles-generic/lib/components/atoms/utilities.css';
-import '@prj--react-playground-typescript/lsg-styles-generic/lib/components/atoms/text.css';
-import '@prj--react-playground-typescript/lsg-styles-generic/lib/components/atoms/margin.css';
-import '@prj--react-playground-typescript/lsg-styles-generic/lib/components/molecules/select.css';
+import '@wbk--reactjs-playground--typescript/lsg-styles-generic/lib/components/atoms/paragraph.css';
+import '@wbk--reactjs-playground--typescript/lsg-styles-generic/lib/components/atoms/margin.css';
+import '@wbk--reactjs-playground--typescript/lsg-styles-generic/lib/components/molecules/select.css';
+import '@wbk--reactjs-playground--typescript/lsg-styles-generic/lib/components/atoms/utilities.css';
+import '@wbk--reactjs-playground--typescript/lsg-styles-generic/lib/components/atoms/text.css';
 
 const options = [
     {

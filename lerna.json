@@ -6,6 +6,7 @@
         "assets/*",
         "assets/**/*",
         "backend/*",
+        "backend/**/*",
         "database/*",
         "frontend/*",
         "frontend/**/*",

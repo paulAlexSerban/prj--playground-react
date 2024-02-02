@@ -1,13 +1,13 @@
 {
-    "name": "@prj--react-playground-typescript/assets-media",
+    "name": "@wbk--reactjs-playground--typescript/assets-media",
     "private": true,
     "version": "0.1.0",
     "files": [
         "dist"
     ],
     "scripts": {
-        "process": "gulp process --require @babel/register --gulpfile build",
-        "publish": "bash scripts/publish.bash"
+        "process:assets": "gulp process --require @babel/register --gulpfile build",
+        "publish:assets": "bash scripts/publish.bash"
     },
     "dependencies": {
         "@babel/core": "^7.23.2",
