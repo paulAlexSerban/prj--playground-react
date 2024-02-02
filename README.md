@@ -11,17 +11,17 @@
 
 ## Env. URL's
 
--   [PROD Apps Lib](https://www.paulserban.eu/prj--react-playground-typescript/apps/)
+-   [PROD Apps Lib](https://www.paulserban.eu/wbk--reactjs-playground--typescript/apps/)
 -   [Visual Regression Testing w. Chromatic & Storybook](https://www.chromatic.com/builds?appId=65278ceafda5062d74eb64f6)
 
--   [STAGE - Apps Lib](https://stage.paulserban.eu/prj--react-playground-typescript/apps/)
--   [STAGE - Component Lib w. Storybook](https://stage.paulserban.eu/prj--react-playground-typescript/storybook)
+-   [STAGE - Apps Lib](https://stage.paulserban.eu/wbk--reactjs-playground--typescript/apps/)
+-   [STAGE - Component Lib w. Storybook](https://stage.paulserban.eu/wbk--reactjs-playground--typescript/storybook)
 
--   [TEST - Apps Lib](https://test.paulserban.eu/prj--react-playground-typescript/apps/)
--   [TEST - Component Lib w. Storybook](https://test.paulserban.eu/prj--react-playground-typescript/storybook)
+-   [TEST - Apps Lib](https://test.paulserban.eu/wbk--reactjs-playground--typescript/apps/)
+-   [TEST - Component Lib w. Storybook](https://test.paulserban.eu/wbk--reactjs-playground--typescript/storybook)
 
--   [DEV - Apps Lib](https://develop.paulserban.eu/prj--react-playground-typescript/apps/)
--   [DEV - Component Lib w. Storybook](https://develop.paulserban.eu/prj--react-playground-typescript/storybook)
+-   [DEV - Apps Lib](https://develop.paulserban.eu/wbk--reactjs-playground--typescript/apps/)
+-   [DEV - Component Lib w. Storybook](https://develop.paulserban.eu/wbk--reactjs-playground--typescript/storybook)
 
 ## 1. Introduction
 
@@ -104,6 +104,7 @@ The project comprises multiple packages as sub-projects, with dependencies betwe
 
 ### Future Improvements or Ideas
 
+-   [ ] implement semantic release
 -   [ ] refactor CI build for better performance (use CI for better performance)
     -   [ ] lint, formats and test
         -   [ ] -   run locally on committing for development branches
@@ -125,11 +126,43 @@ lerna WARN Yarn's registry proxy is broken, replacing with public npm registry
 lerna WARN If you don't have an npm token, you should exit and run `npm login`
 lerna info Assuming all packages changed
 ... some logs ...
-lerna WARN notice Package failed to publish: @prj--react-playground-typescript/shared-foundation
+lerna WARN notice Package failed to publish: @wbk--reactjs-playground--typescript/shared-foundation
 lerna ERR! E404 Not found
 lerna ERR! errno "undefined" is not a valid exit code - exiting with code 1
-lerna WARN notice Package failed to publish: @prj--react-playground-typescript/lsg
+lerna WARN notice Package failed to publish: @wbk--reactjs-playground--typescript/lsg
 lerna ERR! E404 Not found
 lerna ERR! errno "undefined" is not a valid exit code - exiting with code 1
 error Command failed with exit code 1.
 ```
+
+## Case Studies
+
+### State Management with Context API
+
+Both versions of your `CartContextProvider` in React serve to manage a shopping cart's state and provide that state along with some functions (`addItem`, `updateItemQuantity`) to components in your application. However, they use different state management approaches, each with its own advantages and trade-offs.
+
+### Version 1: Using `useState`
+
+-   **State Management:** This version uses the `useState` hook for state management. It's straightforward and easy to understand, especially for simpler state logic.
+-   **State Updating:** It directly manipulates the state based on the given actions (adding an item, updating quantity). This is more intuitive for simple state updates.
+-   **Best Suited For:** Smaller applications or components where state changes are minimal and not complex.
+
+### Version 2: Using `useReducer`
+
+-   **State Management:** This version uses the `useReducer` hook, which is more suited for complex state logic that involves multiple sub-values or when the next state depends on the previous one.
+-   **State Updating:** Actions and reducers handle state updates, making it more structured and predictable, especially beneficial for complex state logic.
+-   **Dispatch Method:** Actions are dispatched rather than setting the state directly. This is helpful for debugging and logging state changes.
+-   **Best Suited For:** Larger applications or components with complex state interactions or when the state logic might grow in complexity over time.
+
+### Key Differences
+
+1. **Complexity and Scalability:** `useReducer` provides more scalability and is better for managing complex state logic. `useState` is simpler and more straightforward for basic state management.
+2. **Predictability:** `useReducer` makes state updates more predictable and organized, which is advantageous in large applications.
+3. **Debugging:** With `useReducer`, it's easier to track dispatched actions, which can aid in debugging.
+
+### Choice Depends on Use Case
+
+-   If your application's state logic is simple and unlikely to become complex, the `useState` approach might be more suitable.
+-   If you anticipate more complex interactions or the state logic becoming more intricate over time, or if you prefer a more structured approach to state management, `useReducer` would be the better choice.
+
+Both are valid in the React ecosystem, and the choice largely depends on the specific needs and complexity of your application.

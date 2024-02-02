@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Heading } from '@prj--react-playground-typescript/react-cmp-lib';
-import '@prj--react-playground-typescript/lsg-styles-generic/lib/components/atoms/heading.css';
+import { Heading } from '@wbk--reactjs-playground--typescript/react-cmp-lib';
+import '@wbk--reactjs-playground--typescript/lsg-styles-generic/lib/components/atoms/heading.css';
 
 const meta = {
     title: 'Atoms/Heading',

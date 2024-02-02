@@ -1,5 +1,5 @@
 {
-    "name": "@prj--react-playground-typescript/select-dropdown-app",
+    "name": "@wbk--reactjs-playground--typescript/select-dropdown-app",
     "version": "0.1.0",
     "license": "MIT",
     "scripts": {
@@ -18,9 +18,9 @@
         "typescript": "^5.2.2"
     },
     "dependencies": {
-        "@prj--react-playground-typescript/shared-foundation": "*",
-        "@prj--react-playground-typescript/lsg-styles-generic": "*",
-        "@prj--react-playground-typescript/react-cmp-lib": "*"
+        "@wbk--reactjs-playground--typescript/shared-foundation": "*",
+        "@wbk--reactjs-playground--typescript/lsg-styles-generic": "*",
+        "@wbk--reactjs-playground--typescript/react-cmp-lib": "*"
     },
     "private": true
 }

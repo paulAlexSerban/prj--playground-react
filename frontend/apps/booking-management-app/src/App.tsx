@@ -21,7 +21,7 @@ const Router = createBrowserRouter(
         },
     ],
     {
-        basename: import.meta.env.DEV ? '/' : `/prj--react-playground-typescript/apps/booking-management-app/`,
+        basename: import.meta.env.DEV ? '/' : `/wbk--reactjs-playground--typescript/apps/booking-management-app/`,
     }
 );
 
