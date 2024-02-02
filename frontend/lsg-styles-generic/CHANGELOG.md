@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.2.0 (2024-02-02)
+
+### Features
+
+-   **rename:** done ([15a0f92](https://github.com/paulAlexSerban/wbk--reactjs-playground--typescript/commit/15a0f92f47690da6021269d43d7489cb72cdc514))
+
 ## 0.2.4 (2023-10-18)
 
 **Note:** Version bump only for package @wbk--reactjs-playground--typescript/lsg
