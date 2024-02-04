@@ -1,6 +1,6 @@
 {
     "name": "@wbk--reactjs-playground--typescript/solid-dependency-inversion-principle",
-    "formattedName": "Solid Dependency Inversion Principle",
+    "formattedName": "(RND) SOLID - Dependency Inversion Principle",
     "description": "A playground to understand the Dependency Inversion Principle of SOLID",
     "private": true,
     "version": "0.0.0",
