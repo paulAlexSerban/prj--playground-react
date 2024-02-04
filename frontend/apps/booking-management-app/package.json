@@ -1,5 +1,7 @@
 {
     "name": "@wbk--reactjs-playground--typescript/booking-management-app",
+    "formattedName": "Booking Management Application",
+    "description": "A booking management app built with ReactJS and TypeScript.",
     "private": true,
     "version": "0.1.0",
     "type": "module",

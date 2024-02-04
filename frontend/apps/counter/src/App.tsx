@@ -1,8 +1,8 @@
 import { useState } from 'react';
 
-import Counter from './components/Counter/Counter';
+import Counter from './components/Counter/Counter.tsx';
 import ConfigureCounter from './components/Counter/ConfigureCounter.tsx';
-import Header from './components/Header';
+import Header from './components/Header.tsx';
 import { log } from './log.js';
 
 function App() {

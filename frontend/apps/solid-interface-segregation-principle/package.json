@@ -1,5 +1,7 @@
 {
     "name": "@wbk--reactjs-playground--typescript/solid-interface-segregation-principle",
+    "formattedName": "Solid Interface Segregation Principle",
+    "description": "A playground for the Interface Segregation Principle",
     "private": true,
     "version": "0.1.0",
     "type": "module",

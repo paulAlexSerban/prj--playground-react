@@ -1,5 +1,7 @@
 {
     "name": "@wbk--reactjs-playground--typescript/form-login-app-w-usereducer",
+    "formattedName": "Form Login App w/ useReducer",
+    "description": "A simple form login app using ReactJS and TypeScript with useReducer",
     "private": true,
     "version": "0.1.0",
     "type": "module",

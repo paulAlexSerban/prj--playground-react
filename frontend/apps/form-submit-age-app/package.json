@@ -1,5 +1,7 @@
 {
     "name": "@wbk--reactjs-playground--typescript/form-submit-age-app",
+    "formattedName": "Form Submit Age App",
+    "description": "A simple form submit age app",
     "private": true,
     "version": "0.1.0",
     "type": "module",

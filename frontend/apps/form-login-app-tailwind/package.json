@@ -1,5 +1,7 @@
 {
     "name": "@wbk--reactjs-playground--typescript/form-login-app-tailwind",
+    "formattedName": "Form Login App Tailwind",
+    "description": "A simple form login app using ReactJS, TypeScript, and TailwindCSS",
     "private": true,
     "version": "0.1.0",
     "type": "module",
