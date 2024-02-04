@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const source = path.join(__dirname, '../../..', 'package', 'apps');
-const dest = path.join(__dirname, '../../..', 'package');
+const dest = path.join(__dirname, '../../..', 'package', 'apps');
 const dotenv = require('dotenv');
 dotenv.config();
 const BASE_URL = process.env.BASE_URL;
