@@ -110,6 +110,9 @@ jobs:
               if: steps.changed-test-files.outputs.any_changed == 'true'
               run: yarn run package
 
+            - name: Display structure of package files
+              run: ls -R ./package/apps
+
             - name: 'Upload apps artifact'
               if: steps.changed-test-files.outputs.any_changed == 'true'
               uses: actions/upload-artifact@v4
