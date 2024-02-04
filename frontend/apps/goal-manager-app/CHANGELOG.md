@@ -14,4 +14,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 -   **init:** new apps ([4415f43](https://github.com/paulAlexSerban/wbk--reactjs-playground--typescript/commit/4415f438f0e5bcb85114c2881630a29c188382db))
 -   **rename:** done ([15a0f92](https://github.com/paulAlexSerban/wbk--reactjs-playground--typescript/commit/15a0f92f47690da6021269d43d7489cb72cdc514))
 -   styled compoennts work ([5cf9cae](https://github.com/paulAlexSerban/wbk--reactjs-playground--typescript/commit/5cf9cae09ec5f9b36f10b44435678947f4bb2f7e))
+    <<<<<<< HEAD
+-   # **vite plugin:** implemenetd ([37d46fa](https://github.com/paulAlexSerban/wbk--reactjs-playground--typescript/commit/37d46fa94fb78ec7126690f942429a51d9ed511e))
+    > > > > > > > release
 -   vite react boiler plate and new app ([c9f400d](https://github.com/paulAlexSerban/wbk--reactjs-playground--typescript/commit/c9f400d569995a3ce94b4f3c2a6c8db9b3229fdb))

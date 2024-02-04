@@ -1,5 +1,7 @@
 {
     "name": "@wbk--reactjs-playground--typescript/_vite-react-ts-boilerplate",
+    "formattedName": "Vite React TypeScript Boilerplate",
+    "description": "A Vite-based React TypeScript boilerplate with ESLint, Prettier, and Sass support.",
     "private": true,
     "version": "0.1.0",
     "type": "module",

@@ -1,5 +1,7 @@
 {
     "name": "@wbk--reactjs-playground--typescript/form-subscribe",
+    "formattedName": "Form Subscribe",
+    "description": "A form to subscribe to a newsletter",
     "private": true,
     "version": "0.1.0",
     "type": "module",

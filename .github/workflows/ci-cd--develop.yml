@@ -110,12 +110,15 @@ jobs:
               if: steps.changed-test-files.outputs.any_changed == 'true'
               run: yarn run package
 
+            - name: Display structure of package files
+              run: ls -R ./package/apps
+
             - name: 'Upload apps artifact'
               if: steps.changed-test-files.outputs.any_changed == 'true'
-              uses: actions/upload-artifact@v3
+              uses: actions/upload-artifact@v4
               with:
                   name: apps-${{ github.run_number }}-${{ github.run_id }}
-                  path: './package/apps/'
+                  path: './package/apps/*'
 
     deploy-test:
         name: 'Deploy to AWS DEV env.'
@@ -142,11 +145,13 @@ jobs:
               if: steps.changed-test-files.outputs.any_changed == 'true'
               run: mkdir -p package/apps
 
-            - uses: actions/download-artifact@v3
+            - uses: actions/download-artifact@v4
               if: steps.changed-test-files.outputs.any_changed == 'true'
               with:
                   name: apps-${{ github.run_number }}-${{ github.run_id }}
                   path: package/apps
+            - name: Display structure of downloaded files
+              run: ls -R package/apps
 
             - name: 'Configure AWS Credentials'
               if: steps.changed-test-files.outputs.any_changed == 'true'

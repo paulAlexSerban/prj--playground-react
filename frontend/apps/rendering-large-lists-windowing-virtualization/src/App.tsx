@@ -4,9 +4,9 @@ import './App.scss';
 // import Base from './cases/Base';
 // import Pagination from './cases/Pagination';
 // import InfiniteScrollComponent from './cases/InfiniteScroll';
-// import ReactVirtualized from './cases/ReactVirtualized';
+import ReactVirtualized from './cases/ReactVirtualized';
 // import ReactWindow from './cases/ReactWindow';
-import ReactViewPortList from './cases/ReactViewPortList';
+// import ReactViewPortList from './cases/ReactViewPortList';
 
 const data = Array.from({ length: 10000 }, (_, index) => ({
     id: index,
@@ -20,9 +20,9 @@ function App() {
             {/* <Base data={data} /> */}
             {/* <Pagination data={data} /> */}
             {/* <InfiniteScrollComponent data={data} /> */}
-            {/* <ReactVirtualized data={data} /> */}
+            <ReactVirtualized data={data} />
             {/* <ReactWindow data={data} /> */}
-            <ReactViewPortList data={data} />
+            {/* <ReactViewPortList data={data} /> */}
         </div>
     );
 }

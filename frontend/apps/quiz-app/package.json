@@ -1,5 +1,7 @@
 {
     "name": "@wbk--reactjs-playground--typescript/quiz-app",
+    "formattedName": "Quiz App",
+    "description": "A simple quiz app built with React and TypeScript.",
     "private": true,
     "version": "0.1.0",
     "type": "module",

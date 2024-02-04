@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react';
 
-import ResultModal, { type ResultModalHandle } from './ResultModal.jsx';
+import ResultModal, { type ResultModalHandle } from './ResultModal.js';
 
 type TimerChallengeProps = {
     title: string;

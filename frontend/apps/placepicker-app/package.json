@@ -1,5 +1,7 @@
 {
     "name": "@wbk--reactjs-playground--typescript/placepicker-app",
+    "formattedName": "Placepicker App",
+    "description": "A simple placepicker app built with ReactJS and TypeScript.",
     "private": true,
     "version": "0.1.0",
     "type": "module",
