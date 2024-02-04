@@ -35,7 +35,7 @@ const headHTML = `
 
 const headerHTML = `
 <header class="row">
-  <h1 class="col display-2">JavaScript Component Library</h1>
+  <h1 class="col display-2">React.js Playground (TypeScript)</h1>
 </header>
 `;
 
