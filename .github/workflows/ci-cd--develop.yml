@@ -142,7 +142,7 @@ jobs:
               if: steps.changed-test-files.outputs.any_changed == 'true'
               run: mkdir -p package/apps
 
-            - uses: actions/download-artifact@v3
+            - uses: actions/download-artifact@v4
               if: steps.changed-test-files.outputs.any_changed == 'true'
               with:
                   name: apps-${{ github.run_number }}-${{ github.run_id }}
