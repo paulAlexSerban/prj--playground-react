@@ -1,5 +1,7 @@
 {
     "name": "@wbk--reactjs-playground--typescript/react-timer-app",
+    "formattedName": "React Timer App",
+    "description": "A simple timer app built with React and TypeScript.",
     "private": true,
     "version": "0.0.0",
     "type": "module",

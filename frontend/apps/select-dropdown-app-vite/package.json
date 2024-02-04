@@ -1,7 +1,7 @@
 {
-    "name": "@wbk--reactjs-playground--typescript/placepicker-app",
-    "formattedName": "Placepicker App",
-    "description": "A simple placepicker app built with ReactJS and TypeScript.",
+    "name": "@wbk--reactjs-playground--typescript/select-dropdown-app-vite",
+    "formattedName": "Select Dropdown App Vite",
+    "description": "Select Dropdown App Vite",
     "private": true,
     "version": "0.0.0",
     "type": "module",
@@ -14,6 +14,9 @@
         "package": "bash scripts/package.bash"
     },
     "dependencies": {
+        "@wbk--reactjs-playground--typescript/shared-foundation": "*",
+        "@wbk--reactjs-playground--typescript/lsg-styles-generic": "*",
+        "@wbk--reactjs-playground--typescript/react-cmp-lib": "*",
         "react": "^18.2.0",
         "react-dom": "^18.2.0"
     },

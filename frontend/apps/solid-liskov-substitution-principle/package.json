@@ -1,5 +1,7 @@
 {
     "name": "@wbk--reactjs-playground--typescript/solid-liskov-substitution-principle",
+    "formattedName": "Solid Liskov Substitution Principle",
+    "description": "A playground to understand the Liskov Substitution Principle",
     "private": true,
     "version": "0.0.0",
     "type": "module",

@@ -1,12 +1,38 @@
-import { PluginOption, defineConfig } from 'vite';
+import { PluginOption, defineConfig, Plugin } from 'vite';
 import react from '@vitejs/plugin-react';
-import fs from 'node:fs/promises';
+import fsPromise from 'node:fs/promises';
+import fs from 'node:fs';
 import path from 'node:path';
 import url from 'node:url';
 import { createRequire } from 'node:module';
 
-// same usage inside defineConfig
+// Custom plugin to write package.json data to meta.json
+const writeMetaPlugin = (): Plugin => {
+    return {
+        name: 'vite-plugin-write-meta',
+        enforce: 'post',
+        apply: 'build', // This ensures the plugin is only applied during build and not during serve
+        writeBundle() {
+            const packageJsonPath = path.resolve(__dirname, './package.json');
+            const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf-8'));
+            // Define the data you want to include in meta.json
+            const metaData = {
+                name: packageJson?.formattedName,
+                version: packageJson.version,
+                description: packageJson.description,
+                slug: PROJECT_NAME,
+                // Add any other package.json data you wish to include
+            };
+            const outputPath = path.resolve(__dirname, 'dist', 'meta.json');
+            // Ensure directory exists or create it
+            fs.mkdirSync(path.dirname(outputPath), { recursive: true });
+            fs.writeFileSync(outputPath, JSON.stringify(metaData, null, 2));
+            console.log(`Meta data written to ${outputPath}`);
+        },
+    };
+};
 
+// same usage inside defineConfig
 const WRONG_CODE = `import { bpfrpt_proptype_WindowScroller } from "../WindowScroller.js";`;
 
 function reactVirtualized(): PluginOption {
@@ -25,9 +51,9 @@ function reactVirtualized(): PluginOption {
                 path.join('dist', 'commonjs', 'index.js'),
                 path.join('dist', 'es', 'WindowScroller', 'utils', 'onScroll.js')
             );
-            const code = await fs.readFile(file, 'utf-8');
+            const code = await fsPromise.readFile(file, 'utf-8');
             const modified = code.replace(WRONG_CODE, '');
-            await fs.writeFile(file, modified);
+            await fsPromise.writeFile(file, modified);
         },
     };
 }
@@ -39,7 +65,7 @@ const BASE_URL = process.env.BASE_URL || '/';
 // https://vitejs.dev/config/
 export default defineConfig(({ command }) => {
     const config = {
-        plugins: [react(), reactVirtualized()],
+        plugins: [react(), reactVirtualized(), writeMetaPlugin()],
         base: '/',
     };
 

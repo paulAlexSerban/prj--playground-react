@@ -1,5 +1,7 @@
 {
     "name": "@wbk--reactjs-playground--typescript/form-login-app",
+    "formattedName": "Form Login App",
+    "description": "A simple form login app using ReactJS and TypeScript",
     "private": true,
     "version": "0.0.0",
     "type": "module",

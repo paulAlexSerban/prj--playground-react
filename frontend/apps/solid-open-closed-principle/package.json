@@ -1,5 +1,7 @@
 {
     "name": "@wbk--reactjs-playground--typescript/solid-open-closed-principle",
+    "formattedName": "(RND) SOLID - Open Closed Principle",
+    "description": "SOLID - Open Closed Principle example using ReactJS and TypeScript",
     "private": true,
     "version": "0.0.0",
     "type": "module",

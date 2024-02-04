@@ -1,5 +1,7 @@
 {
     "name": "@wbk--reactjs-playground--typescript/rendering-large-lists-windowing-virtualization",
+    "formattedName": "Rendering Large Lists (Windowing/Virtualization)",
+    "description": "Rendering Large Lists (Windowing/Virtualization)",
     "private": true,
     "version": "0.0.0",
     "type": "module",

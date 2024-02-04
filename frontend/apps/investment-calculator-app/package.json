@@ -1,5 +1,7 @@
 {
     "name": "@wbk--reactjs-playground--typescript/investment-calculator-app",
+    "formattedName": "Investment Calculator App",
+    "description": "Investment Calculator App",
     "private": true,
     "version": "0.0.0",
     "type": "module",
