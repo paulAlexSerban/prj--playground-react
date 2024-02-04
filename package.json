@@ -17,13 +17,14 @@
         "formats:check": "yarn prettier --check .",
         "formats:write": "yarn prettier --write .",
         "lint": "lerna run lint --concurrency=5",
-        "package": "rm -rfv ./package/* && lerna run package --stream --parallel && node tools/build-scripts/DashboardGenerator.js",
+        "package": "rm -rfv ./package/* && lerna run package --stream --parallel && node tools/build-scripts/dashboard",
         "prepare": "husky install",
         "process:assets": "lerna run process:assets --stream --parallel",
         "publish:assets": "lerna run publish:assets --stream --parallel",
         "test": "yarn lerna run test --stream --parallel",
         "test:chromatic": "yarn lerna run test:chromatic --stream --parallel",
-        "version:modules": "bash tools/build-scripts/version.bash"
+        "version:modules": "bash tools/build-scripts/version.bash",
+        "start:package": "npx serve package"
     },
     "devDependencies": {
         "@commitlint/cli": "^17.7.2",
