@@ -3,11 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-# 0.2.0 (2024-02-04)
+# 0.2.0 (2024-02-02)
 
 ### Features
 
--   added ci-cd svg ([5ca152c](https://github.com/paulAlexSerban/wbk--reactjs-playground--typescript/commit/5ca152cfa6dc2b1548b7c2ed48d33d5debae9db7))
 -   **cleanup:** remove duloingo app ([3ea8f7d](https://github.com/paulAlexSerban/wbk--reactjs-playground--typescript/commit/3ea8f7d47da9759c9ea8f62599a8aa4250b38c3c))
 -   **cleanup:** small ([ef5035d](https://github.com/paulAlexSerban/wbk--reactjs-playground--typescript/commit/ef5035dd88231efce920b3a5ed7e94acaaa02811))
 -   iCodeThis - registration modal ([afbd010](https://github.com/paulAlexSerban/wbk--reactjs-playground--typescript/commit/afbd01009b1d16bd46b641bf1710db230c3be9bb))

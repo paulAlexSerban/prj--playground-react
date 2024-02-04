@@ -30,7 +30,7 @@ jobs:
             - name: '🔧 Install dependencies'
               run: yarn install
 
-            # - name: '🚀 Create Release'
-            #   run: CI=true && yarn semantic-release
-            #   env:
-            #       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            - name: '🚀 Create Release'
+              run: CI=true && yarn semantic-release
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
