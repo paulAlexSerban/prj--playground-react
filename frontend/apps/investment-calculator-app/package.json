@@ -3,7 +3,7 @@
     "formattedName": "Investment Calculator App",
     "description": "Investment Calculator App",
     "private": true,
-    "version": "0.0.0",
+    "version": "0.1.0",
     "type": "module",
     "scripts": {
         "develop": "vite",
@@ -14,9 +14,9 @@
         "package": "bash scripts/package.bash"
     },
     "dependencies": {
-        "@wbk--reactjs-playground--typescript/shared-foundation": "*",
-        "@wbk--reactjs-playground--typescript/lsg-styles-generic": "*",
-        "@wbk--reactjs-playground--typescript/react-cmp-lib": "*",
+        "@wbk--reactjs-playground--typescript/lsg-styles-generic": "^0.2.0",
+        "@wbk--reactjs-playground--typescript/react-cmp-lib": "^0.5.0",
+        "@wbk--reactjs-playground--typescript/shared-foundation": "^0.3.0",
         "react": "^18.2.0",
         "react-dom": "^18.2.0"
     },

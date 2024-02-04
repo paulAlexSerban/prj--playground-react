@@ -3,7 +3,7 @@
     "formattedName": "Placepicker App",
     "description": "A simple placepicker app built with ReactJS and TypeScript.",
     "private": true,
-    "version": "0.0.0",
+    "version": "0.1.0",
     "type": "module",
     "scripts": {
         "develop": "vite",

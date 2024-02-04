@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.3.0 (2024-02-04)
+
+### Features
+
+-   added ci-cd svg ([5ca152c](https://github.com/paulAlexSerban/wbk--reactjs-playground--typescript/commit/5ca152cfa6dc2b1548b7c2ed48d33d5debae9db7))
+-   **cleanup:** remove duloingo app ([3ea8f7d](https://github.com/paulAlexSerban/wbk--reactjs-playground--typescript/commit/3ea8f7d47da9759c9ea8f62599a8aa4250b38c3c))
+-   **cleanup:** small ([ef5035d](https://github.com/paulAlexSerban/wbk--reactjs-playground--typescript/commit/ef5035dd88231efce920b3a5ed7e94acaaa02811))
+-   refactor ([3819cb7](https://github.com/paulAlexSerban/wbk--reactjs-playground--typescript/commit/3819cb7dabfd32836e6acd0d5a8089b467ea5985))
+-   **refactoring:** init ([739b907](https://github.com/paulAlexSerban/wbk--reactjs-playground--typescript/commit/739b9078aa89501f101b009f87f09b49054815c0))
+-   **rename:** done ([15a0f92](https://github.com/paulAlexSerban/wbk--reactjs-playground--typescript/commit/15a0f92f47690da6021269d43d7489cb72cdc514))
+-   restructure ([e7da142](https://github.com/paulAlexSerban/wbk--reactjs-playground--typescript/commit/e7da1422fa1001435ee4f7e086684e2ce2a65276))
+
 ## [0.2.3](https://github.com/paulAlexSerban/wbk--reactjs-playground--typescript/compare/@wbk--reactjs-playground--typescript/shared-foundation@0.2.2...@wbk--reactjs-playground--typescript/shared-foundation@0.2.3) (2023-10-12)
 
 ### Bug Fixes
