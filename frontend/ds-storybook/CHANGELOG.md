@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.1](https://github.com/paulAlexSerban/wbk--reactjs-playground--typescript/compare/storybook@0.2.0...storybook@0.2.1) (2024-02-05)
+
+**Note:** Version bump only for package storybook
+
 # [0.2.0](https://github.com/paulAlexSerban/wbk--reactjs-playground--typescript/compare/storybook@0.1.1...storybook@0.2.0) (2024-02-02)
 
 ### Features

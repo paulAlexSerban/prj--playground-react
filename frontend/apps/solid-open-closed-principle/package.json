@@ -3,7 +3,7 @@
     "formattedName": "(RND) SOLID - Open Closed Principle",
     "description": "SOLID - Open Closed Principle example using ReactJS and TypeScript",
     "private": true,
-    "version": "0.1.0",
+    "version": "0.2.0",
     "type": "module",
     "scripts": {
         "develop": "vite",

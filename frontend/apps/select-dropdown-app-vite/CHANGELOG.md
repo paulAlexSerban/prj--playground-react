@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.1](https://github.com/paulAlexSerban/wbk--reactjs-playground--typescript/compare/@wbk--reactjs-playground--typescript/select-dropdown-app-vite@0.1.0...@wbk--reactjs-playground--typescript/select-dropdown-app-vite@0.1.1) (2024-02-05)
+
+**Note:** Version bump only for package @wbk--reactjs-playground--typescript/select-dropdown-app-vite
+
 # 0.1.0 (2024-02-04)
 
 ### Features

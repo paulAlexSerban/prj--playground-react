@@ -3,7 +3,7 @@
     "formattedName": "Blogpost Gallery App",
     "description": "A simple blogpost gallery app built with ReactJS and TypeScript.",
     "private": true,
-    "version": "0.1.0",
+    "version": "0.2.0",
     "type": "module",
     "scripts": {
         "develop": "vite",

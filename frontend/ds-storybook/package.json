@@ -1,6 +1,6 @@
 {
     "name": "storybook",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "main": "index.js",
     "license": "MIT",
     "scripts": {
@@ -31,9 +31,9 @@
         "typescript": "^5.2.2"
     },
     "dependencies": {
-        "@wbk--reactjs-playground--typescript/lsg-styles-generic": "^0.2.0",
-        "@wbk--reactjs-playground--typescript/react-cmp-lib": "^0.5.0",
-        "@wbk--reactjs-playground--typescript/shared-foundation": "^0.3.0"
+        "@wbk--reactjs-playground--typescript/lsg-styles-generic": "^0.2.1",
+        "@wbk--reactjs-playground--typescript/react-cmp-lib": "^0.5.1",
+        "@wbk--reactjs-playground--typescript/shared-foundation": "^0.3.1"
     },
     "publishConfig": {
         "access": "public"

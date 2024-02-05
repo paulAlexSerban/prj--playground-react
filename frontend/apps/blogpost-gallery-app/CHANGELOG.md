@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/paulAlexSerban/wbk--reactjs-playground--typescript/compare/@wbk--reactjs-playground--typescript/blogpost-gallery-app@0.1.0...@wbk--reactjs-playground--typescript/blogpost-gallery-app@0.2.0) (2024-02-05)
+
+### Features
+
+-   added ci-cd svg ([5ca152c](https://github.com/paulAlexSerban/wbk--reactjs-playground--typescript/commit/5ca152cfa6dc2b1548b7c2ed48d33d5debae9db7))
+-   fix ([86fb27c](https://github.com/paulAlexSerban/wbk--reactjs-playground--typescript/commit/86fb27cbb6b7b03ca5b7e8aa272b13822066b1a9))
+-   fix ([b076274](https://github.com/paulAlexSerban/wbk--reactjs-playground--typescript/commit/b076274e07bb135aa0771c473d6d9364b14f03b8))
+-   fix ([09e1392](https://github.com/paulAlexSerban/wbk--reactjs-playground--typescript/commit/09e1392bd18e52bb8b833874b324cc2d4a85d39f))
+-   test ([7be3761](https://github.com/paulAlexSerban/wbk--reactjs-playground--typescript/commit/7be37613a35da735fa838b6140a0b081c5647c33))
+-   **vite plugin:** implemenetd ([37d46fa](https://github.com/paulAlexSerban/wbk--reactjs-playground--typescript/commit/37d46fa94fb78ec7126690f942429a51d9ed511e))
+
 # 0.1.0 (2024-02-02)
 
 ### Features

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.1.0 (2024-02-05)
+
+### Features
+
+-   **counter-redux:** init ([70abffd](https://github.com/paulAlexSerban/wbk--reactjs-playground--typescript/commit/70abffd930c28d56a3c4c975ce1af511bbf6730b))
+
 # 0.1.0 (2024-02-02)
 
 ### Features

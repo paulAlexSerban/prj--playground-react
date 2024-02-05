@@ -3,7 +3,7 @@
     "formattedName": "React Timer App",
     "description": "A simple timer app built with React and TypeScript.",
     "private": true,
-    "version": "0.1.0",
+    "version": "0.2.0",
     "type": "module",
     "scripts": {
         "develop": "vite",

@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/paulAlexSerban/wbk--reactjs-playground--typescript/compare/@wbk--reactjs-playground--typescript/_vite-react-ts-boilerplate@0.1.0...@wbk--reactjs-playground--typescript/_vite-react-ts-boilerplate@0.2.0) (2024-02-05)
+
+### Features
+
+-   added ci-cd svg ([5ca152c](https://github.com/paulAlexSerban/wbk--reactjs-playground--typescript/commit/5ca152cfa6dc2b1548b7c2ed48d33d5debae9db7))
+-   **vite plugin:** implemenetd ([37d46fa](https://github.com/paulAlexSerban/wbk--reactjs-playground--typescript/commit/37d46fa94fb78ec7126690f942429a51d9ed511e))
+
 # 0.1.0 (2024-02-02)
 
 ### Features
