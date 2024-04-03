@@ -1,20 +1,29 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+
 import RootLayout from './pages/Root';
 import HomePage from './pages/Home';
 import ProductsPage from './pages/Products';
+import ErrorPage from './pages/Error';
+import ProductDetailPage from './pages/ProductDetails';
+
 const router = createBrowserRouter([
     {
         path: '/',
         element: <RootLayout />,
-        // tis lets you create path dependent routes
+        errorElement: <ErrorPage />,
+        // this lets you create path dependent routes
         children: [
             {
-                path: '/',
+                index: true,
                 element: <HomePage />,
             },
             {
-                path: '/products',
+                path: 'products',
                 element: <ProductsPage />,
+            },
+            {
+                path: 'products/:productId',
+                element: <ProductDetailPage />,
             },
         ],
     },

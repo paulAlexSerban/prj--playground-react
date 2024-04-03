@@ -1,5 +1,6 @@
 import { FC } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+
 import styles from './MainNavigation.module.scss';
 
 const MainNavigation: FC = () => {
@@ -8,10 +9,25 @@ const MainNavigation: FC = () => {
             <nav>
                 <ul className={styles.list}>
                     <li>
-                        <Link to="/">Home</Link>
+                        <NavLink
+                            to="/"
+                            className={({ isActive }) => {
+                                return isActive ? styles.active : '';
+                            }}
+                            end
+                        >
+                            Home
+                        </NavLink>
                     </li>
                     <li>
-                        <Link to="/products">Products</Link>
+                        <NavLink
+                            to="/products"
+                            className={({ isActive }) => {
+                                return isActive ? styles.active : '';
+                            }}
+                        >
+                            Products
+                        </NavLink>
                     </li>
                 </ul>
             </nav>
